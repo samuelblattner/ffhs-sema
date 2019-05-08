@@ -1,0 +1,48 @@
+%%
+%% Author: samuelblattner
+%% 2019-01-20
+%%
+
+% Preamble
+\documentclass{ffhsthesis}
+
+% Packages
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+% Document
+\begin{document}
+
+    \dokumentTyp{Bachelor/Master-Thesis}
+    \studiengang{INF/WI}
+    \title{Recurrent Neuronal Networks als Kreativitätswerkzeug für Gastronomiebetriebe}
+    \titelbild[height=2cm,width=10cm]{ffhslogo}  % optional
+    \author{Samuel Blattner}
+    \wohnort{Zürich}
+
+    \referentin{Dr. Heinrich Zimmermann\\ BSc INF 2015, ZH5-Mo, FS19}
+    \eingereichtBei{Dr. Heinrich Zimmermann\\ BSc INF 2015, ZH5-Mo, FS19}
+
+    \maketitle
+
+    \begin{zusammenfassung}
+        ... Deutsche Zusammenfassung ...
+    \end{zusammenfassung}
+
+    \begin{abstract}
+        ... English summary ...
+    \end{abstract}
+
+    \tableofcontents
+
+    \startThesis % Befehl muss vor dem ersten chapter stehen (Seitennummerierung!)
+
+    \include{parts/introduction}
+    \include{parts/model}
+    \include{parts/results}
+    \include{parts/analysis}
+
+    \bibliography{../src/main}
+    \bibliographystyle{plain}
+
+\end{document}

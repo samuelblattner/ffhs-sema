@@ -1,0 +1,33 @@
+\section{Daten \& Training}
+\label{sec:model-data-training}
+
+In diesem Abschnitt werden die Trainingsdaten für das Modell analysiert und beschrieben.
+Als Lerngrundlage für den Algorithmus dienen rund 400000 Namen von Gerichten.
+Diese sind im Kaggle-Datensatz «What's on the menu»\footnote{https://www.kaggle.com/nypl/whats-on-the-menu} enthalten.
+Der Unterdatensatz «Dish.csv» enthält folgende Struktur:
+
+\begin{center}
+    \begin{tabular}{ |r|l|l|r|c| }
+        \hline
+        id & name & description & menus\_appeared & … \\
+        \hline
+        1 & Consomme printaniere royal & & 110 & … \\
+        \hline
+        2 & Chicken gumbo & & 13 & … \\
+        \hline
+        3 & Tomato aux croutons & & 41 & … \\
+        \hline
+        4 & Onion au gratin & & 66 & … \\
+        \hline
+        5 & Radishes & & 3265 & … \\
+        \hline
+        6 & Chicken soup with rice & & 48 & … \\
+        \hline
+        … & … & … & … & … \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Für die Arbeit relevant ist lediglich die \textit{name}-Spalte.
+Sie enthält Bezeichungen von Gerichten in mehreren Sprachen.
+Weil

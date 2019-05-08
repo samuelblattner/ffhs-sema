@@ -1,0 +1,50 @@
+%Vorlage fuer Thesen an der FFHS
+\documentclass{ffhsthesis}
+
+\usepackage[utf8]{inputenc}
+\usepackage[bibstyle=apa,backend=biber]{biblatex}
+\addbibresource{disposition.bib}
+
+\usepackage[T1]{fontenc}
+\usepackage[ampersand]{easylist}
+\begin{document}
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+
+\dokumentTyp{Disposition zur Seminararbeit (SEMA)}
+\studiengang{BSc INF 2015, ZH5-Mo, FS19}
+\title{Recurrent Neuronal Networks als Kreativitätswerkzeug für Gastronomiebetriebe}
+\subtitle{Disposition} % optional
+%\titelbild[height=2cm,width=10cm]{ffhslogo}  % optional
+\author{Samuel Blattner}
+% \date{}
+\wohnort{Zürich}
+%\referent{Name des Referenten\\ Titel\\Unterrichtetes Fach}
+\begin{center}
+\referent{Dr. Heinrich Zimmermann\\ SEMA\_INF, Seminararbeit, BSc INF 2015, ZH5-Mo, FS19}
+\end{center}
+\maketitle
+
+\renewcommand{\bibname}{Recherchierte Literatur}
+
+\startThesis % Befehl muss vor dem ersten chapter stehen (Seitennummerierung!)
+
+\setcounter{chapter}{1}
+\input{sectionsdispo/introduction}
+
+\input{sectionsdispo/grounds}
+
+\input{sectionsdispo/hypothesis}
+
+\input{sectionsdispo/process}
+
+
+\input{sectionsdispo/expected-results}
+
+\nocite{*}
+\printbibliography
+
+
+\end{document}
+
+

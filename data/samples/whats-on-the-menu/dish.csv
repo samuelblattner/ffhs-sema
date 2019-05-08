@@ -1,0 +1,833 @@
+id,name,description,menus_appeared,times_appeared,first_appeared,last_appeared,lowest_price,highest_price
+1,Consomme printaniere royal,,8,9,1897,1927,0.2,0.4
+2,Chicken gumbo,,110,116,1895,1960,0.1,0.8
+3,Tomato aux croutons,,13,13,1893,1917,0.25,0.4
+4,Onion au gratin,,41,41,1900,1971,0.25,1
+5,St. Emilion,,66,68,1881,1981,0,18
+7,Radishes,,3265,3349,1854,2928,0,25
+8,Chicken soup with rice,,48,49,1897,1961,0.1,0.6
+9,Clam broth (cup),,15,17,1899,1962,0.15,0.4
+10,"Cream of new asparagus, croutons",,2,2,1900,1900,0,0
+11,Clear green turtle,,157,157,1893,1937,0.25,60
+12,"Striped bass saute, meuniere",,2,2,1900,1900,0,0
+13,Anchovies,,453,484,1858,1987,0,30
+14,Fresh lobsters in every style,,4,4,1899,1900,0,0
+15,Celery,,4247,4691,1,2928,0,50
+16,Pim-olas,,145,148,1897,1918,0.15,35
+17,Caviar,,505,534,1880,1987,0,75
+18,Sardines,,1425,1483,1856,2928,0,50
+19,India chutney,,16,16,1865,1901,0.1,0.2
+20,Pickles,,454,473,1852,1987,0,10
+21,English walnuts,,83,86,1851,1948,0.1,0.3
+22,Pate de foies-gras,,9,9,1898,1901,1,1
+23,Pomard,,11,11,1880,1950,0.75,5
+24,"Brook trout, mountain style",,2,2,1900,1900,0,0
+25,"Whitebait, sauce tartare",,4,4,1900,1901,0.3,0.75
+26,Clams,,171,181,1881,1970,0.1,0.9
+27,Oysters,,289,292,1862,1963,0,35
+28,Claremont planked shad,,2,2,1899,1900,1.5,2.5
+29,G. H. Mumm & Co's Extra Dry,,14,14,1895,1914,2,4
+30,Cerealine with Milk,,1,1,1901,1901,0,0
+31,Sliced Bananas,,220,238,1900,1987,0,15
+32,Wheat Vitos,,3,3,1900,1900,0,0
+33,Sliced Tomatoes,,1195,1256,1873,2928,0,25
+34,Russian Caviare on Toast,,3,3,1900,1900,,
+35,Smoked beef in cream,,21,21,1896,1933,0.3,0.9
+38,Apple Sauce,,720,829,1,1987,0,20
+39,Potage a la Victoria,,5,5,1899,1901,,
+40,Breakfast,,28,28,1900,1967,0.25,1
+41,Strawberries,,303,338,1854,1985,0,50
+42,Preserved figs,,257,259,1889,1969,0,30
+43,BLUE POINTS,,869,892,1881,1968,0.15,50
+44,CONSOMME ANGLAISE,,5,5,1900,1907,0.2,0.25
+45,CREAM OF CAULIFLOWER,,18,18,1899,1949,0.1,0.5
+46,"BROILED SHAD, A LA MAITRE D'HOTEL",,6,6,1896,1900,0,0
+47,SLICED CUCUMBERS,,455,458,1881,1964,0,25
+48,SALTED ALMONDS,,774,783,1889,2012,0,10
+49,"POTATOES, JULIEN",,3,3,1900,1900,0,0
+50,Cracked Wheat,,120,124,1859,1917,0.1,0.3
+51,Malt Breakfast Food,,63,64,1899,1917,0.1,0.35
+52,"BOILED BEEF TONGUE, ITALIAN SAUCE",,3,3,1900,1900,0,0
+53,Young Onions,,157,157,1894,1949,0.05,10
+54,Pears,,631,650,1852,1974,0,50
+55,"ROAST SIRLOIN OF BEEF, YORKSHIRE PUDDING",,11,12,1900,1974,0,0.75
+57,Huhnerbruhe,,11,11,1900,1901,0,0
+58,"ROAST EASTER LAMB, MINT SAUCE",,4,4,1899,1900,0,0
+59,Rockaways,,157,162,1889,1948,0.2,50
+60,Hafergrutze,,206,219,1899,1910,,
+61,BROWNED POTATOES,,55,58,1893,1980,0.25,20
+62,Pampelmuse,,30,30,1900,1910,0,0
+63,Apfelsinen,,181,184,1899,1935,,
+64,Ananas,,94,104,1884,1978,0,0.95
+65,Milchreis,,135,135,1899,1910,,
+66,Grape fruit,,715,749,1895,1968,0,2540
+67,Oranges,,1423,1479,1851,2012,0,25
+68,Clam Fritters,,258,270,1880,1959,0.15,50
+69,Filet v. Schildkrote m. Truffeln,,3,3,1900,1900,0,0
+70,"Bouillon, en Tasse",,17,17,1897,1906,0.2,0.25
+71,Spargel Suppe,,4,4,1899,1900,0,0
+72,"Kraftsuppe, konigliche Art",,2,2,1900,1900,0,0
+73,Rissoles a la Merrill,,4,4,1900,1900,0,0
+75,S. Julien,,4,4,1900,1900,0.75,1.5
+76,Chambertin,,239,251,1851,1977,0,250
+77,St. Julien,,336,391,1851,1970,0,175
+78,Vegetable,,107,115,1892,1987,0,1.75
+80,Puree of split peas aux croutons,,11,11,1900,1917,0.05,0.35
+81,Consomme in cup,,128,128,1896,1949,0,20
+82,"Broiled shad, Maitre d'hotel",,27,27,1889,1937,0.3,0.9
+83,Mashed potatoes,,2585,2675,1852,2012,0,15
+84,Breaded veal cutlet with peas,,3,3,1900,1900,0,0
+86,Hind-quarter of spring lamb with stuffed tomatoes,,3,3,1900,1900,0,0
+87,Hot or cold ribs of beef,,1,1,1900,1900,,
+88,Doucette salad,,7,7,1900,1910,0,0
+89,New beets,,134,139,1865,1981,0.05,0.5
+90,Salisbury steak au cresson,,1,1,1900,1900,0,0
+91,Boiled rice,,830,839,1859,1969,0,25
+92,Stewed oyster plant,,28,28,1884,1901,0.1,0.4
+93,"Boiled onions, cream sauce",,46,48,1893,1940,0.05,0.45
+94,Old fashioned rice pudding,,16,22,1899,1945,0.15,0.3
+95,Ice cream,,1065,1184,1880,1993,0,20
+96,Coffee,,7741,8484,1,2928,0,30
+97,Tea,,4159,4769,1858,2012,0,25
+98,Milk,,1896,2293,1890,2012,0,45
+99,Mush,,18,18,1853,1915,0.05,0.15
+100,Rolled Oats,,104,113,1900,1989,0,0.35
+101,Small Hominy,,20,20,1900,1900,0,0
+102,Broiled Mackerel,,41,44,1856,1957,0.3,2.5
+103,Kippered Herring,,231,236,1,1970,0,0.85
+104,Strawberries with cream,,146,150,1882,1969,0,65
+105,Compote of fruits,,42,42,1899,1966,0,1.15
+106,Orange marmalade,,460,479,1889,1970,0,4.5
+107,Baked apples with cream,,141,144,1883,1945,0.1,20
+108,Bananas,,1195,1213,1,2012,0,25
+109,Bananas with cream,,77,78,1900,1957,0.1,0.5
+110,Austern in der Schale,,23,23,1888,1901,0,0
+111,Stewed prunes,,1267,1371,1881,1987,0,20
+112,Fruit,,1921,2008,1854,2928,0,40
+113,Grapes,,887,950,1856,1969,0,125
+114,Honey in comb,,81,81,1892,1938,0,0.4
+115,Apples,,1215,1239,1851,2012,0.05,25
+116,Oranges sliced,,7,7,1900,1913,0.15,0.25
+117,Stewed tomatoes,,1205,1253,1852,1985,0,25
+118,Large pot of coffee,,5,5,1900,1963,0,0.2
+119,Cup of coffee (served in small pot),,1,1,1900,1900,0,0
+120,Large pot of Oolong tea,,1,1,1900,1900,0.2,0.2
+121,Pot of chocolate,,72,72,1892,1955,0.15,20
+122,Pitcher of milk,,9,11,1900,1914,0.1,0.15
+123,Pot of broma,,16,16,1893,1900,0.2,0.25
+124,"Suppe, Schlossherrin Art",,2,2,1900,1900,0,0
+125,"Eggs, boiled [2]",,6,6,1900,1918,0.2,0.25
+126,Sliced Bananas and Cream,,163,169,1900,1949,0.05,0.45
+127,Baked Apples and Cream,,112,119,1882,1913,0.05,40
+128,Pettijohn Breakfast Food,,3,3,1900,1900,0,0
+129,Quaker Oats,,84,86,1899,1958,0.2,0.25
+130,Hotch potch von Ochsenschwanazen,,1,1,1900,1900,0,0
+131,Sugar Cured Ham,,76,79,1893,1987,0,4.15
+132,"PINE APPLE FRITTERS, SAUCE MARASCHINO",,3,3,1900,1900,0,0
+133,Planked shad,,58,58,1896,1907,0.3,150
+134,"Baked bluefish, Duxelle",,2,2,1900,1900,0.6,0.6
+135,Consomme aux Quenelle's,,2,2,1900,1900,,
+136,Milk rice,,44,48,1900,1970,,
+137,Mohren Suppe mit Sago,,3,3,1900,1901,0,0
+138,French rolls,,217,221,1880,1965,0.05,5
+139,Milk rolls,,49,49,1889,1939,0.01,0.1
+140,Corn muffins,,284,295,1881,1987,0,0.6
+141,Omelette aux fines herbes,,42,42,1900,1978,0,0.7
+142,Boiled eggs,,540,556,1853,1987,0,20
+143,Bacon and eggs,,473,499,1889,1987,0,25
+144,Fish cakes,,148,156,1894,1953,0,15
+145,Food,,2,2,1900,1900,0,0
+146,Shreaded Wheat,,3,3,1900,1900,0,0
+147,Clam cocktail,,269,287,1900,1968,0.05,25
+148,Oyster cocktail,,461,498,1896,1987,0,30
+150,Little Neck clams,,1000,1078,1882,1989,0,50
+151,Stuffed olives,,465,472,1862,1969,0,50
+152,Lalla Rookh,,116,122,1889,1959,0,40
+153,Malaga grapes,,351,353,1882,1941,0.1,40
+154,Martineaus,,7,7,1890,1900,0.4,0.4
+155,Oatmeal,,532,610,1,1988,0,20
+156,hominy with milk,,33,33,1900,1943,0,0
+157,Baked apples,,263,265,1865,1972,0.05,20
+158,"PATTIES OF SWEET BREADS, A LA TOULOUSE",,3,3,1900,1900,0,0
+159,"Chicken broth, per cup",,7,7,1900,1915,0.2,0.3
+160,"Terrapin, Maryland",,100,112,1887,1917,0.65,350
+161,Sardines on toast,,62,62,1881,1964,0,0.5
+162,English snipe,,94,94,1882,1907,0.45,60
+163,Charlotte Russe,,822,897,1851,1973,0,30
+164,Tutti frutti,,125,138,1883,1969,0.2,25
+165,Lady fingers,,341,347,1858,1949,0.05,15
+166,Marrow bones on toast,,13,13,1887,1910,0,0
+167,Fresh mushrooms on toast,,58,59,1891,1952,0.4,50
+168,Farm Sausage,,6,6,1900,1955,0,0
+169,Club sandwich,,641,659,1896,2928,0,40
+170,Baked Stuffed Mullet & Sauce Pomard,,2,2,1900,1900,,
+171,Thon marine,,43,43,1896,1957,0.25,0.5
+172,Croquettes of sweetbreads,,7,7,1885,1900,1,1
+173,Teal duck,,125,127,1889,1908,0.6,125
+174,Demi-tasse,,852,887,1892,1979,0,15
+175,Strawberry,,97,102,1865,1973,0,4.25
+176,Oyster Bay asparagus,,271,279,1895,1941,0.15,75
+177,"SMALL TENDERLOIN STEAK, A LA STANLEY",,3,3,1900,1900,0,0
+178,Hoot Mon Mush,,5,5,1901,1901,0,0
+179,Apollinoris,,4,4,1900,1900,0.62,0.62
+180,Vve Cliquot,,4,4,1900,1900,7,7
+181,Chicken broth,,402,413,1881,1971,0,50
+182,Fruits in Season,,136,137,1889,1987,0,3.95
+183,"Salt Codfish, Spanish Style",,3,3,1901,1901,0,0
+184,Oatmeal Porridge,,163,163,1853,1962,0.15,0.15
+185,Mashed Hominy,,5,5,1900,1900,0,0
+186,Plain Omelette,,322,355,1881,1987,0,15
+187,"Canape, Martha",,10,10,1900,1915,0.4,0.65
+190,Puree of beans,,6,6,1900,1918,0.1,0.1
+191,Fried Flounders,,11,11,1900,1901,0.15,15
+192,Strawberry short cake,,278,283,1882,1987,0,125
+193,Fried smelts,,148,148,1858,1960,0,2.5
+194,Fried fish,,112,112,1856,1971,0,1.75
+195,Oxford Sausage,,6,6,1900,1900,1.2,1.2
+196,BUZZARD BAY OYSTERS,,62,62,1898,1907,0.2,0.6
+197,Strained gumbo,,34,35,1895,1969,0.25,30
+198,Bouillon in cup,,5,5,1890,1900,0.1,0.15
+199,Queen olives,,691,708,1865,1965,0,15
+200,Chow chow,,675,686,1865,1965,0,20
+201,"Panfish, Meuniere",,1,1,1900,1900,0,0
+202,German fried potatoes,,134,140,1898,1969,0.05,0.5
+203,Ribs of prime beef,,141,143,1891,1921,0.25,50
+204,"Calf's tongue, caper sauce",,2,2,1900,1900,0,0
+208,Luncheon,,19,18,1900,1993,0.65,0.65
+211,Assorted cakes,,1337,1361,1880,2012,0,30
+212,"Scollops en caisse, Supreme",,2,2,1900,1900,0.4,0.4
+213,Irish stew,,161,192,1864,1955,0,0.5
+214,"Marrow on toast, Bordelaise",,5,5,1900,1900,0,0
+215,Lobster salad,,1513,1568,1858,1995,0,100
+216,Potato salad,,1306,1336,1881,1987,0,25
+217,Chicken salad,,1819,1889,1858,1987,0,100
+218,Spinach with egg,,211,217,1896,1965,0.1,20
+219,Boiled potatoes,,2080,2135,1858,1974,0,20
+220,Baba au rhum,,103,108,1882,1985,0,25
+221,Hot buns,,10,10,1900,1901,0.1,0.1
+222,Tongue,,693,734,1851,1965,0,95
+223,Lemon ice cream,,134,134,1852,1981,0,25
+224,Pickled lambs' tongues,,54,54,1895,1962,0.3,0.5
+225,Blackberry tarts,,4,4,1881,1900,0.15,0.15
+226,Apricots,,242,252,1883,2012,0,0.75
+227,Red currant jam,,5,5,1900,1921,0.15,0.15
+228,Chipped beef,,55,55,1892,1953,0,40
+229,Turkey,,434,445,1851,1987,0,80
+230,Crackers,,965,985,1854,1987,0,10
+231,Chocolate,,1488,1566,1858,1987,0,30
+232,Roast beef,,1224,1334,1851,1987,0,75
+233,Corned beef,,821,879,1862,1985,0,50
+234,Boned capon,,137,137,1892,1917,0.4,60
+235,Lamb,,428,438,1865,1949,0,60
+236,Cumberland ham,,66,66,1896,1938,0,0
+237,Chicken,,678,818,1866,1985,0,125
+238,Fried Eggs,,549,564,1856,1987,0,20
+239,Broiled Ham,,623,636,1,1970,0,25
+240,Roast veal,,69,73,1856,1957,0,20
+241,Rolls,,431,494,1881,1989,0,2.5
+242,Griddle cakes,,128,138,1858,1987,0,3.85
+244,Porterhouse Steak,,260,266,1884,1962,0,5
+245,Pommes de Terre a la Creme,,4,4,1900,1906,0.3,0.3
+246,Tenderloin Steak,,588,611,1858,1980,0.15,80
+247,Sirloin Steak,,912,929,1,1987,0,235
+248,"Filet mignon, Lyonnaise",,2,2,1900,1900,0,0
+249,All Kinds of Pies per cut,,2,2,1900,1900,0.05,0.05
+251,Sandwiches of all Kinds,,2,2,1900,1900,0,0
+252,Small Steak,,383,389,1892,1957,0,75
+253,Hamburger Steak,,319,360,1893,1987,0,20
+254,Veal Chops or Cutlets,,3,3,1900,1900,0.3,0.5
+256,Pork Chops,,408,433,1853,1988,0,40
+257,Ham & Eggs,,24,24,1881,1964,0,4.95
+258,Bacon & Eggs,,26,26,1900,1957,0,4.75
+259,Fried Liver,,29,31,1856,1961,0,10
+260,German Pancake,,206,212,1889,1969,0.15,3.95
+262,Oysters & Clams,,1,1,1900,1900,0,0
+265,Stewed,,49,55,1,1918,0.1,15
+266,Box Stew,,90,95,1892,1939,0.2,40
+270,Hominy,,421,510,1,1969,0.1,0.35
+271,Omelette a l'Oseille,,5,5,1901,1901,0,0
+272,Eggs au Beurre Noir,,45,46,1896,1941,0.19,30
+274,Smelts - Remoulade,,1,1,1901,1901,0,0
+275,Sirloin Steak with Mushrooms,,231,233,1884,1939,0,75
+276,Grilled Ham,,51,53,1892,1989,0,5.5
+277,Calves Liver & Bacon,,18,18,1900,1958,0.4,2.75
+278,Lamb Hash - en Bordure,,1,1,1901,1901,0,0
+279,Mutton Chops - Mashed Potatoes,,1,1,1901,1901,0,0
+280,Corn Cakes,,146,148,1,1953,0.02,0.55
+281,Marmalade,,719,752,1888,1973,0,25
+282,Jam,,248,267,1892,1981,0,1.25
+283,Cocoa,,1636,1704,1865,1987,0,25
+284,Oat Meal,,68,81,1880,1957,0.1,0.4
+286,Scrambled Eggs,,571,586,1853,1987,0,28
+287,Poached Eggs on Toast,,348,352,1892,1968,0,20
+288,Broiled Fresh Mackerel,,120,132,1887,1962,0,2.5
+290,Chicken Liver with Bacon,,2,2,1901,1901,0,0
+291,Minced Veal a la Zingari,,4,4,1900,1901,0,0
+293,Lyonnaise Potatoes,,727,745,1,1989,0,30
+298,Baked Weakfish,,3,3,1900,1901,0.15,0.15
+300,Half and Half Scallops & Oysters,,1,1,1900,1900,0,0
+305,Pork Chops Piquante Sauce,,2,2,1901,1901,0,0
+310,Broiled Kidney with Bacon,,2,2,1901,1901,0,0
+315,Dry Toast,,719,743,1856,1981,0,10
+316,Bunns,,5,5,1900,1901,0,0
+317,Graham Muffins,,60,60,1897,1940,0.1,0.2
+320,Hot Cakes,,32,32,1900,1969,0,0.5
+321,Tea and Coffee,,42,42,1900,1937,0.1,0.1
+322,"Ponche de huevo, sambayon, frolada, con pan",,4,4,1900,1900,0.25,0.25
+323,Smelts Meuniere,,2,2,1900,1901,0,0
+324,Findon Haddock,,31,31,1899,1905,0,0
+326,Paysanne,,4,4,1900,1914,0.25,0.4
+327,Boiled Whiting and Parsley Sauce,,1,1,1900,1900,0,0
+328,Haricot Mutton,,11,11,1900,1910,0,0
+329,Sausages and Mashed Potatoes,,2,2,1900,1915,0.25,0.25
+331,Veal and Ham Pie,,50,50,1900,1971,0,1
+332,Roast Lamb,,202,205,1851,1957,0,80
+333,Fried Flounder,,28,29,1899,1937,0,0
+334,Grillirte Kuken,,16,16,1899,1901,0,0
+335,Fillet Steaks aux Champignon,,1,1,1901,1901,0,0
+336,oatmeal with cream,,104,104,1897,1952,0.1,25
+337,broiled shad,,119,125,1881,1940,0.25,60
+338,Milk stew,,47,51,1894,1947,0.2,40
+339,Boston Stew,,77,84,1900,1939,0.2,0.6
+340,Raw on the Half Shell,,1,1,0,0,0,0
+343,Beef Steak,,58,58,1865,1944,0,1
+344,Saratoga Chips,,415,444,1881,1969,0.05,0.3
+346,Grilled Mutton Chops,,35,35,1892,1910,,
+347,Dried Hash,,23,23,1900,1901,0,0
+348,Smelts,,93,95,1,1998,0.15,50
+349,Tartare Sauce,,16,16,1900,1963,0,0.15
+350,Sausage,,55,57,1894,1987,0,25
+351,Porto-Rico,,1,1,1901,1901,0,0
+352,Buckwheat Cakes,,347,351,1,1962,0,20
+353,Sliced Pineapples,,3,3,1896,1918,0.25,0.25
+354,Soles Normandy,,1,1,1901,1901,0,0
+355,Broiled Salt Mackerel,,131,136,1859,1949,0,0.8
+356,Shad roe and bacon,,64,66,1899,1963,0.2,3.5
+357,Tripe Fricassee,,6,6,1900,1900,0,0
+358,Minced scallops on toast,,5,5,1900,1900,0,0
+359,Steak Pie,,4,4,1901,1917,0.15,0.2
+360,Mutton,,282,328,1865,1917,0.15,60
+364,Boston Box Stew,,7,7,1900,1919,0.3,0.4
+365,Fry,,30,36,1900,1919,0.15,50
+366,Fry with Bacon,,11,11,1900,1919,0.35,0.6
+367,Oyster Omelette,,71,85,1892,1946,0.2,25
+368,Stewed Tripe,,37,38,1856,1943,0.1,10
+369,Pork Sausage,,27,27,1900,1958,0.25,0.35
+370,Corned Beef Hash,,616,675,1,1959,0.1,25
+371,"Broiled Mackerel, Butter Sauce",,2,2,1901,1901,0,0
+372,Mock Turtle,,140,142,1865,1966,0,40
+373,Consomme Benoiton,,1,1,1900,1900,0,0
+375,Puree of Tomatoes,,104,105,1866,1939,0.1,0.4
+376,Filet Steaks aux Champignon,,1,1,1901,1901,0,0
+377,Consomme Plain,,30,30,1887,1937,0.15,25
+378,"Minced Chicken, Creamed Rice",,1,1,1901,1901,0,0
+379,Schmorbraten a la bourgeoise,,2,2,1900,1900,0,0
+380,Kartoffelmus,,48,48,1899,1910,0,0
+381,"Tripe, Spanish Style",,3,3,1901,1901,0,0
+382,Consomme San Remo,,4,4,1900,1962,0.2,0.2
+383,Gebackene Kartoffeln,,154,157,1900,1969,0.75,0.75
+384,Calves’ Liver & Bacon,,1,1,1901,1901,0,0
+385,Eggs to order,,263,264,1891,1973,,
+386,Consomme Maceo,,1,1,1900,1900,0.2,0.2
+387,Puree Mongol,,5,5,1900,1913,0.2,0.35
+388,Broiled Rashers of Ham and Bacon,,6,6,1901,1901,0,0
+389,Consomme Printanier,,47,52,1891,1959,0,0.4
+391,Chicken Mulligatawny,,38,41,1897,2001,0.2,0.4
+392,Split Rolls,,21,21,1900,1901,0,0
+393,Blue Point Stew,,3,3,1900,1917,0.35,0.35
+394,French bread,,291,293,1882,1970,0.05,0.15
+395,Corn bread,,270,272,1853,1941,0,10
+396,Crumb Fry,,8,10,1900,1919,0.3,0.45
+397,English Beef,,12,12,1900,1913,0.1,0.4
+398,Beef Stew,,83,93,1899,1980,0,15
+399,Tomato Soup,,317,352,1852,1974,0,10
+400,Blue Point Fry,,2,2,1901,1917,0.35,0.4
+401,Filet of sole a la Horly,,4,4,1900,1913,0.6,0.8
+402,Diamond back terrapin,,6,6,1897,1905,2,2
+403,Fried Plaice - Meuniere,,1,1,1901,1901,0,0
+405,Sausage & Mashed Potatoes,,3,3,1900,1901,0,0
+406,"Fried Jew Fish, Sauce Tartare",,1,1,1901,1901,0,0
+407,Fruit in Season,,193,202,1890,1987,0,20
+408,GREEN PEAS,,1342,1379,1858,1985,0,75
+409,Fried country sausage and buckwheat cakes,,3,3,1900,1900,0,0
+410,Stewed california prunes,,8,8,1900,1948,0.15,0.3
+411,Ham omelette,,147,153,1891,1985,0,15
+412,Fried hominy,,190,190,1881,1967,0.1,0.25
+413,Broiled bluefish,,218,225,1880,1963,0.2,60
+414,"Egg, to order",,2,2,1900,1900,0,0
+415,Diamond stew,,23,23,1900,1901,0,0
+417,Boiled or Broiled Salt Mackerel,,13,13,1900,1917,0.25,40
+418,Whitefish,,44,45,1900,1917,0.3,0.75
+419,"Shad, Maitre d'Hotel",,7,7,1900,1901,0.5,0.5
+420,Codfish in Cream,,89,90,1,1941,0,0.6
+421,Fried Scollops,,36,36,1865,1917,0.25,0.85
+422,Breakfast Bacon,,188,191,1891,1969,0.15,0.75
+423,Calf's Liver and Bacon,,362,374,1,1967,0,40
+424,Pork Spare Ribs,,5,5,1900,1900,0,0
+425,English Mutton Chops,,82,82,1889,1958,0.25,50
+426,Broiled Spring Chicken,,226,231,1859,1958,0.1,100
+427,Sirloin or Tenderloin Steak,,3,3,1900,1901,,
+429,"Corned Beef Hash, Browned",,59,61,1898,1940,0.15,30
+430,"Veal Cutlets, Breaded, Tomato Sauce",,31,31,1882,1913,0.2,1
+431,"Stewed Honeycomb Tripe, Lyonnaise",,3,3,1900,1900,0,0
+432,"Frizzled Beef, in Cream",,6,6,1900,1901,0.3,0.4
+433,Eggs as Ordered,,82,83,1898,1949,,
+437,Fried Indian Mush or Hominy,,1,1,1900,1900,0,0
+439,French Fried,,63,65,1893,1973,0,30
+440,Lyonnaise,,103,105,1894,1967,0,35
+441,Stewed in Cream,,26,27,1900,2928,0.15,40
+442,Saute,,29,30,1900,1961,0.15,15
+443,"Rye, Graham or Boston Brown Bread",,1,1,1900,1900,0,0
+444,Shredded Wheat Biscuits,,33,33,1899,1921,0,0.3
+445,Vienna Rolls,,143,144,1891,1954,0.03,0.15
+446,Papovers,,3,3,1900,1900,0,0
+447,"wheat or Buckwheat Cakes, with Maple Syrup",,1,1,1900,1900,0,0
+448,Corn Meal Mush,,29,29,1892,1918,0.1,0.1
+449,Boiled,,53,54,1851,1967,0,25
+450,Scotch grouse en casserole,,3,3,1900,1900,0,0
+451,Soup á l'écossaise,,3,3,1900,1900,0,0
+453,Broiled Blue Fish,,44,49,1865,1957,0.2,3.75
+455,Chicken Liver on Toast with Bacon,,3,3,1901,1901,0,0
+458,"PUNCH, REPUBLICAN",,3,3,1900,1900,0,0
+459,Puff over,,1,1,1900,1900,0.1,0.1
+460,Passion Fruit,,10,10,1901,1901,0,0
+461,Kippered Herrings,,125,125,1899,1955,0,0.5
+462,Curried Pork and Rice,,17,17,1900,1901,0,0
+463,Stewed Tripe with Cream sauce,,1,1,1901,1901,0,0
+466,"Eggs, boiled",,168,172,1880,1970,0.1,20
+467,Fillets of Beef with Mushrooms,,1,1,1901,1901,0,0
+468,Consomme Macaroni,,22,22,1892,1907,0.2,0.25
+470,Hard Boiled Egg,,11,11,1900,1948,0.05,0.75
+471,Cream Cheese,,971,1056,1887,1980,0,25
+472,Broiled Mackerel - Maitre d'Hotel,,2,2,1901,1901,0,0
+473,Sirloin Steak -- Fried Onions,,1,1,1901,1901,0,0
+474,Devilled Chicken,,3,3,1900,1901,0,0
+475,Lamb Hash en Bordure,,3,3,1901,1901,0,0
+478,Shirred Eggs,,342,347,1858,1969,0,19
+479,Broiled Salmon Trout,,9,9,1891,1957,2,2
+482,Grilled Mutton Kidneys & Bacon,,1,1,1901,1901,0,0
+486,Apfel,,86,86,1899,1972,0,0
+487,Maisgries,,65,65,1899,1910,0,0
+488,Snowflakes,,19,19,1900,1901,0,0
+489,Gebratene Seezunge,,28,28,1899,1910,0,0
+490,"Fried Halibut, Sauce Tartare",,3,3,1893,1901,0.4,0.4
+491,Yarmouth Bloaters,,85,85,1892,1958,0.2,0.75
+493,Fillet Steads with Mushrooms,,1,1,1901,1901,0,0
+495,"Curried Prawns and Rice, Bombay Duck",,2,2,1901,1901,0,0
+496,"Lamb Chops, Broiled Plain",,2,2,1901,1901,0,0
+497,Whiting - Meuniere,,3,3,1901,1901,0,0
+498,Broiled Rashers of Bacon with Fried Bananas,,2,2,1901,1901,0,0
+499,Sirloin Steak - Fried Onions,,3,3,1901,1901,0,0
+500,Lambs' Liver Saute,,3,3,1901,1901,0,0
+501,Tripe Fritters,,5,5,1901,1910,0,0
+502,Jambon Grille,,9,9,1900,1937,0,0.5
+503,Mutton Chops - Saute Potatoes,,2,2,1901,1901,0,0
+504,Calfs Liver + Bacon,,1,1,1901,1901,0,0
+505,Cold Smoked Tongue and Ham,,2,2,1901,1901,0,0
+507,Fried & Boiled Potatoes,,8,8,1899,1901,,
+508,Sirloin Steaks aux Cepes,,1,1,1901,1901,0,0
+509,Beefsteaks with Horseradish,,1,1,1901,1901,0,0
+510,Dry and buttered Toast,,13,13,1900,1935,0,0
+511,English Muffins,,130,136,1,1987,0,0.3
+512,"Salt Cod, Egg Sauce",,21,21,1900,1907,0,0
+513,Rice Cakes,,218,224,1,1949,0.05,20
+514,Honey in the Comb,,50,50,1900,1917,0.2,0.4
+516,Ris de Veau aux Epinards,,4,4,1900,1906,0,0
+518,Quail on Toast,,43,43,1889,1958,0.4,0.6
+519,"Broiled Green Bluefish, Drawn Butter",,4,4,1901,1901,0.2,0.2
+520,Roast Leg of Mutton & Black Currant,,1,1,1900,1900,0,0
+523,Frizzled Breakfast Bacon (to order),,1,1,1901,1901,0,0
+525,French Fried Potatoes with Dinner Orders,,1,1,1901,1901,0.05,0.05
+526,Beefsteak and Onions,,9,9,1900,1905,0.5,0.5
+527,Roast (Vancouver) Suckling Pig & Bread Sauce,,2,2,1900,1900,,
+529,Saute of Kidney,,2,2,1901,1901,0,0
+530,"Knuckle of Veal, Bacon & Parsely Sauce",,1,1,1900,1900,0,0
+531,"Coffee, Tea or Cocoa",,1,1,1901,1901,0.05,0.05
+532,Scrambled Eggs and Bacon,,8,8,1900,1945,0.4,25
+533,liver and bacon,,140,147,1889,1962,0.1,15
+534,Fillet de Boeuf a la Parisienne,,2,2,1900,1900,,
+535,Fried Chicken a la Maryland,,28,28,1898,1958,0.2,5.6
+536,Fried sole,,65,65,1899,1961,0,0.4
+537,Salt mackerel,,327,333,1859,1945,0,30
+538,Bouchees aux Macaroni,,2,2,1900,1900,,
+539,Cold Ham with Potato Salad,,36,36,1900,1955,0,1.75
+540,mutton chops with potato chips,,2,2,1901,1901,0,0
+541,Pork Sausage and Lyonaisse Potatoes,,1,1,1901,1901,0,0
+542,"Tenderloin of pork, Robert sauce",,2,2,1900,1900,0,0
+543,Roast Goose & Apple Sauce,,3,3,1900,1900,,
+544,Oyster Stew,,431,455,1882,1982,0,50
+545,Hot Breads,,17,17,1901,1954,0,0
+548,Pork Sausage and Lyonnaise Potatoes,,9,9,1901,1901,0,0
+549,"Baked Apple Dumpling, Hard Sauce",,15,15,1900,1953,0.1,0.3
+550,Potato a la Maitre d'Hotel,,4,4,1892,1901,0.15,0.15
+551,Cracked Wheat with Fresh Milk,,5,5,1901,1901,0,0
+552,Boiled Cabbage,,21,22,1900,1962,0.05,0.35
+553,Strawberries and Cream,,340,359,1880,1969,0,50
+554,Chicken Liver with Mushrooms,,12,12,1900,1914,0.3,0.6
+555,Mashed Pumpkins,,3,3,1900,1900,,
+556,Roast in shell,,4,4,1900,1918,0.5,40
+557,"Bread Pudding, Hard Sauce",,5,5,1901,1914,0.05,0.1
+558,Indo Curry & Rice,,2,2,1900,1900,,
+559,Steamed Apple Pudding & Hard Sauce,,2,2,1900,1900,,
+561,Rice or Tapioca Pudding,,1,1,1901,1901,0.05,0.05
+562,Fruit Pie,,36,36,1900,1981,0,1.2
+563,Chocolate Pudding with Cream,,16,17,1901,1985,0.05,0.4
+564,Scotch Sandwiches,,2,2,1900,1900,,
+565,Chocolate Cream & Sauce,,2,2,1900,1900,,
+566,Corn Starch Pudding with Cream,,4,4,1901,1901,0,0
+567,Swiss Rolls,,7,7,1900,1900,,
+568,Cold Ham,,593,599,1854,1972,0,45
+569,Cup Custard,,884,952,1854,2928,0,25
+570,Codfish Cakes,,198,209,1859,1949,0,30
+571,Jam and Marmalade,,10,10,1900,1910,,
+572,Lettuce,,921,974,1859,1988,0,35
+573,Cum-quats,,3,3,1900,1900,,
+574,Raisin and Pound Cake,,3,3,1901,1901,0,0
+575,Orange,,862,971,1,1975,0,25
+576,Fillet Steak and Lamb Chops to Order,,1,1,1901,1901,,
+577,Calf's Liver Saute,,8,8,1900,1952,0.4,2.25
+578,Brazil Nuts,,28,28,1852,1948,0.15,0.3
+579,Almonds & Raisins,,6,6,1882,1901,0.25,0.25
+580,Cheshire Cheese,,91,91,1865,1974,0.15,0.35
+581,Stilton Cheese,,286,323,1881,1987,0,10
+582,Broiled Lambs Kidney,,3,3,1901,1901,0,0
+583,MacLaren Cheese,,16,16,1896,1900,,
+584,China & Indian Teas,,9,9,1900,1900,,
+585,Stewed Tripe Spanish,,17,17,1900,1901,0,0
+587,Eggs Bacon and Ham to Order,,2,2,1901,1901,,
+588,Breakfast Jem,,2,2,1901,1901,0,0
+589,Breakfast Rolls,,41,45,1899,1967,0,0.3
+590,Germea,,20,20,1899,1901,0,0
+591,Butter Cakes with Maple Syrup,,1,1,1901,1901,0,0
+594,Bananas & Apples,,2,2,1901,1901,0,0
+595,Hot Rolls,,382,406,1853,1983,0.05,0.25
+596,Tea Coffee and Cocoa,,2,2,1901,1901,,
+597,"Kraftsuppe, Prinzessin Art",,2,2,1900,1900,0,0
+599,Boiled Mackerel,,9,9,1859,1906,0.15,0.15
+600,Sonoma,,1,1,1901,1901,0,0
+601,"Gekochter Steinbutt, Granatsauce, zerlassene Butter",,2,2,1900,1900,0,0
+602,Findon Haddocks,,4,4,1901,1901,0,0
+603,Cromesquis von Schinken,,3,3,1899,1900,0,0
+604,Curried Pork & Rice,,11,11,1900,1901,0,0
+605,Fillet Steaks and Mushrooms,,2,2,1901,1901,0,0
+607,"Blumenkohl, hollandische Sauce",,4,4,1900,1906,0,0
+609,"Cotelettes de Veau, Sauce Tomate",,3,3,1901,1901,,
+610,Gratinierter Eierkuchen nach Mornay,,2,2,1900,1900,0,0
+614,"Entenbraten, Bordeaux Sauce",,2,2,1900,1900,0,0
+615,Boiled Fried potatoes,,5,5,1900,1906,0.05,0.1
+616,"Pork Sausages, Snowflake Potatoes",,3,3,1901,1901,0,0
+619,Lambs' Liver with Bacon,,2,2,1901,1901,0,0
+621,Tea + Coffee,,1,1,1901,1901,0,0
+622,Mutton Chops & Potato Chips,,4,4,1901,1901,0,0
+623,Citronen-Auflauf,,4,4,1899,1905,0,0
+625,Cape Horn Hash,,2,2,1901,1901,0,0
+627,A. A. Oats with Fresh Milk,,1,1,1901,1901,,
+628,Fried Whiting,,26,26,1900,1917,0,45
+630,Pikelets,,3,3,1901,1901,0,0
+632,Flannel Cakes,,28,28,1889,1937,0.1,0.3
+634,Saute of Sheeps Kidney,,2,2,1901,1901,0,0
+635,"Smoked Schnapper, Butter Sauce",,1,1,1901,1901,0,0
+636,Fillet Steak Fried Potatoes,,1,1,1901,1901,0,0
+637,&,,4,4,1901,1901,0,0
+638,Finnon Haddock Butter Sauce,,1,1,1901,1901,0,0
+640,Mutton Stew,,24,24,1899,1906,0.1,0.15
+641,Broiled Lamb Chops,,76,79,1891,1967,0,5.25
+642,"Eggs, Bacon and Ham to Order",,2,2,1901,1901,,
+644,Wheat Cakes,,200,207,1,1959,0,15
+645,N.Y. Public Library,,2,2,1895,1907,0,0
+646,Beef Steak & onions,,10,10,1900,1901,0,0
+647,Fried Bananas,,57,57,1886,1975,0.25,0.4
+648,Egg to Order,,17,17,1900,1948,,
+649,Beef Steak and Champignons,,1,1,1900,1900,0,0
+650,Boiled potato,,74,74,1893,1965,0.05,0.7
+651,Currant Buns,,54,54,1896,1965,0.05,0.1
+653,Waffle,,28,28,1900,1969,0,0.8
+654,Jam & Marmalade,,3,3,1900,1900,,
+655,Broiled or Fried Spring Chicken,,4,4,1900,1921,0.65,250
+656,Fruit.,,37,38,1889,1901,,
+659,Sirloin Steaks with Onions,,1,1,1901,1901,0,0
+660,Dipped Toast,,201,206,1859,1958,0,15
+661,Tripe a la Bordelaise,,4,4,1900,1901,0,0
+662,"Extra Order of Meat, Fish or Eggs, 10c.",,1,1,1900,1900,0.1,0.1
+663,Curried Chicken with Rice,,152,157,1900,2928,0,3
+667,Mutton Chops,,627,638,1851,1958,0,60
+668,Potato Chips,,24,24,1900,1987,0.15,0.75
+670,Curried Veal and Rice,,52,52,1900,1901,0,0
+671,Broiled Rashers of Bacon,,11,11,1901,1901,0,0
+672,Cold: Ox Tongue,,11,11,1900,1910,0,0
+674,"Tripe, Stewed in Cream",,3,3,1901,1906,0,0
+675,Egg Muffins,,26,26,1900,1907,0.1,0.15
+676,Devilled Mutton Kidneys and Bacon,,1,1,1901,1901,0,0
+678,Coffee Cake,,129,135,1893,1987,0.05,5
+680,"Fried Sausages, Mashed Potatoes",,2,2,1901,1906,0,0
+682,Devilled Kidney,,8,8,1865,1905,0.5,0.5
+684,Pettijohn,,10,10,1901,1949,0.2,0.2
+685,Fried Ham & Eggs,,1,1,1901,1901,0,0
+687,Boiled Cracked Wheat,,4,4,1901,1901,0,0
+688,Spanish Omelettes,,5,5,1894,1938,0.5,0.55
+689,Calves Liver and Onions,,8,8,1900,1917,0.15,0.4
+690,Mutton Chops (to order),,2,2,1901,1901,0,0
+691,Lamb Chops,,614,624,1,1988,0,75
+692,Jacket Potatoes,,87,88,1898,1974,0,0
+695,Onions,,159,161,1852,1987,0,0.5
+696,Boiled Corn Meal with Cream,,2,2,1901,1901,0,0
+697,Maple Syrup,,146,146,1896,1962,0,0.1
+698,Curried Shrimps and Rice,,15,15,1900,1901,0,0
+699,Fried Fresh Fish,,71,71,1897,1943,0.35,0.8
+700,Honey,,304,307,1881,1973,0,25
+701,Fillet Steaks with Mushrooms,,1,1,1901,1901,0,0
+702,Porterhouse Steak and Lamb Chops,,3,3,1901,1901,0,0
+703,Tongues and Sounds,,6,6,1900,1901,0,0
+707,Cornmeal Mush,,10,10,1898,1901,0,0
+708,Breakfast Delight,,11,11,1901,1901,0,0
+710,Fresh Comb Honey,,4,4,1901,1901,0,0
+713,Broiled Boned Smelts,,1,1,1901,1901,0,0
+714,Blue Points on the Shell,,15,15,1899,1900,0,0
+715,Broiled Lobster,,108,116,1887,1961,0,60
+718,Fried Country Sausages and Lima Beans,,2,2,1900,1900,0,0
+719,Oxtail Ragout and Vegetable,,1,1,1900,1900,0,0
+721,Oyster Pan Roast on Toast,,5,5,1900,1901,0,0
+722,Mutton Chops Bratonne,,1,1,1901,1901,0,0
+723,Broiled Chicken with Petit Pois,,1,1,1901,1901,0,0
+724,Roast Leg of English Mutton,,4,4,1900,1900,0.35,0.35
+725,Lynnhavens,,354,423,1896,2928,0,50
+726,Hamburger Steak and Onions,,6,6,1900,1918,0.15,0.2
+727,Pork Sausages,,17,17,1901,1972,0,0
+728,Veal Cutlets Breaded,,13,13,1895,1907,0.5,0.5
+730,Little Neck Clams on the Shell,,11,11,1895,1900,0.25,0.25
+731,Frankfurter Sausages and Sauerkraut,,6,6,1900,1900,0,0
+732,Cape Cods,,455,499,1896,1968,0.2,45
+733,Curried Prawns and Rice with Bombay Duck,,1,1,1901,1901,0,0
+734,Hamburg Steak with Fried Onions,,8,8,1900,1921,0.15,0.75
+735,Mashed Turnips,,369,381,1856,1955,0,25
+736,Fried Liver & Bacon,,4,4,1900,1907,0.15,0.15
+737,Potatoes,,303,336,1856,2928,0,15
+738,Potatoes Saute,,101,105,1881,1973,0.1,0.4
+739,Cherrystones,,519,524,1891,2928,0,45
+740,Fried and broiled Ham,,4,4,1901,1901,,
+741,Eclairs,,138,155,1898,1987,0,25
+743,Pies,,130,137,1887,1987,0.05,1.25
+744,Potatoes boiled and Mashed,,8,8,1900,1901,,
+745,Baked Shad Wine Sauce,,3,3,1900,1900,0.35,0.35
+747,Hot Biscuits,,40,42,1898,1959,0,0.15
+748,Bloaters,,40,40,1900,1970,0.5,0.5
+750,Broiled Lamb Kidneys and Bacon,,9,9,1900,1919,0.25,0.5
+751,Toast,,430,494,1858,1989,0,1.05
+752,Frogs' legs in every style,,2,2,1900,1900,0,0
+754,Jelly omelette,,94,101,1900,1985,0,25
+756,Broiled Lamb Chops and Bacon,,2,2,1900,1900,0.45,0.45
+759,Sauterne 1ere,,1,1,1900,1900,1.5,1.5
+760,St. Julien Superieur,,7,8,1886,1937,0.5,3.5
+761,Pontet Canet,,365,400,1859,1955,0,200
+762,Haut Sauternes,,263,290,1865,1973,0,150
+763,Sherry,,397,420,1866,1990,0,3.5
+764,Laubenheimer,,257,278,1881,1955,0,100
+765,Smoked Tongue,,122,122,1859,1963,0.2,2.65
+766,Niersteiner,,340,364,1864,1983,0,100
+767,Hochheimer,,238,252,1852,1918,0,150
+769,Mumm's Ex. Dry,,2,2,1891,1900,4,4
+770,Pommery Sec,,265,269,1881,1918,0,400
+771,Cliquot Sec,,2,2,1889,1891,,
+772,"Moet & Chandon, White Seal",,268,272,1884,1949,1.4,350
+773,"Moet & Chandon, Brut",,10,10,1892,1914,1.75,5
+774,Irroy Brut,,25,25,1892,1906,1.75,4
+776,Apollinaris,,1366,1474,1,1988,0,40.25
+777,Johannis,,383,478,1,1918,0,40.25
+778,Blue Point Oysters,,473,512,1887,1987,0,40
+779,Consomme Daumont,,7,7,1898,1914,0.25,0.25
+781,Bisque of Crawfish,,18,18,1889,1924,0.25,0.45
+782,Timbales Warsaw,,1,1,1900,1900,0,0
+783,Fillet of Beef with Fresh Mushrooms,,1,1,1900,1900,0,0
+784,Trevise Tomatoes,,2,2,1899,1900,0,0
+785,Poularde Stuffed with Chestnuts,,1,1,1900,1900,0,0
+786,French Peas with Butter,,1,1,1900,1900,0,0
+787,"New Asparagus, Cream Sauce",,4,4,1900,1916,0.15,0.15
+788,Sherbert Roman,,1,1,1900,1900,0,0
+789,Red Head Duck,,90,91,1882,1907,0.6,250
+790,Celery Salad,,412,426,1882,1973,0,60
+791,Fancy Ice Cream,,161,161,1887,1953,0.25,0.5
+793,Broiled Shad Maitre d'Hotel,,3,3,1900,1913,,
+794,Cakes,,376,383,1887,1988,0,2.75
+795,Cheese,,1559,1596,1,1990,0,40
+796,Mutton chops fried potatoes,,2,2,1901,1901,0,0
+797,"ROAST SQUAB ON TOAST, WITH APRICOTS",,3,3,1900,1900,0,0
+798,"ASPARAGUS, BROWN BUTTER",,4,4,1899,1900,0,0
+799,Beef Steak & fried onions,,8,8,1901,1901,0,0
+800,BAKED SWEET POTATOES,,312,313,1852,1965,0.05,30
+801,Smoked Snapper,,9,9,1901,1901,0,0
+802,Fillets of Steak with Champignons,,1,1,1901,1901,0,0
+803,Curried Lamb and Rice,,24,24,1900,1901,0,0
+804,Broiled Chicken on Toast,,37,37,1900,1915,0.5,1
+805,Curried Shrimps & Rice,,3,3,1901,1901,0,0
+806,"Stewed Tripe, Cream sauce",,2,2,1901,1901,0,0
+807,Mutton Chops with Fried Potatoes,,2,2,1901,1901,0,0
+808,Kaffee,,828,867,1888,2005,0,0
+809,Obst.,,12,12,1899,1901,,
+810,Hamburg Steak with Onions,,20,20,1900,1941,0.35,0.75
+811,Nachtisch.,,4,4,1900,1901,,
+812,Fried Gar fish,,1,1,1901,1901,0,0
+814,Batter Cakes,,8,8,1900,1901,,
+816,Oat Meal Porridge,,2,2,1901,1901,0,0
+817,Eels,,19,19,1880,1914,0.15,0.5
+818,Pork Cutlets,,26,30,1901,1910,,
+820,Hamburg Steak Spanish Sauce,,2,2,1901,1901,0,0
+821,Lemon Soda,,188,191,1890,1953,0.05,10
+822,Tea & Coffee,,11,11,1900,1901,,
+823,Clysmic,,166,168,1892,1928,0.15,40
+824,Russischer Borscht,,2,2,1900,1900,0,0
+825,"Rice, Semolina",,1,0,1900,1900,0,0
+826,Pork Cutlet,,3,3,1900,1901,0,0
+827,Buffalo Lithia Water,,14,14,1900,1907,0.05,0.6
+828,1/4 chicken,,5,5,1900,1944,0,1
+829,Congress Water,,332,338,1858,1915,0,25
+830,Roast Duck,,85,85,1892,1993,0,15.25
+831,Giblets,,2,2,1900,1900,0,0
+832,Hunyadi,,29,30,1891,1933,0.1,40
+834,Cabbage,,127,134,1852,1980,0,20
+835,Cornbread,,24,24,1900,1901,,
+836,Russet Cider,,35,36,1881,1915,0.05,0.75
+837,Salad,,520,551,1854,2001,0,75
+838,Cucumber,,326,360,1887,2928,0,50
+839,Londonderry Lithia,,92,92,1895,1913,0.15,40
+840,Lockchen Pudding,,2,2,1900,1900,0,0
+841,Vienna Pudding,,5,5,1900,1901,0.2,0.2
+842,Semolina Pudding,,17,17,1900,1938,,
+844,Liver,,21,21,1892,1971,0,0.35
+845,Goulash,,10,10,1899,1943,0,0
+846,Klops,,2,2,1900,1900,0,0
+849,Sally Lunn Buns,,7,7,1900,1900,0,0
+850,Minced Chicken with Creamed Rice,,1,1,1901,1901,0,0
+851,Lockchen Ferfel,,1,1,1900,1900,0,0
+852,"Veal Chops, Breaded, Sauce Tomate",,1,1,1901,1901,0,0
+854,Steak,,32,34,1884,1961,0,30
+855,Coffee and Tea,,11,11,1900,1976,,
+856,Wiener Schnitzel,,88,95,1899,1992,0,4
+857,"Lambs' Liver, Fried with Onions",,1,1,1901,1901,0,0
+858,Calves' Liver and Bacon,,15,15,1900,1912,0.15,0.7
+859,potage a la chatelaine,,2,2,1900,1900,0,0
+860,"Fillet Steaks, Spanish Style",,1,1,1901,1901,0,0
+861,Eggs au Soleil,,1,1,1901,1901,0,0
+862,Stewed Beef,,9,9,1889,1901,0.1,0.15
+863,Soup Meat,,2,2,1900,1900,0,0
+865,Pickled Mackerel,,6,6,1892,1939,0,0
+866,Corned Beef and Cabbage,,256,260,1856,1961,0.1,85
+867,Oyster Patties,,174,179,1865,1938,0.1,50
+868,Fillet of Beef a la Financiere,,2,2,1900,1900,0,0
+869,Curried Mutton and Rice,,10,10,1900,1901,0,0
+870,Beef and Brown Potatoes,,17,17,1900,1900,0,0
+871,Pork and Apple Sauce,,13,13,1900,1900,0,0
+872,Cauliflower,,886,942,1865,1987,0,70
+873,String Beans,,1489,1571,1858,2928,0,60
+874,Chicken Liver on Toast,,4,4,1900,1901,0,0
+875,Boiled and Mashed Potatoes,,61,62,1891,1912,0.05,0.15
+877,"Rice Custard, Cream Sauce",,4,4,1900,1900,0,0
+878,Blackberry Pie,,118,121,1854,1958,0.05,5
+880,Italian Cream,,22,22,1864,1948,0,0
+882,Crackers and Cheese,,104,107,1881,1946,0,0.15
+884,Roast Phil'a Chicken,,2,2,1900,1900,0,0
+885,Red Herrings,,1,1,1901,1901,0,0
+886,"Turtle Steaks, Perigueux",,1,1,1901,1901,0,0
+887,Broiled Mutton Chops,,52,52,1859,1910,,
+888,Chicken Livers on Toast,,5,5,1900,1965,0.25,1.6
+889,Hamburger Steaks,,5,5,1901,1905,0.2,0.2
+890,Broiled Cumberland Ham (to order),,1,1,1901,1901,0,0
+891,"Veal Cutlets, Tomato Sauce",,57,57,1858,1910,0.25,35
+892,Stewed rhubarb,,246,264,1889,1973,0,35
+893,Frizzled Bacon (to order),,1,1,1901,1901,0,0
+894,Fried Potatoes,,566,580,1856,1987,0,15
+895,"Stewed Tripe, White Sauce",,1,1,1901,1901,0,0
+896,Stewed French prunes,,27,27,1892,1943,0.1,5
+897,Florida oranges,,16,16,1884,1907,0.15,0.3
+898,Pork Sausages with Fried Apples,,1,1,1901,1901,0,0
+899,Sliced bananas with cream,,118,122,1900,1961,0,10
+900,Hot corn muffins,,10,10,1900,1946,0,0
+901,Schottische Suppe,,6,6,1900,1901,0,0
+902,Pork Sausage with White Wine,,1,1,1901,1901,0,0
+903,"Rindsmittelrippe, Bercy Art",,3,3,1900,1900,0,0
+904,Buttered toast,,511,525,1856,1969,0,15
+905,Shrewsburys,,15,15,1895,1912,0.25,0.7
+906,"Succotash, amerikanische Art",,2,2,1900,1900,0,0
+907,Milk toast,,675,690,1856,1965,0,30
+908,Puterbraten,,49,49,1899,1907,0,0
+909,Cream toast,,485,494,1865,1961,0,30
+910,Boston cream toast,,11,11,1900,1945,0,0
+911,Cotuits,,300,345,1900,2928,0,45
+912,Bratapfel mit Schlagsahne,,13,13,1899,1900,,
+913,Codfish Balls,,44,44,1856,1910,0.15,0.6
+914,Aprikosen- & Pflaumen-Kompott,,1,1,1899,1899,0,0
+915,Tomatoes,,454,460,1858,1987,0,15
+916,Reistortchen,,3,3,1900,1900,0,0
+917,Entre-cote a la Bercy,,3,3,1900,1900,0,0
+918,Succotash a l'americaine,,3,3,1900,1900,0,0
+919,Roast Turkey,,247,251,1851,1963,0,3.55
+920,Baked Potatoes,,1294,1327,1859,2012,0,20
+921,Baked apples & whipped cream,,15,15,1899,1910,0,0
+922,Stewed apricots & prunes,,7,7,1899,1900,0,0
+923,Rice tartlets,,8,8,1900,1900,0,0
+925,Salzmakrele,,57,57,1899,1907,,
+926,Beefsteak,,230,306,1,1958,0,15
+927,Geback. Labskaus,,2,2,1899,1900,0,0
+928,Gekochter Reis,,64,64,1900,1935,,
+929,Corned beef hash browned,,37,37,1898,1921,0.15,1
+930,Sardellen,,188,217,1896,1961,0,15
+931,Anchovis,,172,173,1899,1915,0,0.2
+932,Delikatess Haringe,,35,35,1899,1901,,
+933,Aal in Gallert,,64,64,1899,1910,0,0
+934,Gerauchter Rheinlachs,,1,1,1900,1900,0,0
+935,Mutton Chops & Chips,,9,9,1900,1906,,
+936,Rotwurst,,48,48,1899,1910,0,0
+937,Sulze,,92,92,1899,1907,,
+938,Leberwurst,,186,187,1899,1965,0,0.5
+939,Nagelholz,,91,91,1899,1910,0,0
+940,Gekochter Yorkshire Schinken,,62,63,1899,1910,,
+941,"Beef steak, Onion Sauce",,2,2,1900,1900,0,0
+942,Piccalilly,,75,75,1899,1910,0,0
+943,Salzgurken,,53,53,1899,1912,0,0
+944,Radieschen,,223,226,1899,1969,0,0
+947,Sardelles,,80,80,1897,1939,0.3,0.65
+948,Fried Tom Cod,,12,12,1900,1918,0.3,0.3
+949,Heat Roll,,1,1,1900,1900,0,0
+950,Pickled Herrings,,65,66,1899,1950,0.4,0.4
+951,Eel in Jelly,,89,89,1899,1954,0,0
+952,Brawn,,158,158,1892,1910,0,0
+953,Black Sausage,,46,46,1899,1910,0,0
+954,Liver-sausage,,21,21,1899,1901,0,0
+955,Smoked beef,,244,247,1888,1965,0.2,0.5
+958,Smoked Rhine salmon,,60,60,1899,1910,0,0
+959,Boiled Yorkshire ham,,70,70,1899,1910,0,0
+960,Stewed Pineapple and Rice,,1,1,1900,1900,0,0
+961,Pickled cucumbers,,13,13,1899,1910,0,0
+964,Stewed Prunes and Rice,,9,9,1898,1910,0,0
+965,Plum Tart,,13,13,1900,1985,0.1,6
+966,T. Hennessy & Co's Cognac,,1,1,1900,1900,0,0
+967,Oysters a la Poulette,,112,113,1881,1957,0.3,50
+968,Vermicelli Pudding,,29,29,1900,1933,0.2,25
+969,Sirloin Steaks with Mushrooms,,3,3,1901,1901,0,0
+970,"Cabinet Whiskey, 15 years old",,1,1,1900,1900,0,0
+971,"Pork Chops, Breaded Sauce Diable",,1,1,1901,1901,0,0
+972,Old Pepper Whiskey,,8,8,1900,1901,0.15,2
+973,Sausages,,60,61,1853,1967,0,3.25
+974,Madeira Cake,,2,2,1900,1973,0,0
+975,Fine Old Rye,,1,1,1900,1900,0,0
+977,Rock and Rye,,33,33,1900,1965,0.1,2
+978,Indian Muffins,,4,4,1900,1905,0,0
+979,Old Crow Whiskey,,23,23,1884,1918,0.1,2.5
+980,"Tea, Coffee and Chocolate",,1,1,1900,1900,0,0
+981,Mount Vernon Whiskey,,19,19,1900,1950,0.1,2.5
+982,Prünellen- & Pflaumen-Kompott,,4,4,1899,1900,0,0
+983,Applejack,,8,8,1900,1969,0.3,0.6
+985,Hominy Fritters,,25,26,1893,1969,0.2,0.2
+986,Fine Holland Gin,,2,2,1900,1900,0,0
+987,Beef Steak and Onions,,10,10,1900,1901,0.4,0.4
+988,Old Tom Gin,,155,156,1873,1941,0,150
+989,Raspberries,,182,235,1865,1941,0,35
+990,Home Made Wild Cherry Bitters,,1,1,1900,1900,0,0
+991,"Kidney Saute, Madeira",,1,1,1901,1901,0,0
+992,Blackberry Brandy,,133,134,1882,1985,0,3
+993,Vermouth,,310,317,1858,1989,0,20
+994,Hohlhippen,,10,10,1899,1901,0,0
+995,Hostetter Bitters,,5,5,1900,1900,0.15,0.15
+996,Booker's Bitters,,1,1,1900,1900,0,0
+998,Sirloin of beef with stewed tomatoes,,3,3,1901,1901,0.15,0.15
+999,Boonerkamp Bitters,,1,1,1900,1900,0,0
+1000,Pork Chop,,71,72,1,1974,0,30
