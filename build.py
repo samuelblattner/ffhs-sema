@@ -1,12 +1,11 @@
-from tensorflow.python.keras import Input
-from tensorflow.python.keras.engine.training import Model
-from tensorflow.python.keras.layers import Embedding, LSTM, Dense
+from tensorflow.python.keras.engine.sequential import Sequential
+from tensorflow.python.keras.layers import LSTM, Dense, CuDNNLSTM
 from tensorflow.python.keras.preprocessing.text import Tokenizer
 
 from loader import Loader
 
 
-def build_model(use_gpu: bool = False, max_num_chars: int = None):
+def build_model(use_gpu: bool = False, max_num_chars: int = None, num_units: int = 64):
     """
     Builds the RNN-Model for character prediction.
 
@@ -17,58 +16,43 @@ def build_model(use_gpu: bool = False, max_num_chars: int = None):
     loader = Loader(1000, 0, 0)
     tokenizer = Tokenizer(
         filters='',
-        split='°'
+        split='°',
+        lower=False
     )
 
     lengths = {}
 
-    if max_num_chars is None:
+    update_max_num_chars = max_num_chars is None
+    if update_max_num_chars is None:
         max_num_chars = 0
-        for dataframe in loader:
 
-            chars = set()
+    for dataframe in loader:
 
-            for name in dataframe['name']:
+        chars = set()
+
+        for name in dataframe['name']:
+            if len(name) > 200:
+                continue
+
+            if update_max_num_chars:
                 max_num_chars = max(max_num_chars, len(list(name)))
-                lengths.setdefault(len(name), 0)
-                lengths[len(name)] += 1
 
-                chars.update(set(name))
+            lengths.setdefault(len(name), 0)
+            lengths[len(name)] += 1
 
-            tokenizer.fit_on_texts(list(chars))
+            chars.update(set(name))
 
-    tokenizer.fit_on_texts(['<pad>', '<end>'])
-    input_layer = Input(shape=(1,))
+        tokenizer.fit_on_texts(list(chars))
 
-    embedding_layer = Embedding(
-        input_dim=max_num_chars,
-        output_dim=len(tokenizer.word_index.keys())
-    )
+    tokenizer.fit_on_texts(['pre', '<end>'])
 
-    lstm_layer = LSTM(
-        units=32,
-        return_sequences=False,
-        return_state=False,
-    )
-
-    softmax_layer = Dense(
-        units=len(tokenizer.word_index.keys()) + 1,
-        activation='softmax'
-    )
-
-    softmax_layer = softmax_layer(
-        inputs=lstm_layer(
-            inputs=embedding_layer(
-                inputs=input_layer
-            )
-        )
-    )
-
-    model = Model(input_layer, softmax_layer)
+    model = Sequential()
+    model.add((CuDNNLSTM if use_gpu else LSTM)(num_units, input_shape=(max_num_chars, len(tokenizer.index_word) + 1)))
+    model.add(Dense(len(tokenizer.index_word) + 1, activation='softmax'))
 
     model.compile(
         optimizer='adam',
-        loss='sparse_categorical_crossentropy',
+        loss='categorical_crossentropy',
         metrics=['accuracy']
     )
     print(model.summary())
