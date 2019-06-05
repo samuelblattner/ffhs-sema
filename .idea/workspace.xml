@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acaa3f25-e3a6-40cd-aa47-0692f865a2c0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/loader2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/speed_batchsizes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Seminararbeit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Seminararbeit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/analysis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/analysis.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/results.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-data-training.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-data-training.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-definition.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-definition.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-generation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-generation.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-implementation.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -16,34 +25,91 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/loader.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
-              <folding>
-                <element signature="e#1#65#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="765">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            <state relative-caret-position="1618">
+              <caret line="139" column="36" lean-forward="true" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
               <folding>
-                <element signature="e#0#13#0" expanded="true" />
+                <element signature="e#0#15#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="705">
+              <caret line="93" column="64" lean-forward="true" selection-start-line="93" selection-start-column="64" selection-end-line="93" selection-end-column="64" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loader2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/speed_batchsizes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="1815">
+              <caret line="121" column="51" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/utils.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_sorted.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="15">
+              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/full/names/food.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="690">
+              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -52,13 +118,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>op</find>
-      <find>text</find>
-      <find>BROASTED CHICKEN ALA SKILLET DINNER</find>
-      <find>pad</find>
-      <find>texts_to</find>
-      <find>tokenizer</find>
+      <find>10</find>
+      <find>Beef with</find>
+      <find>Bingees</find>
+      <find>Sauce Bacon Potato</find>
+      <find>LSTM</find>
+      <find>weight</find>
+      <find>weights</find>
+      <find>32</find>
       <find>print</find>
+      <find>batch</find>
+      <find>tokenizer</find>
+      <find>type</find>
+      <find>whopp</find>
+      <find>ais French Fried with Ham or Milk</find>
+      <find>Sazat, French Enpiert sauce</find>
+      <find>steak with</find>
+      <find>Bhicken, a la Marierout with bearn on Toast</find>
+      <find>French Fried Fish</find>
+      <find>Ham or Bubtins and cream</find>
+      <find>Saraebed Sweetbreads</find>
+      <find>charwin</find>
+      <find>window_siz</find>
+      <find>model</find>
+      <find>400</find>
+      <find>vocab_size</find>
+      <find>data</find>
+      <find>timesince</find>
+      <find>pre</find>
+      <find>loaded from</find>
+      <find>epoch_done</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -72,14 +161,28 @@
         <option value="$PROJECT_DIR$/requirements-gpu.txt" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/top_list/100_50_50_64_15_5_0.1.txt" />
+        <option value="$PROJECT_DIR$/top_list/100_50_50_64_15_1_0.0.txt" />
+        <option value="$PROJECT_DIR$/top_list/100_50_50_256_5_0.2_15.txt" />
+        <option value="$PROJECT_DIR$/top_list/100_50_50_256_1_0_15.txt" />
+        <option value="$PROJECT_DIR$/top_list/100_500_50_64_1_0.0_15.txt" />
+        <option value="$PROJECT_DIR$/top_list/100_500_50_128_5_0.2_15.txt" />
+        <option value="$PROJECT_DIR$/names.py" />
+        <option value="$PROJECT_DIR$/data/full/whats-on-the-menu/food1.txt" />
+        <option value="$PROJECT_DIR$/data/full/names/food.txt" />
+        <option value="$PROJECT_DIR$/names2.py" />
+        <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/build.py" />
-        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/loader.py" />
+        <option value="$PROJECT_DIR$/loader2.py" />
+        <option value="$PROJECT_DIR$/analysis.py" />
+        <option value="$PROJECT_DIR$/speed_batchsizes.txt" />
+        <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="89" />
+    <option name="x" value="44" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1417" />
@@ -89,6 +192,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -100,7 +204,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -112,11 +215,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data/full/whats-on-the-menu" />
+      <recent name="$PROJECT_DIR$/data/full" />
+      <recent name="$PROJECT_DIR$/data" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data/full" />
+      <recent name="$PROJECT_DIR$/data/full/names" />
+      <recent name="$PROJECT_DIR$/top_list" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -131,7 +238,29 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Train Model">
+  <component name="RunManager" selected="Python.GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 1, D: 0">
+    <configuration name="Analysis" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/Seminararbeit/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="Build Model" type="PythonConfigurationType" factoryName="Python">
       <module name="Seminararbeit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,6 +275,336 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/build.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 2000, E: 50, U: 64, W: 15, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=2000 --num_epochs=50 --window_size=15 --configuration=100_2000_50_64_1_0_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 500, E: 50, U: 128, W: 15, L: 5, D: 0.2" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --num_units=128 --num_layers=5 --batch_size=100 --num_batches=500 --num_epochs=50 --window_size=15 --configuration=100_500_50_128_5_0_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 500, E: 50, U: 256, W: 15, L: 3, D: 0.2" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=500 --num_epochs=50 --window_size=15 --num_units=256 --dropout_rate=0.2 --num_layers=3 --configuration=100_500_50_256_3_0.2_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 500, E: 50, U: 64, W: 15, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=500 --num_epochs=50 --window_size=15 --configuration=100_500_50_64_1_0_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 100, U: 256, W: 15, L: 5, D: 0.2" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=50 --num_epochs=100 --window_size=15 --num_layers=5 --dropout_rate=0.2 --num_units=256 --configuration=100_50_100_256_5_0.2_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 50, U: 256, W: 15, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=50 --num_epochs=50 --window_size=15 --num_units=256 --configuration=100_50_50_256_1_0_15 --force_train=True" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 50, U: 512, W: 15, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=50 --num_epochs=50 --window_size=15 --num_units=512 --configuration=100_50_50_512_1_0_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=125 --num_batches=540 --num_epochs=50 --window_size=15 --configuration=100_50_50_64_1_0_15 --force_train=True" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 3, D: 0.1" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=50 --num_epochs=50 --window_size=15 --num_layers=3 --dropout_rate=0.1 --configuration=100_50_50_64_3_0.1_15" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 5, D: 0.1" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=50 --num_epochs=50 --window_size=15 --num_layers=5 --dropout_rate=0.1 --configuration=100_50_50_64_5_0.1_15 --force_train=True" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 100, N: 50, E: 50, U: 64, W: 25, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_batches=50 --num_epochs=50 --window_size=25 --configuration=100_50_50_64_1_0_25" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 1, N: 1, E: 1, U: 64, W: 10, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --num_epochs=1 --batch_size=1 --num_batches=1" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="GPU, B: 5, N: 1, E: 50, U: 64, W: 10, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="sftp://samuelblattner@10.0.0.99:22/home/samuelblattner/.virtualenvs/samworks-text-summarization/bin/mypython" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=5 --force_train=True --num_epochs=50" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Names" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/Seminararbeit/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/names2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Sort CSV" type="PythonConfigurationType" factoryName="Python">
+      <module name="Seminararbeit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="$USER_HOME$/.virtualenvs/Seminararbeit/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/utils.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -179,6 +638,22 @@
     <list>
       <item itemvalue="Python.Build Model" />
       <item itemvalue="Python.Train Model" />
+      <item itemvalue="Python.GPU, B: 1, N: 1, E: 1, U: 64, W: 10, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 5, N: 1, E: 50, U: 64, W: 10, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 50, U: 64, W: 25, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 100, N: 500, E: 50, U: 64, W: 15, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 100, N: 500, E: 50, U: 256, W: 15, L: 3, D: 0.2" />
+      <item itemvalue="Python.GPU, B: 100, N: 2000, E: 50, U: 64, W: 15, L: 1, D: 0" />
+      <item itemvalue="Python.Sort CSV" />
+      <item itemvalue="Python.Names" />
+      <item itemvalue="Python.GPU, B: 100, N: 500, E: 50, U: 128, W: 15, L: 5, D: 0.2" />
+      <item itemvalue="Python.Analysis" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 50, U: 256, W: 15, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 50, U: 512, W: 15, L: 1, D: 0" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 100, U: 256, W: 15, L: 5, D: 0.2" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 3, D: 0.1" />
+      <item itemvalue="Python.GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 5, D: 0.1" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -193,23 +668,34 @@
       <updated>1557311766781</updated>
       <workItem from="1557311768339" duration="4843000" />
       <workItem from="1557756765978" duration="9859000" />
-      <workItem from="1557910085905" duration="20708000" />
+      <workItem from="1557910085905" duration="20747000" />
+      <workItem from="1557993201161" duration="157000" />
+      <workItem from="1557993383536" duration="143000" />
+      <workItem from="1558264039834" duration="24534000" />
+      <workItem from="1558331089818" duration="19405000" />
+      <workItem from="1558540798527" duration="13000" />
+      <workItem from="1559035739576" duration="1788000" />
+      <workItem from="1559245826445" duration="4000" />
+      <workItem from="1559314282391" duration="22809000" />
+      <workItem from="1559657243814" duration="7341000" />
+      <workItem from="1559712947493" duration="1996000" />
+      <workItem from="1559741072678" duration="6678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35410000" />
+    <option name="totallyTimeSpent" value="120317000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14257348" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12629071" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981133" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32981133" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45207548" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -220,11 +706,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32981133" />
+      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32789317" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.13145353" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -232,15 +719,34 @@
     <option name="version" value="1" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Seminararbeit$Train_Model.coverage" NAME="Train Model Coverage Results" MODIFIED="1557949426151" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__500__E__50__U__128__W__15__L__5__D__0_2.coverage" NAME="GPU, B: 100, N: 500, E: 50, U: 128, W: 15, L: 5, D: 0.2 Coverage Results" MODIFIED="1558366315102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__25__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 25, L: 1, D: 0 Coverage Results" MODIFIED="1559330252351" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__256__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 256, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559662175003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__4000__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 2000, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559338070250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$Train_Model_GPU.coverage" NAME="GPU, B: 1, N: 1, E: 1, U: 64, W: 10, L: 1, D: 0 Coverage Results" MODIFIED="1558335872308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__3__D__0_1__1_.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 3, D: 0.1 (1) Coverage Results" MODIFIED="1558338460278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__100__U__256__W__15__L__5__D__0_2.coverage" NAME="GPU, B: 100, N: 50, E: 100, U: 256, W: 15, L: 5, D: 0.2 Coverage Results" MODIFIED="1559036303279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$Sort_CSV.coverage" NAME="Sort CSV Coverage Results" MODIFIED="1559339126462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__500__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 500, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559328748289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__3__D__0_1.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 3, D: 0.1 Coverage Results" MODIFIED="1559669610184" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__2000__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 2000, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559673462389" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$Train_Model.coverage" NAME="Train Model Coverage Results" MODIFIED="1558267420379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$Build_Model.coverage" NAME="Build Model Coverage Results" MODIFIED="1557760608929" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1559743623595" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559748442674" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__5__D__0_1.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 5, D: 0.1 Coverage Results" MODIFIED="1559664132766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__500__E__50__U__256__W__15__L__3__D__0_2.coverage" NAME="GPU, B: 100, N: 500, E: 50, U: 256, W: 15, L: 3, D: 0.2 Coverage Results" MODIFIED="1559741279161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__5__N__1__E__50__U__64__W__10__L__1__D__0.coverage" NAME="GPU, B: 5, N: 1, E: 50, U: 64, W: 10, L: 1, D: 0 Coverage Results" MODIFIED="1559314972258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__512__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 512, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559669087239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$Names.coverage" NAME="Names Coverage Results" MODIFIED="1559337841669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__1__N__1__E__1__U__64__W__10__L__1__D__0.coverage" NAME="GPU, B: 1, N: 1, E: 1, U: 64, W: 10, L: 1, D: 0 Coverage Results" MODIFIED="1559659261725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/data/samples/whats-on-the-menu/dish.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" rowLines="3" />
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/data/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -276,13 +782,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="60">
-          <caret line="4" column="7" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/.virtualenvs/Seminararbeit/lib/python3.7/site-packages/keras_preprocessing/sequence.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
@@ -297,10 +796,87 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/remote_sources/1939551162/-673700185/tensorflow/python/pywrap_tensorflow.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/remote_sources/1939551162/-673700185/tensorflow/python/pywrap_tensorflow_internal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/Seminararbeit/lib/python3.7/site-packages/tensorflow/python/keras/engine/sequential.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="314" column="34" lean-forward="true" selection-start-line="314" selection-start-column="34" selection-end-line="314" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/remote_sources/1939551162/2078862083/imp.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="817">
+          <caret line="327" selection-start-line="327" selection-end-line="327" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/remote_sources/1939551162/-673700185/tensorflow/python/keras/engine/sequential.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="312" selection-start-line="312" selection-end-line="312" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Caches/PyCharm2019.1/remote_sources/1939551162/-673700185/tensorflow/python/keras/engine/training.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="1121" selection-start-line="1121" selection-end-line="1121" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/argparse.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="1655" column="23" selection-start-line="1655" selection-start-column="19" selection-end-line="1655" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_500_50_64_1_0.0_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="238" column="4" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_5_0.2_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_500_50_128_5_0.2_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_1_0.0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
         </state>
       </provider>
     </entry>
@@ -311,30 +887,133 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/train.py">
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_5_0.1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        <state relative-caret-position="195">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_1_0_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/full/names">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/names.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1485">
+          <caret line="105" column="23" selection-start-line="105" selection-start-column="23" selection-end-line="105" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/names2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4725">
+          <caret line="320" column="15" selection-start-line="320" selection-start-column="15" selection-end-line="320" selection-end-column="15" />
           <folding>
-            <element signature="e#0#13#0" expanded="true" />
+            <element signature="e#2404#2469#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.py">
+    <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/food1.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="735">
-          <caret line="49" column="24" selection-start-line="49" selection-start-column="24" selection-end-line="49" selection-end-column="24" />
+        <state>
+          <caret selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="1815">
+          <caret line="121" column="51" selection-start-line="121" selection-start-column="51" selection-end-line="121" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="50" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_sorted.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="15">
+          <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/full/names/food.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="31" column="25" lean-forward="true" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding>
-            <element signature="e#1#65#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speed_batchsizes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.virtualenvs/Seminararbeit/lib/python3.7/site-packages/tensorflow/python/keras/callbacks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="897" column="28" selection-start-line="897" selection-start-column="20" selection-end-line="897" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/loader.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="31" selection-start-line="1" selection-start-column="31" selection-end-line="1" selection-end-column="31" />
+        <state relative-caret-position="705">
+          <caret line="93" column="64" lean-forward="true" selection-start-line="93" selection-start-column="64" selection-end-line="93" selection-end-column="64" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="61" column="40" lean-forward="true" selection-start-line="61" selection-start-column="40" selection-end-line="61" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/train.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1618">
+          <caret line="139" column="36" lean-forward="true" selection-start-line="139" selection-start-column="36" selection-end-line="139" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

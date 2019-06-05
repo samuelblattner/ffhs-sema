@@ -31,6 +31,18 @@ Der Unterdatensatz «Dish.csv» enthält folgende Struktur:
     }
 \end{center}
 
-Für die Arbeit relevant ist lediglich die \textit{name}-Spalte.
+Für die Arbeit relevant ist vorerst lediglich die \textit{name}-Spalte.
 Sie enthält Bezeichungen von Gerichten in mehreren Sprachen.
-Weil
+
+Für das Training eines ersten Modells wird folgende Spezifikation verwendet:
+
+Batches: 100
+Batchsize: 50
+Epochen: 50
+RNN-Units: 64
+RNN-Layers: 1
+Textlänge: 15
+
+Für die Validierung pro Epoche werden jeweils die weiteren Zeilen, die auf das Trainingsset folgen, verwendet.
+
+

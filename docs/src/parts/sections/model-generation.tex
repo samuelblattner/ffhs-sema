@@ -1,2 +1,251 @@
 \section{Erzeugung von Sequenzen}
 \label{sec:model-generation}
+
+Um mit dem trainierten Modell Sequenzen zu erzeugen, werden zufällige Zeichen als Initialsequenz erzeugt, die
+wiederum ins Modell eingespeist werden.
+
+Die ersten paar generierten Sequenzen sind in Tabelle \ref{tab:first-sequences} aufgeführt.
+Interessanterweise zeigen sich bereits einige Muster, die entfernt an Namen von Gerichten erinnern.
+So zum Beispiel «Artonast wit Creme» (4) oder «iAe, D' Arerel \& Sauce Potator».
+Um das Modell weiter auszubauen und die Auswirkungen der Veränderungen konsistent beobachten zu können,
+werden einige der zufälligen Initialsequenzen sowie ein paar manuell definierte Sequenzen als Ausgangslage
+festgelegt (siehe Tabelle \ref{tab:fixed-initial-sequences}).
+
+Rätselhaft ist vorerst, dass sich die erzeugten Sequenzen auch nach längeren Trainingszeiten (+4h) nicht merklich verbessern.
+Nach längerer Analyse des Codes für das Training und Vergleichen mit Beispielmodellen\footnote{z.B. https:\/\/pytorch.org\/tutorials\/intermediate\/char\_rnn\_generation\_tutorial.html}
+stellt sich heraus, dass ein Fehler in der Logik dafür sorgt, dass für jeden trainierten Namen immer nur der letzte Buchstabe trainiert wird (siehe Abb. \ref{fig:logic-error}).
+
+Nachdem der Fehler behoben ist, stellen sich bereits nach dem Training eines verhältnismässig niederkomplexen Modells bedeutend bessere Resultate ein (siehe Tabelle \ref{tab:first-sequences-after-fix}).
+Die Resultate weisen besser lesbare Abfolgen von Konsonanten und Vokalen auf.
+
+Ausgehend von den Anfangs präsentierten Initialsequenzen sollen nun systematisch verschiedene Modell-Konfigurationen trainiert und
+ausgewertet werden.
+
+\begin{center}
+    \begin{table}
+        \centering
+        \begin{tabular}{ |l|l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz} \\
+            \hline
+            1 & GVoRUcZybxnbknW & in Aones \\
+            2 & KZZkfvyyQexqTel & a bey \\
+            3 & oXvGKETlJftZHnE & SPhKAQahbgOCmjA \& pg. \\
+            4 & TKWLvaUtsiBvjPm & Artonast wit Creme \\
+            5 & fewKeuFYJecyCAk & Autt, cu paAte Sauce \\
+            6 & ItekMqsKSONjbZj & gngn \\
+            7 & KXntyJsfzrZFAJT & eatong \\
+            8 & wudYekDhHOnsuPM & t \\
+            9 & rOVMbLyCBbyCCSv & uAf \\
+            10 & sGrYAEQfnkKxpOM & eiihg \\
+            11 & jTNkWHsSswfEqhE & ing woth Mustorer) \\
+            12 & bSTqiMSCZxVffMo & pshne Homatse \\
+            13 & ktJyYYRuSUIJrCk & ung, D AyAnena aute,ors \\
+            14 & kfoHrzlsoUGsAkY & Ah DricrTela oedt \\
+            15 & DLVzoGsxmAwZgNZ & PoRrer \\
+            16 & LCgtubworFrYewb & anco Hadorige \\
+            17 & XchjpBUGSMyTMDq & ung \\
+            19 & uNjcueOEZadlCMi & ihon w anilh Potatoast \\
+            20 & UqStcroEvEehEyo & ng aust (torofffeds \\
+            22 & ITiVXrEVDZXmROr & i, Are \& OoTatots \\
+            23 & qweSAvVKPXrITCg & eagO \\
+            26 & HfhoDhwJzEQaENT & \& Bance \\
+            27 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator \\
+            28 & CswghmMaYkvPCbR & ete wite withe Bacons onito \\
+            29 & tfRfupMQNvfAiaM & n Ar) \\
+            30 & DdeFQkxYiMRYZdS & eupe \\
+            31 & EcWjyUUvFZlzIVr & ieegs \\
+            32 & seJxLpTqfwVrXap & jUTKKjCUByrALrS \& , Pon oof CTEes \\
+            33 & jkAdzFdrlJDiQrI & ig anu Fueneons \\
+            34 & ZItmxxUhqrlSXOI & b \\
+            36 & ZhkCmYpZooVaFbs & e \\
+            37 & jKbYNXXLpnbCgOd & Ait \\
+            38 & wdaAgOuxYYhomCF & ith shune \\
+            \hline
+        \end{tabular}
+        \caption{Caption}
+        \label{tab:first-sequences}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \begin{table}
+        \centering
+        \begin{tabular}{ |l|l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz} \\
+            \hline
+            1 &  heyvAgaJnFEykXR & ROyooA SFac,a BaNooe \\
+            2 &  qApRVwGkLZaRTpY & YoClNE AN COuuvE SARS \\
+            3 &  hSSBSghZgvntYKW & WNOy \\
+            4 &  FDtdLiovThWAABB & BaAsSA SALL IET CONDE, BRER AMBRA SUER, SIUTALIRA SLUERE BEE \\
+            5 &  exvduWkBRXPNgNc & casOy BSTTESSaSTAS, Ay STENLLOWSFe \\
+            6 &  pjJugwZkcVtIaHT & TEE AAa OpBu'E LAUj \\
+            7 &  vYDTlKoBjHctHLM & Mer Em \\
+            8 &  EATxlnekKSyyhXi & if Spakess \\
+            9 &  VacBJsKUBwxBydg & gnodPHasdLirsh\& Salcok \\
+            10 & DzEnFccEnDbgdHI & IEs \\
+            11 & WVaBhFZTILSnQUj & jeTEEE \\
+            12 & tuTluUGOpjxkryK & KraANdd Nedd \\
+            13 & OKRABqePBWpocxI & Indeas \\
+            14 & VzXKNFSsVfYfzlg & ge ois Ned M'llet \\
+            15 & SuxVLdnvkkCacoq & qu \\
+            16 & leIMviMndJaIjSb & bo org, BL OUG \\
+            17 & LOFFoVRpWHMonHv & vA, TETLa \\
+            19 & UkjuVIJtjoUpLIB & BTONCEETS \\
+            20 & yWMmVISehLIBXoh & h \\
+            22 & QHzgFhRXrsfwHnD & DhoAs,ucheredaldesri \\
+            23 & sMhAWWJdrTjcjsN & Ned \\
+            26 & GNGyQTKJgvxfPtK & KasagB \\
+            27 & QPVDHuCtxfHrReF & F Su Sak OIp,, Ay oes Oes \\
+            28 & czXXfUdrbYuxQaw & was \\
+            29 & WigGaQAfkvSgyAV & Ve, LOIroua Aw CerE's \\
+            30 & TfgDYRHCSXRnjDv & vELLEILLINTITEK,IS, ROUDOUYA \\
+            31 & vwrTcebqyXvKChl & ls, crowmerrbous e \\
+            32 & WpjVUIxzQbHbRoJ & J TEUE \\
+            33 & bjXkBNwONnuriUT & TEF YEE \\
+            34 & SUwXNVDHGuyrPXZ & ZANE,II  O N Ay CREp \\
+
+            \hline
+        \end{tabular}
+        \caption{Caption}
+        \label{tab:first-sequences-after-fix}
+    \end{table}
+\end{center}
+
+
+\begin{center}
+    \begin{table}
+        \centering
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{ |l|l|l|l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64} & \textbf{Generierte Sequenz 256} & \textbf{Generierte Sequenz 512} \\
+            \hline
+            1 & GVoRUcZybxnbknW & Whea & WUag Dalen & WhipTer ba ch pind Camb eits \\
+            2 & TKWLvaUtsiBvjPm & moshrin  Musr rumst wchet & me & mon tarte\\
+            3 & fewKeuFYJecyCAk & kfand & kglanY acol & knssaraw andderes \\
+            4 & KXntyJsfzrZFAJT & T & T muthe & Te \\
+            5 & jTNkWHsSswfEqhE & E, CoN Oy Lp My DfOTBRENOa  F TOINO & Eg S \& CE BLUUCR\& OTREAS, SAUL Yo Sauc & Et \& E sansere, Soulles \\
+            6 & uNjcueOEZadlCMi & i, Aal are & in, & ingere \\
+            7 & XESvYRSRqVSVNQy & yE, DAy NANG Lea DO CEg OAE & yUN Ef BUN SAMCE & yETT MAATEEAl \\
+            8 & EcWjyUUvFZlzIVr & rF FAy Busdee B YoNNed Friodd & r ongKice & riss wAth cre \\
+            9 & A & Apples & Apples & Apples \\
+            10 & B & Baked apples with cream & Baked apples with cream & Baked apples with cream \\
+            11 & C & Chicken broth & Chicken broth & Chicken broth \\
+            12 & Chicken & n broth & n broth & n broth \\
+            \hline
+        \end{tabular}
+        }
+        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
+        \label{tab:fixed-initial-sequences1}
+    \end{table}
+
+\end{center}
+
+\begin{center}
+    \begin{table}
+        \centering
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{ |l|l|l|l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64, L1, D0.1} & \textbf{Generierte Sequenz 62, L3, D0.1} & \textbf{Generierte Sequenz 64, L5 D0.1} \\
+            \hline
+            1 & GVoRUcZybxnbknW & in Aones & WSrh' chhompagntsos tret & Whreast \\
+            2 & TKWLvaUtsiBvjPm & Artonast wit Creme & mERNT Dooo D GEN, M.lerr LNNe, Po.us PTENBe Nock FuNer rifd & mels \\
+            3 & fewKeuFYJecyCAk & Autt, cu paAte Sauce & kripl & ky Snonle \\
+            4 & KXntyJsfzrZFAJT & eatong & Toratt & Tinse \\
+            5 & jTNkWHsSswfEqhE & ing woth Mustorer) & Es & Erg \\
+            6 & uNjcueOEZadlCMi & ihon w anilh Potatoast & ih & inds \\
+            7 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator & y BRoNffrotd & yK \\
+            8 & EcWjyUUvFZlzIVr & ieegs & r \& OfxTEe s & rer \\
+            9 & A & kee & Apples & Apples \\
+            10 & B & amb & Boiled onions, cream sauce & Baked apples with cream \\
+            11 & C & \&. & \& Chicken broth & Chicken broth \\
+            12 & Chicken & & n broth & n broth \\
+            \hline
+        \end{tabular}
+        }
+        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
+        \label{tab:fixed-initial-sequences2}
+    \end{table}
+
+\end{center}
+
+\begin{center}
+    \begin{table}
+        \centering
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{ |l|l|l|l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64, 5000} & \textbf{Generierte Sequenz 64, 50000} & \textbf{Generierte Sequenz 64, 500000} \\
+            \hline
+            1 & GVoRUcZybxnbknW & in Aones & anteG in Cream & Whished Sureere \\
+            2 & TKWLvaUtsiBvjPm & Artonast wit Creme & e with Milk with Bacon with Milk with Bacon with Milk with & mo\\
+            3 & fewKeuFYJecyCAk & Autt, cu paAte Sauce & es) & ke \\
+            4 & KXntyJsfzrZFAJT & eatong & ss & TZN CUSCACOUP PIT OY ALET Brackleass) 1/2 pot \\
+            5 & jTNkWHsSswfEqhE & ing woth Mustorer) & vil)-aux champagonago & E. \\
+            6 & uNjcueOEZadlCMi & ihon w anilh Potatoast & le Style & itte \\
+            7 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator & en Pee Sleate & yON \\
+            8 & EcWjyUUvFZlzIVr & ieegs & eatlaine & avery & r \\
+            9 & A & kee & \& & Assorted Cakes \\
+            10 & B & amb & oxe & Broiled Spring Chicken Saute au gratin \\
+            11 & C & \&. & rams & Cold Cocktails \\
+            12 & Chicken & & & n Croquettes, Cream sauce \\
+            \hline
+        \end{tabular}
+        }
+        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
+        \label{tab:fixed-initial-sequences}
+    \end{table}
+
+\end{center}
+
+\begin{center}
+    \begin{table}
+        \centering
+        \resizebox{\textwidth}{!}{
+        \begin{tabular}{ |l|l|l|l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64, 5000} & \textbf{Generierte Sequenz 256, 50000} & \textbf{Generierte Sequenz 64, 500000} \\
+            \hline
+            1 & GVoRUcZybxnbknW & in Aones & Wey & Whished Sureere \\
+            2 & TKWLvaUtsiBvjPm & Artonast wit Creme & min & mo\\
+            3 & fewKeuFYJecyCAk & Autt, cu paAte Sauce & ken Black, or Cotz, Gin & ke \\
+            4 & KXntyJsfzrZFAJT & eatong & Tram Punch & TZN CUSCACOUP PIT OY ALET Brackleass) 1/2 pot \\
+            5 & jTNkWHsSswfEqhE & ing woth Mustorer) & Ex& E. \\
+            6 & uNjcueOEZadlCMi & ihon w anilh Potatoast & irontan, Pine Sauce & itte \\
+            7 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator & y & yON \\
+            8 & EcWjyUUvFZlzIVr & ieegs & eatlaine & rI & r \\
+            9 & A & kee & Anchovies & Assorted Cakes \\
+            10 & B & amb & Bluefish & Broiled Spring Chicken Saute au gratin \\
+            11 & C & \&. & Calf's head, fried with tomato sauce & Cold Cocktails \\
+            12 & Chicken & & n croquette, with peas & n Croquettes, Cream sauce \\
+            \hline
+        \end{tabular}
+        }
+        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
+        \label{tab:fixed-initial-sequences}
+    \end{table}
+
+\end{center}
+
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{}
+    \caption{Fehler in der Logik: Statt der gesamten Abfolge wird jeweils nur der letzte Buchstabe trainiert.}
+    \label{fig:logic-error}
+\end{figure}
+
+512
+47s 9ms/step - loss: 0.0272 - accuracy: 0.9799 - val_loss: 4.9989 - val_accuracy: 0.3500
+
+50000
+Epoch 00001: val_accuracy improved from -inf to 0.45450, saving model to checkpoints/checkpoint_100_500_50_64_1_0_15.best_val_acc.hdf5

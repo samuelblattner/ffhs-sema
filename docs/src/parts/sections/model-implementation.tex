@@ -1,2 +1,96 @@
 \section{Implementierung}
 \label{sec:model-implementation}
+
+\subsection{Evaluierung der schnellsten Batchsize}
+\label{sec:evaluating-fastest-batchsize}
+Grafikkarte 980XT.
+Um das Modell möglichst effizient zu trainieren, soll die effizienteste Batch-Grösse für diese Grafikkarte empirisch eruiert werden.
+Dazu werden 10 Epochen mit jeweils 1000 Trainingsschritten vollführt.
+
+\begin{center}
+    \begin{table}
+        \centering
+        \begin{tabular}{ |l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Batch-Grösse} & \textbf{Durchschnittliche Dauer in Sekunden (über 10 Epochen)} \\
+            \hline
+            1 & 14.69 \\
+            50 & 4.07 \\
+            71 & 4.04 \\
+            91 & 3.97 \\
+            100 & 3.93 \\
+            125 & 3.98 \\
+            200 & 5.32 \\
+            250 & 6.16 \\
+            \hline
+        \end{tabular}
+        \caption{Altes Modell}
+        \label{tab:best-batch-size}
+    \end{table}
+\end{center}
+
+\begin{center}
+    \begin{table}
+        \centering
+        \begin{tabular}{ |l|l| }
+
+            \hline
+            \textbf{n} & \textbf{Batch-Grösse} & \textbf{Durchschnittliche Dauer in Sekunden (über 10 Epochen)} \\
+            \hline
+            1 & 55.52 \\
+            2 & 53.14 \\
+            10 & 49.82 \\
+            25 & 4.28 \\
+            50 & 4.30 \\
+            71 & 4.34 \\
+            91 & 4.33 \\
+            100 & 4.23 \\
+            125 & 4.05 \\
+            143 & 4.44 \\
+            200 & 4.7 \\
+            250 & 4.91 \\
+            \hline
+        \end{tabular}
+        \caption{Neues Modell}
+        \label{tab:best-batch-size-new}
+    \end{table}
+\end{center}
+
+
+
+\subsection{Erweiterung des Trainingssets}
+\label{sec:enhancing-training-set}
+
+Bisher war das Modell so implementiert, dass jede Epoche jeweils die gleichen Trainingseinheiten erhielt.
+Der Grund für dieses Vorgehen basierte auf der Annahme, dass jede Trainingseinheit mehrmals dem Modell vorgelegt werden müsse, damit
+ein der Lernprozess effektiv ist.
+Diese Annahme entstand jedoch auf der fehlerhaften Implementierung, weshalb sie verworfen werden kann.
+Der Nachteil dieses Vorgehens bestand darin, dass das Modell eine relativ begrenztes Trainingsset zu sehen bekam.
+Dieser Nachteil verstärkt sich, da durch das behobene und nun korrekt funktionierende Training noch weniger Trainingseinheiten verwendet werden.
+Bei einer durchschnittlichen Zeilenlänge von 32 Zeichen, 500 Batches à 100 Trainingsschritten werden dem Modell also:
+
+\[ 500 \cdot \frac{100}{32} = 1562.5 \]
+
+gerade mal rund 1500 Zeilen der insgesamt 400'000 Zeilen gezeigt.
+Damit erlernt das Modell ein sehr begrenztes Vokabular.
+Die Trainingslogik soll nun so verbessert werden, dass jede Epoche einen beliebigen Ausschnitt aus allen Zeilen zum Training erhält.
+Der Loader wird als endloser Generator implementiert.
+Erreicht eine Epoche das Ende des Datensatzes, wird einfach wieder von vorne begonnen.
+Gleichwohl mit dem Datensatz, der zur Validierung herangezogen wird.
+Der Generator wird also quasi als Ringspeicher implementiert wobei Trainings- und Validierungsdatensatz um die Hälfte der Länge des Gesamtdatensatzes
+verschoben («Offset») ausgeliefert werden.
+Damit das ganze Datenset mindestens einmal durchlaufen wird müssten also insgesamt rund \[ 32 \cdot 422039 = 13'505'248 \] Trainingsschritte vollführt werden.
+Wird von einer idealen Batchsize von 100 Trainingsschritten ausgegangen, fallen insgesamt \[ \frac{13505248}{100} = 135052 \] Batches an.
+Damit kann die Anzahl der notwendigen Batches für eine bestimmten Prozentsatz des Gesamtdatensatzes als Funktion $ b(p, e) $ ausgedrückt werden:
+
+\[ b(p, e) = \frac{p \cdot R \cdot S}{B * e} \]
+
+wobei $ p $ dem gewünschten Anteil entspricht, $ e $ die Anzahl Epochen darstellt und die Konstanten $ R $, $ S $ sowie $ B $ die Anzahl Trainingssätze (Zeilen), die durchschnittliche Zeichenzahl pro Zeile sowie
+die ideale Batch-Grösse repräsentieren.
+
+Sollen also beispielsweise 25\% des gesamten Datensatzes mit 50 Epochen trainiert werden, so fallen:
+
+\[ b(0.25, 50) = \frac{0.25 \cdot 422039 \cdot 32}{125 \cdot 50} = 540.20992 \]
+
+Batches an.

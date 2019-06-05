@@ -1,18 +1,19 @@
 import argparse
 
+from timeit import default_timer as timer
 import numpy as np
 import pickle
 import random
 import string
 import sys
 
-from tensorflow.python.keras.callbacks import ModelCheckpoint, EarlyStopping
+from tensorflow.python.keras.callbacks import ModelCheckpoint, EarlyStopping, Callback
 from tensorflow.python.keras.preprocessing.sequence import pad_sequences
 from tensorflow.python.keras.saving import load_model
 from tensorflow.python.keras.utils import to_categorical
 
 from build import build_model
-from loader import Loader
+from loader2 import Loader
 
 INITIAL_SEQUENCES = (
     'GVoRUcZybxnbknW',
@@ -26,8 +27,12 @@ INITIAL_SEQUENCES = (
     'A',
     'B',
     'C',
-    'Chicken'
+    'Chicken',
+    'cWjyUUvFZlzIVaC',
+    'XESvYRSRqVSVN B'
 )
+
+START_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ'
 
 parser = argparse.ArgumentParser()
 parser.add_argument('--configuration', default=None)
@@ -44,6 +49,28 @@ args = parser.parse_args()
 
 model = None
 tokenizer = None
+
+class EpochDone(Callback):
+
+    start_time = None
+    sum_times = 0
+
+    def on_epoch_begin(self, epoch, logs=None):
+
+        print('epoch begin')
+        self.start_time = timer()
+
+    def on_epoch_end(self, epoch, logs=None):
+
+        if self.start_time is not None:
+            took = timer() - self.start_time
+            print('Epoch took {} '.format(took))
+            self.sum_times += took
+
+    def on_train_end(self, logs=None):
+        print('Total time: ', self.sum_times)
+        print('Average: ', self.sum_times/10)
+
 
 if args.configuration:
     try:
@@ -70,7 +97,7 @@ if args.configuration is None or args.force_train:
         args.window_size,
     )
 
-    if model is None or tokenizer is None:
+    if model is None or tokenizer is None or args.force_train:
         model, tokenizer = build_model(
             use_gpu=args.use_gpu,
             num_units=args.num_units,
@@ -94,7 +121,7 @@ if args.configuration is None or args.force_train:
 
     validation_loader = Loader(
         batch_size=args.batch_size,
-        offset=args.batch_size * args.num_batches,
+        offset=211019,
         num_batches=args.num_batches,
         epochs=args.num_epochs
     )
@@ -104,7 +131,7 @@ if args.configuration is None or args.force_train:
         steps_per_epoch=args.batch_size * args.num_batches,
         epochs=args.num_epochs,
         validation_data=validation_loader.get_train_generator(tokenizer, args.window_size),
-        validation_steps=20,
+        validation_steps=32,
         callbacks=[
             ModelCheckpoint(
                 'checkpoints/checkpoint_{}.best_val_acc.hdf5'.format(args.configuration),
@@ -113,22 +140,24 @@ if args.configuration is None or args.force_train:
                 save_best_only=True,
                 mode='max',
             ),
-            EarlyStopping(
-                monitor='accuracy',
-                min_delta=0.001,
-                patience=15,
-                verbose=2
-            )
+            # EarlyStopping(
+            #     monitor='accuracy',
+            #     min_delta=0.001,
+            #     patience=5,
+            #     verbose=2
+            # ),
+            EpochDone()
         ]
     )
 
 num_samples = 0
 
 for sequence in INITIAL_SEQUENCES:
+# for sequence in range(0, 30):
 
     i = 0
     num_samples += 1
-    # sequence = [random.choice(string.ascii_letters) for r in range(0, args.window_size)]
+    # sequence = [random.choice(string.ascii_letters) for r in range(0, args.window_size - 1)] + [START_LETTERS[random.randint(0, len(START_LETTERS)-1)]]
     sequence = list(sequence)
     if len(sequence) < args.window_size:
         sequence = ['pad'] * (args.window_size - len(sequence)) + sequence
