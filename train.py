@@ -6,6 +6,7 @@ import pickle
 import random
 import string
 import sys
+from matplotlib import pyplot as plt
 
 from tensorflow.python.keras.callbacks import ModelCheckpoint, EarlyStopping, Callback
 from tensorflow.python.keras.preprocessing.sequence import pad_sequences
@@ -39,6 +40,7 @@ parser.add_argument('--configuration', default=None)
 parser.add_argument('--force_train', default=False)
 parser.add_argument('--batch_size', default=1, type=int)
 parser.add_argument('--num_batches', default=1, type=int)
+parser.add_argument('--perc_lines', default=0, type=float)
 parser.add_argument('--num_epochs', default=1, type=int)
 parser.add_argument('--num_units', default=64, type=int)
 parser.add_argument('--window_size', default=10, type=int)
@@ -49,6 +51,25 @@ args = parser.parse_args()
 
 model = None
 tokenizer = None
+
+class LinesYielded(Callback):
+
+    generator = None
+
+    def __init__(self, loader):
+        self.generator = loader
+        super(LinesYielded, self).__init__()
+
+    def on_epoch_end(self, epoch, logs=None):
+        num = 0
+        num_samples = 0
+        if self.generator:
+            num = self.generator.get_num_lines_yielded()
+            num_samples = self.generator.get_total_samples_yielded()
+
+        print('Number of lines yielded: ', num)
+        print('Number of samples yielded: ', num_samples)
+
 
 class EpochDone(Callback):
 
@@ -72,6 +93,17 @@ class EpochDone(Callback):
         print('Average: ', self.sum_times/10)
 
 
+if args.perc_lines > 0.0:
+
+    loader = Loader()
+    args.num_batches = int((args.perc_lines * loader.get_num_lines() * 26)/(args.batch_size * args.num_epochs))
+    print('To see {} of dataset, {} batches with {} training steps are run for {} epochs.'.format(
+        args.perc_lines,
+        args.num_batches,
+        args.batch_size,
+        args.num_epochs
+    ))
+
 if args.configuration:
     try:
         model = load_model('checkpoints/checkpoint_{}.best_val_acc.hdf5'.format(args.configuration), )
@@ -87,7 +119,8 @@ if args.configuration:
 
 if args.configuration is None or args.force_train:
 
-    args.configuration = '{}_{}_{}_{}_{}_{}_{}'.format(
+    args.configuration = '{}_{}_{}_{}_{}_{}_{}_{}'.format(
+        args.perc_lines,
         args.batch_size,
         args.num_batches,
         args.num_epochs,
@@ -105,6 +138,7 @@ if args.configuration is None or args.force_train:
             num_batches=args.num_batches,
             num_layers=args.num_layers,
             window_size=args.window_size,
+            dropout_rate=args.dropout_rate
         )
     else:
         print('MODEL LOADED FROM DISK')
@@ -126,12 +160,12 @@ if args.configuration is None or args.force_train:
         epochs=args.num_epochs
     )
 
-    model.fit_generator(
+    train_history = model.fit_generator(
         generator=loader.get_train_generator(tokenizer, args.window_size),
-        steps_per_epoch=args.batch_size * args.num_batches,
+        steps_per_epoch=args.num_batches,
         epochs=args.num_epochs,
         validation_data=validation_loader.get_train_generator(tokenizer, args.window_size),
-        validation_steps=32,
+        validation_steps=26 * 20,
         callbacks=[
             ModelCheckpoint(
                 'checkpoints/checkpoint_{}.best_val_acc.hdf5'.format(args.configuration),
@@ -140,15 +174,34 @@ if args.configuration is None or args.force_train:
                 save_best_only=True,
                 mode='max',
             ),
-            # EarlyStopping(
-            #     monitor='accuracy',
-            #     min_delta=0.001,
-            #     patience=5,
-            #     verbose=2
-            # ),
-            EpochDone()
+            EarlyStopping(
+                monitor='accuracy',
+                min_delta=0.001,
+                patience=25,
+                verbose=2
+            ),
+            EpochDone(),
+            LinesYielded(loader)
         ]
     )
+
+    loss = train_history.history['loss']
+    val_loss = train_history.history['val_loss']
+    acc = train_history.history['accuracy']
+    val_acc = train_history.history['val_accuracy']
+    plt.plot(loss)
+    plt.plot(val_loss)
+    plt.plot(acc)
+    plt.plot(val_acc)
+    plt.axis([0, args.num_epochs, 0, 3.5])
+    plt.legend(['loss', 'val_loss', 'accuracy', 'val_accuracy'])
+    plt.title(args.configuration)
+
+    fig1 = plt.gcf()
+    plt.show()
+    plt.draw()
+
+    fig1.savefig('train_histories/{}.pdf'.format(args.configuration), format='pdf')
 
 num_samples = 0
 

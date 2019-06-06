@@ -13,6 +13,9 @@ class Loader(object):
     __window_size: int = 10
     __generator = None
 
+    __num_lines_yielded: int = 0
+    __total_samples_yielded: int = 0
+
     def __init__(self, batch_size: int = 1000, offset: int = 0, limit: int = 0, epochs: int = 1, window_size: int = 10, num_batches: int = 1):
         self.__batch_size = batch_size
         self.__num_batches = num_batches
@@ -21,6 +24,8 @@ class Loader(object):
         self.__epochs = epochs
         self.__window_size = window_size
         self.__generator = self.__create_dataframe_generator()
+        self.__num_lines_yielded = 0
+        self.__total_samples_yielded = 0
 
     def __iter__(self):
         return self
@@ -48,20 +53,25 @@ class Loader(object):
 
     def __create_trainset_generator(self, tokenizer: Tokenizer, pad_to_length: int = 0, char_window_size: int = 10):
 
-        def gen():
+        def gen(loader):
+
+            initial_offset_lines_skipped = 0
 
             while True:
 
-                lines_yielded = 0
                 batches_yielded = 0
                 samples_yielded = 0
+                self.__total_samples_yielded = 0
                 X = None
                 Y = None
 
-                for dataframe in read_csv('data/full/whats-on-the-menu/Dish.csv', delimiter=',', header=0,
-                                          skiprows=self.__offset, chunksize=1000):
+                for dataframe in read_csv('data/full/whats-on-the-menu/Dish.csv', delimiter=',', header=0, chunksize=1000):
 
                     for row in dataframe[dataframe.columns[1]]:
+
+                        if self.__offset > 0 and initial_offset_lines_skipped < self.__offset:
+                            initial_offset_lines_skipped += 1
+                            continue
 
                         windowed_tokenized_sequences = []
 
@@ -97,7 +107,7 @@ class Loader(object):
                             X = np.append(X, one_hot_phrases, axis=0)
                             Y = np.append(Y, one_hot_ys, axis=0)
 
-                        lines_yielded += 1
+                        loader.__num_lines_yielded += 1
                         samples_yielded += len(windowed_tokenized_sequences)
 
                         # print(samples_yielded)
@@ -110,13 +120,28 @@ class Loader(object):
                             X = X[self.__batch_size:]
                             Y = Y[self.__batch_size:]
 
+                            self.__total_samples_yielded += samples_yielded
+
                             samples_yielded = len(X)
 
+        return gen(self)
 
-        return gen()
+    def get_num_lines_yielded(self):
+        return self.__num_lines_yielded
 
     def get_generator(self):
         return self.__create_dataframe_generator()
 
     def get_train_generator(self, tokenizer: Tokenizer, pad_to_length: int = 0):
         return self.__create_trainset_generator(tokenizer, pad_to_length, pad_to_length)
+
+    def get_num_lines(self):
+        lines = 0
+        for dataframe in read_csv('data/full/whats-on-the-menu/Dish.csv', delimiter=',', nrows=self.__limit if self.__limit > 0 else None,
+                                  skiprows=self.__offset, chunksize=10000):
+            lines += len(dataframe)
+
+        return lines
+
+    def get_total_samples_yielded(self):
+        return self.__total_samples_yielded

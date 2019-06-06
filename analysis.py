@@ -23,7 +23,7 @@ for dataframe in loader:
         yl = int(last_appeared)
         lengths.append(len(name))
 
-        if 'xing stew' in name.lower():
+        if 'Coffee, Tea or Milk'.lower() in name.lower():
             print(name)
 
         if y > 1:
@@ -44,8 +44,11 @@ print('avg len ', sum(lengths)/len(lengths))
 print(min_year)
 print(max_year)
 print(len(lengths))
+sorted_lengths = list(sorted(lengths))
+print(sorted_lengths[int(len(sorted_lengths)/2)])
 plt.style.use('ggplot')
-g = plt.hist([years, years_last], bins=10, range=(min_year, max_year), label=['first_appeared', 'last_appeared'])
+# g = plt.hist([years, years_last], bins=10, range=(min_year, max_year), label=['first_appeared', 'last_appeared'])
+g = plt.hist([lengths], bins=100, range=(0, 200))
 plt.legend(loc='upper right')
 fig1 = plt.gcf()
 plt.show()

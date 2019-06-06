@@ -9,6 +9,12 @@
 % Packages
 \usepackage{amsmath}
 \usepackage[utf8]{inputenc}
+\usepackage[bibstyle=apa,backend=biber]{biblatex}
+\addbibresource{sema-samuel-blattner.bib}
+\usepackage[hidelinks]{hyperref}
+\input{parts/glossary-defs}
+\makeglossaries
+\makeglossary
 
 % Document
 \begin{document}
@@ -41,8 +47,11 @@
     \include{parts/model}
     \include{parts/results}
     \include{parts/analysis}
+    \include{parts/glossary}
 
-    \bibliography{../src/main}
-    \bibliographystyle{plain}
+    \printbibliography[<options for printing>]
+
+    \listoffigures
+
 
 \end{document}
