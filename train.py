@@ -205,13 +205,13 @@ if args.configuration is None or args.force_train:
 
 num_samples = 0
 
-for sequence in INITIAL_SEQUENCES:
-# for sequence in range(0, 30):
+# for sequence in INITIAL_SEQUENCES:
+for sequence in range(0, 30):
 
     i = 0
     num_samples += 1
-    # sequence = [random.choice(string.ascii_letters) for r in range(0, args.window_size - 1)] + [START_LETTERS[random.randint(0, len(START_LETTERS)-1)]]
-    sequence = list(sequence)
+    sequence = [random.choice(string.ascii_letters) for r in range(0, args.window_size - 1)] + [START_LETTERS[random.randint(0, len(START_LETTERS)-1)]]
+    # sequence = list(sequence)
     if len(sequence) < args.window_size:
         sequence = ['pad'] * (args.window_size - len(sequence)) + sequence
 

@@ -2,21 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="acaa3f25-e3a6-40cd-aa47-0692f865a2c0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/src/parts/glossary-defs.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/parts/glossary.tex" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.bib" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/main.bib" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/analysis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/analysis.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/model.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-definition.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-definition.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-implementation.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/loader2.py" beforeDir="false" afterPath="$PROJECT_DIR$/loader2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.png" beforeDir="false" afterPath="$PROJECT_DIR$/test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,35 +19,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_5_0.2_15.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="16" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/analysis.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="375">
+              <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="512">
-              <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
-              <folding>
-                <element signature="e#0#64#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/train.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="49">
-              <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.virtualenvs/Seminararbeit/lib/python3.7/site-packages/tensorflow/python/keras/callbacks.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5865">
-              <caret line="416" column="13" selection-start-line="416" selection-start-column="13" selection-end-line="416" selection-end-column="13" />
+            <state relative-caret-position="15">
+              <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -63,7 +52,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/loader.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="195">
               <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
@@ -72,23 +61,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/loader2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1965">
-              <caret line="135" column="87" selection-start-line="135" selection-start-column="87" selection-end-line="135" selection-end-column="87" />
+            <state relative-caret-position="613">
+              <caret line="100" column="45" selection-start-line="79" selection-start-column="11" selection-end-line="100" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/analysis.py">
+        <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_1_0_15.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#25#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="90">
+              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -103,28 +89,31 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="7380">
-              <caret line="492" column="24" selection-start-line="492" selection-start-column="24" selection-end-line="492" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_sorted.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="15">
-              <caret line="1" column="8" selection-start-line="1" selection-start-column="8" selection-end-line="1" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/full/names/food.txt">
+        <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_5_0.1.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
+            <state relative-caret-position="195">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_1_0.0.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/train.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1174">
+              <caret line="228" column="46" selection-start-line="228" selection-start-column="46" selection-end-line="228" selection-end-column="46" />
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -189,10 +178,10 @@
         <option value="$PROJECT_DIR$/utils.py" />
         <option value="$PROJECT_DIR$/speed_batchsizes.txt" />
         <option value="$PROJECT_DIR$/loader.py" />
-        <option value="$PROJECT_DIR$/loader2.py" />
-        <option value="$PROJECT_DIR$/analysis.py" />
-        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/build.py" />
+        <option value="$PROJECT_DIR$/train.py" />
+        <option value="$PROJECT_DIR$/analysis.py" />
+        <option value="$PROJECT_DIR$/loader2.py" />
       </list>
     </option>
   </component>
@@ -207,7 +196,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,23 +208,11 @@
               <item name="Seminararbeit" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="Seminararbeit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Seminararbeit" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="full" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Seminararbeit" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Seminararbeit" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="full" type="462c0819:PsiDirectoryNode" />
-              <item name="whats-on-the-menu" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -271,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.2. GEN: GPU, P: 1.5, E: 50, U: 64S, W: 26, L: 2, D: 0.3">
+  <component name="RunManager" selected="Python.Analysis">
     <configuration name="2. GEN: GPU, P: 0.01, E: 50, U: 256, W: 15, L: 1, D: 0" type="PythonConfigurationType" factoryName="Python">
       <module name="Seminararbeit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -462,7 +438,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
-      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_epochs=50 --window_size=15 --perc_lines=1.0 --num_units=64 --num_layers=3 --dropout_rate=0.2 --force_train=True" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_epochs=50 --window_size=15 --perc_lines=1.0 --num_units=64 --num_layers=3 --dropout_rate=0.2 --configuration=1.0_100_2194_50_64_3_0.2_15" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -528,7 +504,7 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/train.py" />
-      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_epochs=50 --window_size=26 --perc_lines=1.5 --num_units=64 --num_layers=2 --dropout_rate=0.3" />
+      <option name="PARAMETERS" value="--use_gpu=True --batch_size=100 --num_epochs=50 --window_size=26 --perc_lines=1.5 --num_units=64 --num_layers=2 --dropout_rate=0.3 --configuration=1.5_100_3291_50_64_2_0.3_26" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -989,23 +965,25 @@
       <workItem from="1559657243814" duration="7341000" />
       <workItem from="1559712947493" duration="1996000" />
       <workItem from="1559741072678" duration="20879000" />
-      <workItem from="1559802100095" duration="1478000" />
+      <workItem from="1559802100095" duration="3174000" />
+      <workItem from="1559828404427" duration="9000" />
+      <workItem from="1559929218392" duration="2312000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135996000" />
+    <option name="totallyTimeSpent" value="140013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12708499" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12867355" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981133" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45207548" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45207548" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1016,12 +994,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32981133" />
-      <window_info anchor="bottom" id="File Transfer" order="13" weight="0.32789317" />
+      <window_info anchor="bottom" id="File Transfer" order="13" visible="true" weight="0.32754716" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Remote Host" order="3" />
-      <window_info anchor="right" id="SciView" order="4" visible="true" weight="0.34908658" />
+      <window_info active="true" anchor="right" id="SciView" order="4" visible="true" weight="0.37251788" />
       <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
@@ -1031,16 +1009,16 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__500__E__50__U__128__W__15__L__5__D__0_2.coverage" NAME="GPU, B: 100, N: 500, E: 50, U: 128, W: 15, L: 5, D: 0.2 Coverage Results" MODIFIED="1558366315102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__256__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 256, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559662175003" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__512__W__15__L__3__D__0_2.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 512, W: 15, L: 3, D: 0.2 Coverage Results" MODIFIED="1559761023051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__512__W__15__L__3__D__0_2.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 512, W: 15, L: 3, D: 0.2 Coverage Results" MODIFIED="1559822293353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__64__W__15__L__1__D__0.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559755137011" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__4000__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 2000, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559338070250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__3__D__0_1__1_.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 3, D: 0.1 (1) Coverage Results" MODIFIED="1558338460278" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_5__E__50__U__256__W__26__L__5__D__0_3.coverage" NAME="2. GEN: GPU, P: 1.5, E: 50, U: 256, W: 26, L: 5, D: 0.3 Coverage Results" MODIFIED="1559802232262" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_5__E__50__U__256__W__26__L__5__D__0_3.coverage" NAME="2. GEN: GPU, P: 1.5, E: 50, U: 256, W: 26, L: 5, D: 0.3 Coverage Results" MODIFIED="1559822630908" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$Sort_CSV.coverage" NAME="Sort CSV Coverage Results" MODIFIED="1559339126462" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__512__W__15__L__3__D__0_7.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 512, W: 15, L: 3, D: 0.7 Coverage Results" MODIFIED="1559764937926" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__64__W__15__L__3__D__0_2.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 64, W: 15, L: 3, D: 0.2 Coverage Results" MODIFIED="1559755741490" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__512__W__15__L__3__D__0_7.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 512, W: 15, L: 3, D: 0.7 Coverage Results" MODIFIED="1559822556409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_0__E__50__U__64__W__15__L__3__D__0_2.coverage" NAME="2. GEN: GPU, P: 1.0, E: 50, U: 64, W: 15, L: 3, D: 0.2 Coverage Results" MODIFIED="1559822885685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559753240482" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1559765017578" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$Analysis.coverage" NAME="Analysis Coverage Results" MODIFIED="1559822934400" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__64__W__15__L__5__D__0_1.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 64, W: 15, L: 5, D: 0.1 Coverage Results" MODIFIED="1559664132766" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__500__E__50__U__256__W__15__L__3__D__0_2.coverage" NAME="GPU, B: 100, N: 500, E: 50, U: 256, W: 15, L: 3, D: 0.2 Coverage Results" MODIFIED="1559741279161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__50__U__512__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 50, E: 50, U: 512, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559669087239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -1048,7 +1026,7 @@
     <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__0_1__E__50__U__64__W__15__L__1__D__0.coverage" NAME="2. GEN: GPU, P: 0.1, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559754629802" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$Train_Model_GPU.coverage" NAME="GPU, B: 1, N: 1, E: 1, U: 64, W: 10, L: 1, D: 0 Coverage Results" MODIFIED="1558335872308" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__50__E__100__U__256__W__15__L__5__D__0_2.coverage" NAME="GPU, B: 100, N: 50, E: 100, U: 256, W: 15, L: 5, D: 0.2 Coverage Results" MODIFIED="1559036303279" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_5__E__50__U__64__W__26__L__2__D__0_3.coverage" NAME="2. GEN: GPU, P: 1.5, E: 50, U: 64, W: 26, L: 2, D: 0.3 Coverage Results" MODIFIED="1559802389221" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_5__E__50__U__64__W__26__L__2__D__0_3.coverage" NAME="2. GEN: GPU, P: 1.5, E: 50, U: 64, W: 26, L: 2, D: 0.3 Coverage Results" MODIFIED="1559822014359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__1_5__E__50__U__64S__W__26__L__2__D__0_3.coverage" NAME="2. GEN: GPU, P: 1.5, E: 50, U: 64S, W: 26, L: 2, D: 0.3 Coverage Results" MODIFIED="1559816848110" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__100__N__500__E__50__U__64__W__15__L__1__D__0.coverage" NAME="GPU, B: 100, N: 500, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559328748289" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__0_01__E__50__U__256__W__15__L__1__D__0.coverage" NAME="2. GEN: GPU, P: 0.01, E: 50, U: 256, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559754121837" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -1165,34 +1143,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top_list/100_500_50_64_1_0.0_15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="238" column="4" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_5_0.2_15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="16" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_list/100_500_50_128_5_0.2_15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_1_0.0.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/requirements.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1204,20 +1154,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="23" selection-start-line="2" selection-start-column="23" selection-end-line="2" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_5_0.1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_1_0_15.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1265,40 +1201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loader2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="135" column="87" selection-start-line="135" selection-start-column="87" selection-end-line="135" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/speed_batchsizes.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="4" selection-start-column="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="7380">
@@ -1320,23 +1222,103 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/256_3_02.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2070">
+          <caret line="138" column="22" selection-start-line="138" selection-start-column="22" selection-end-line="138" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_500_50_128_5_0.2_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_500_50_64_1_0.0_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="238" column="4" selection-start-line="238" selection-start-column="4" selection-end-line="238" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_5_0.2_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="16" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_256_1_0_15.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/speed_batchsizes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_5_0.1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_list/100_50_50_64_15_1_0.0.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="80" selection-start-line="1" selection-start-column="80" selection-end-line="1" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="49">
-          <caret line="200" column="14" selection-start-line="200" selection-start-column="14" selection-end-line="200" selection-end-column="14" />
+        <state relative-caret-position="1174">
+          <caret line="228" column="46" selection-start-line="228" selection-start-column="46" selection-end-line="228" selection-end-column="46" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.py">
+    <entry file="file://$PROJECT_DIR$/analysis.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="512">
-          <caret line="42" column="28" selection-start-line="42" selection-start-column="28" selection-end-line="42" selection-end-column="28" />
+        <state relative-caret-position="375">
+          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
           <folding>
-            <element signature="e#0#64#0" expanded="true" />
+            <element signature="e#0#25#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/loader2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="613">
+          <caret line="100" column="45" selection-start-line="79" selection-start-column="11" selection-end-line="100" selection-end-column="45" />
         </state>
       </provider>
     </entry>

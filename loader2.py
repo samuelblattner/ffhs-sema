@@ -51,7 +51,7 @@ class Loader(object):
 
         return gen()
 
-    def __create_trainset_generator(self, tokenizer: Tokenizer, pad_to_length: int = 0, char_window_size: int = 10):
+    def __create_trainset_generator(self, tokenizer: Tokenizer, char_window_size: int = 10):
 
         def gen(loader):
 
@@ -65,7 +65,11 @@ class Loader(object):
                 X = None
                 Y = None
 
-                for dataframe in read_csv('data/full/whats-on-the-menu/Dish.csv', delimiter=',', header=0, chunksize=1000):
+                for dataframe in read_csv(
+                        filepath_or_buffer='data/full/whats-on-the-menu/Dish.csv',
+                        delimiter=',',
+                        header=0,
+                        chunksize=1000):
 
                     for row in dataframe[dataframe.columns[1]]:
 
@@ -77,15 +81,17 @@ class Loader(object):
 
                         # Split menu text up into characters
                         split_text = list(row)
+                        split_text_with_end = split_text + ['<end>']
 
                         # Generate windows
-                        for window_end in range(0, len(split_text) + 1):
+                        for window_end in range(0, len(split_text_with_end)):
 
-                            windowed_tokenized_sequences.append(
-                                [
-                                    tokenizer.word_index.get(char, tokenizer.word_index.get('pre')) for char in (['pad'] * max(0, (char_window_size - window_end)) + (split_text + ['<end>'])[max(0, window_end-char_window_size):window_end + 1])
-                                ]
-                            )
+                            padding_length = char_window_size - window_end
+
+                            windowed_tokenized_sequences.append([
+                                    tokenizer.word_index.get(char, tokenizer.word_index.get('pre')) for char in (
+                                        ['pad'] * max(0, padding_length) + split_text_with_end[max(0, window_end-char_window_size):window_end + 1])
+                                ])
 
                         # print(windowed_tokenized_sequences)
 

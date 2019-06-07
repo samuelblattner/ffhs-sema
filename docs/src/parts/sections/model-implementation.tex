@@ -1,6 +1,74 @@
 \section{Implementierung}
 \label{sec:model-implementation}
 
+Dieser Abschnitt beschreibt die Implementierung des Modells.
+Für den Aufbau und das Training werden TensorFlow 2.0\footnote{https://www.tensorflow.org/beta} sowie das mittlerweile darin integrierte Framework Keras\footnote{https://keras.io/} verwendet.
+Die Implementierung kann grundsätzlich in drei Komponenten aufteilt werden:
+
+\paragraph{Loader} Der Loader übernimmt die Aufgabe, die Trainings-Daten bereitszustellen.
+Das Training des Modells wird im sog. Mini-Batch-Verfahren vollführt.
+Der Loader lädt damit mit einem Python-Generator für jede Trainingsepoche nacheinander mehrere Ausschnitte des Gesamtdatensatzes (siehe Listing \ref{lst:mini-batch-loader}).
+Dies ermöglicht, beliebig grosse Datensätze zu bearbeiten, da immer nur der Speicherbedarf eines Mini-Batches benötigt wird.
+
+\begin{lstlisting}[language=Python, caption=Mini-Batch Loader, label=lst:mini-batch-loader]
+    ...
+    # Load mini-batch
+    for dataframe in read_csv(
+        filepath_or_buffer='data.csv',
+        delimiter=',',
+        header=0,
+        chunksize=1000):
+
+        # Iterate over lines in mini-batch
+        for row in dataframe[dataframe.columns[1]]:
+            ...
+\end{lstlisting}
+
+Der Loader übernimmt zudem die Aufgabe, die einzelnen Textsequenzen in einzelne Trainingseinheiten zu zerlegen.
+Die Sequenzlänge für das Training des RNN's ist konstant.
+Ist eine Trainingssequenz kürzer als die Fenstergrösse, wird sie mit Platzhalter Zeichen aufgefüllt («padding»).
+Ist eine Trainingssequenz länger als die Fenstergrösse, so wird sie abgeschnitten.
+Eine Trainingssequenz wird so Buchstabe um Buchstabe durch das Fenster geschoben.
+Der letzte Buchstabe wird jeweils als Zielwert abgeschnitten und in einem separaten Array zurückgeliefert (y).
+Gleichzeitig werden die Buchstabensequenzen mit dem Tokenizer in Vokabular-Indizes umgewandelt.
+Zuletzt werden diese Vokabularfolgen in One-Hot-Vektoren umgewandelt.
+
+\begin{lstlisting}[language=Python, caption=Encoding, label=lst:one-hot-encoding]
+    windowed_tokenized_sequences = []
+
+    # Split menu text up into characters
+    split_text = list(row)
+    split_text_with_end = split_text + ['<end>']
+
+    # Generate windows
+    for window_end in range(0, len(split_text_with_end)):
+
+    padding_length = char_window_size - window_end
+
+    windowed_tokenized_sequences.append([
+    tokenizer.word_index.get(char, tokenizer.word_index.get('pre')) for char in (
+    ['pad'] * max(0, padding_length) + split_text_with_end[max(0, window_end-char_window_size):window_end + 1])
+    ])
+
+    # print(windowed_tokenized_sequences)
+
+    windowed_tokenized_sequences = np.array(windowed_tokenized_sequences)
+    # print(tokenizer.sequences_to_texts(windowed_tokenized_sequences[:, :-1]))
+    # print(tokenizer.sequences_to_texts([windowed_tokenized_sequences[:, -1]]))
+    tokenized_char_phrases_X, tokenized_chars_y = windowed_tokenized_sequences[:, :-1], windowed_tokenized_sequences[:, -1]
+    padded_phrases_X = pad_sequences(tokenized_char_phrases_X, char_window_size)
+
+    one_hot_phrases = to_categorical(padded_phrases_X, num_classes=len(tokenizer.index_word) + 1)
+    # print(padded_phrases_X)
+    # print(one_hot_phrases)
+    one_hot_ys = to_categorical(tokenized_chars_y, num_classes=len(tokenizer.index_word) + 1)
+\end{lstlisting}
+
+
+\paragraph{Builder}
+
+\paragraph{Tainer}
+
 \subsection{Evaluierung der schnellsten Batchsize}
 \label{sec:evaluating-fastest-batchsize}
 Grafikkarte 980XT.
