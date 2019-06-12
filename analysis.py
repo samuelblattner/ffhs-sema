@@ -9,6 +9,7 @@ years_last = []
 min_year = 9999
 max_year = 0
 lengths = []
+spans = []
 for dataframe in loader:
 
     chars = set()
@@ -23,7 +24,9 @@ for dataframe in loader:
         yl = int(last_appeared)
         lengths.append(len(name))
 
-        if 'Greed with bread'.lower() in name.lower():
+        spans.append(yl - y)
+
+        if 'Tomato Surprise with Slices of Lettuce'.lower() in name.lower():
             print(name)
 
         if y > 1:
@@ -44,13 +47,16 @@ print('avg len ', sum(lengths)/len(lengths))
 print(min_year)
 print(max_year)
 print(len(lengths))
+print(spans[0:20])
+print(min(spans), max(spans))
 sorted_lengths = list(sorted(lengths))
 print(sorted_lengths[int(len(sorted_lengths)/2)])
 plt.style.use('ggplot')
-# g = plt.hist([years, years_last], bins=10, range=(min_year, max_year), label=['first_appeared', 'last_appeared'])
-g = plt.hist([lengths], bins=100, range=(0, 200))
+# g = plt.hist([years, years_last], bins=20, range=(min_year, max_year), label=['first_appeared', 'last_appeared'])
+g = plt.hist(spans, bins=100, range=(0, 100), label=['span',])
+# g = plt.hist([lengths], bins=100, range=(0, 200))
 plt.legend(loc='upper right')
 fig1 = plt.gcf()
 plt.show()
 plt.draw()
-fig1.savefig('test.png', dpi=300)   # no need for DPI setting, assuming the fonts and figures are all vector based
+fig1.savefig('test.pdf', dpi=300, format='pdf')   # no need for DPI setting, assuming the fonts and figures are all vector based

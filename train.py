@@ -3,8 +3,6 @@ import argparse
 from timeit import default_timer as timer
 import numpy as np
 import pickle
-import random
-import string
 import sys
 from matplotlib import pyplot as plt
 
@@ -14,23 +12,18 @@ from tensorflow.python.keras.saving import load_model
 from tensorflow.python.keras.utils import to_categorical
 
 from build import build_model
-from loader2 import Loader
+from loader3 import Loader
 
 INITIAL_SEQUENCES = (
-    'GVoRUcZybxnbknW',
-    'TKWLvaUtsiBvjPm',
-    'fewKeuFYJecyCAk',
-    'KXntyJsfzrZFAJT',
-    'jTNkWHsSswfEqhE',
-    'uNjcueOEZadlCMi',
-    'XESvYRSRqVSVNQy',
-    'EcWjyUUvFZlzIVr',
     'A',
-    'B',
-    'C',
+    'E',
+    'I',
+    'O',
+    'U',
     'Chicken',
-    'cWjyUUvFZlzIVaC',
-    'XESvYRSRqVSVN B'
+    'Steak',
+    'Burger',
+    'Tomato'
 )
 
 START_LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZÄÖÜ'
@@ -47,6 +40,7 @@ parser.add_argument('--window_size', default=10, type=int)
 parser.add_argument('--num_layers', default=1, type=int)
 parser.add_argument('--dropout_rate', default=0, type=float)
 parser.add_argument('--use_gpu', default=False)
+parser.add_argument('--use_year', default=False)
 args = parser.parse_args()
 
 model = None
@@ -119,7 +113,7 @@ if args.configuration:
 
 if args.configuration is None or args.force_train:
 
-    args.configuration = '{}_{}_{}_{}_{}_{}_{}_{}'.format(
+    args.configuration = '{}_{}_{}_{}_{}_{}_{}_{}_{}'.format(
         args.perc_lines,
         args.batch_size,
         args.num_batches,
@@ -128,6 +122,7 @@ if args.configuration is None or args.force_train:
         args.num_layers,
         args.dropout_rate,
         args.window_size,
+        'y' if args.use_year else 'ny'
     )
 
     if model is None or tokenizer is None or args.force_train:
@@ -205,32 +200,48 @@ if args.configuration is None or args.force_train:
 
 num_samples = 0
 
-# for sequence in INITIAL_SEQUENCES:
-for sequence in range(0, 30):
+words = [''] + [i for w,i in tokenizer.index_word.items()]
+
+year = ((float(2000) - 1800) / 300) if args.use_year else None
+
+print(year)
+for sequence in INITIAL_SEQUENCES:
+# for sequence in range(0, 30):
 
     i = 0
     num_samples += 1
-    sequence = [random.choice(string.ascii_letters) for r in range(0, args.window_size - 1)] + [START_LETTERS[random.randint(0, len(START_LETTERS)-1)]]
-    # sequence = list(sequence)
+    # sequence = [random.choice(string.ascii_letters) for r in range(0, args.window_size - 1)] + [START_LETTERS[random.randint(0, len(START_LETTERS)-1)]]
+    sequence = list(sequence)
+    initial_sequence = sequence.copy()
     if len(sequence) < args.window_size:
         sequence = ['pad'] * (args.window_size - len(sequence)) + sequence
 
-    initial_sequence = sequence.copy()
     out_sequence = []
     last_char = None
 
     while last_char != '<end>' and i < 60:
         tokenized_sequence = [tokenizer.word_index.get(char, tokenizer.word_index.get('pre')) for char in sequence]
         padded_sequence = pad_sequences([tokenized_sequence], args.window_size)[0]
-        padded_sequence = to_categorical(padded_sequence, num_classes=len(tokenizer.index_word) + 1)
+
+        if year:
+            padded_sequence = np.append(
+                to_categorical(padded_sequence, num_classes=len(tokenizer.index_word) + 1),
+                np.array([[year]] * args.window_size),
+                axis=1)
+        else:
+            padded_sequence = to_categorical(padded_sequence, num_classes=len(tokenizer.index_word) + 1)
         i = i + 1
-        p = list(model.predict_classes(np.array(padded_sequence).reshape((1, args.window_size, len(tokenizer.index_word) + 1))))
+
+        p = model.predict(np.array(padded_sequence).reshape((1, args.window_size, len(tokenizer.index_word) + 1 + (1 if year else 0))))
+        probs = list(p[0])
         # print(p)
-        last_char = tokenizer.index_word[p[0]]
-        sequence += [tokenizer.index_word[p[0]]]
-        out_sequence += [tokenizer.index_word[p[0]]]
+        last_char = np.random.choice(words, p=p.reshape((96,)))
+        # last_char = words[probs.index(max(probs))]
+
+        sequence += [last_char]
+        out_sequence += [last_char]
 
     print('{} -> {}'.format(
         ''.join(initial_sequence),
-        '{}{}'.format(initial_sequence[-1], ''.join(out_sequence[:-1])))
+        '{}{}'.format(''.join(initial_sequence), ''.join(out_sequence[:-1])))
     )

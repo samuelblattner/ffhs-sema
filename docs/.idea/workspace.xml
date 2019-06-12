@@ -2,11 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa572fd-a88a-4461-9295-5bbbf685ca2e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/parts/conclusion.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../loader3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../build.py" beforeDir="false" afterPath="$PROJECT_DIR$/../build.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/diagrams/model.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/diagrams/model.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/diagrams/model.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/diagrams/model.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parts/analysis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/analysis.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parts/glossary-defs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/glossary-defs.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parts/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/results.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parts/sections/model-definition.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-definition.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/parts/sections/model-generation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-generation.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/parts/sections/model-implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-implementation.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sema-samuel-blattner.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/sema-samuel-blattner.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../train.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parts/analysis.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="315">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -40,20 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parts/sections/model-definition.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/parts/glossary-defs.tex">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#23#2" expanded="true" />
-              </folding>
+            <state relative-caret-position="600">
+              <caret line="40" column="94" lean-forward="true" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="94" />
             </state>
           </provider>
         </entry>
@@ -61,11 +61,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sema-samuel-blattner.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+            <state relative-caret-position="687">
+              <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
               <folding>
                 <element signature="e#97#117#2" expanded="true" />
-                <element signature="e#197#218#2" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,20 +79,56 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/parts/sections/model-implementation.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="31" column="110" lean-forward="true" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
+            <state relative-caret-position="1125">
+              <caret line="75" column="75" selection-start-line="75" selection-start-column="75" selection-end-line="75" selection-end-column="75" />
               <folding>
-                <element signature="e#4560#4565#2" expanded="true" />
-                <element signature="e#5347#5352#2" expanded="true" />
-                <element signature="e#5718#5723#3" expanded="true" />
-                <element signature="e#5726#5731#3" expanded="true" />
-                <element signature="e#6129#6134#3" expanded="true" />
-                <element signature="e#6142#6147#3" expanded="true" />
-                <element signature="e#6156#6161#3" expanded="true" />
+                <element signature="e#6054#6059#2" expanded="true" />
+                <element signature="e#6841#6846#2" expanded="true" />
+                <element signature="e#7212#7217#3" expanded="true" />
+                <element signature="e#7220#7225#3" expanded="true" />
+                <element signature="e#7623#7628#3" expanded="true" />
+                <element signature="e#7636#7641#3" expanded="true" />
+                <element signature="e#7650#7655#3" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parts/conclusion.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parts/sections/model-generation.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/parts/sections/model-data-training.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/parts/results.tex">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="271">
+              <caret line="37" column="55" lean-forward="true" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -152,21 +187,23 @@
         <option value="$PROJECT_DIR$/src/parts/introduction.tex" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/src/parts/sections/model-data-training.tex" />
-        <option value="$PROJECT_DIR$/src/parts/results.tex" />
-        <option value="$PROJECT_DIR$/src/parts/sections/model-generation.tex" />
         <option value="$PROJECT_DIR$/src/main.bib" />
         <option value="$PROJECT_DIR$/src/parts/model.tex" />
         <option value="$PROJECT_DIR$/src/parts/glossary.tex" />
-        <option value="$PROJECT_DIR$/src/parts/glossary-defs.tex" />
         <option value="$PROJECT_DIR$/src/sema-samuel-blattner.bib" />
+        <option value="$PROJECT_DIR$/src/parts/glossary-defs.tex" />
+        <option value="$PROJECT_DIR$/src/parts/conclusion.tex" />
         <option value="$PROJECT_DIR$/src/parts/analysis.tex" />
-        <option value="$PROJECT_DIR$/src/parts/sections/model-definition.tex" />
         <option value="$PROJECT_DIR$/src/sema-samuel-blattner.tex" />
+        <option value="$PROJECT_DIR$/src/parts/sections/model-definition.tex" />
+        <option value="$PROJECT_DIR$/src/parts/sections/model-generation.tex" />
         <option value="$PROJECT_DIR$/src/parts/sections/model-implementation.tex" />
+        <option value="$PROJECT_DIR$/src/parts/results.tex" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-19" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1417" />
@@ -177,19 +214,12 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-              <item name="sources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
@@ -201,6 +231,27 @@
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="analysis" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="diagrams" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Seminararbeit SEMA" type="b2602c69:ProjectViewProjectNode" />
@@ -219,12 +270,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559932514071" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560370362385" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -234,15 +287,18 @@
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/images/analysis" />
+      <recent name="$PROJECT_DIR$/src/images/hist-dates" />
+      <recent name="$PROJECT_DIR$/src/images" />
+      <recent name="$PROJECT_DIR$/sources" />
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/parts" />
       <recent name="$PROJECT_DIR$/src/parts/sections" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/src/chapters" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/sources" />
-      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -404,18 +460,19 @@
       <workItem from="1559714077144" duration="852000" />
       <workItem from="1559741163935" duration="13701000" />
       <workItem from="1559809015842" duration="8797000" />
-      <workItem from="1559908198137" duration="9123000" />
+      <workItem from="1559908198137" duration="9191000" />
+      <workItem from="1560337602110" duration="13098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112147000" />
+    <option name="totallyTimeSpent" value="125313000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
+    <frame x="-4" y="23" width="2560" height="1417" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15011914" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15131056" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -424,7 +481,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981133" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.19698113" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.42490566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -550,20 +607,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parts/sections/model-data-training.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parts/sections/model-generation.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1035">
-          <caret line="69" column="12" selection-start-line="23" selection-end-line="69" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -602,13 +645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parts/results.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/parts/introduction.tex">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -639,23 +675,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/parts/model.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="117" selection-start-line="5" selection-start-column="117" selection-end-line="5" selection-end-column="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/parts/glossary-defs.tex">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#23#2" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/sema-samuel-blattner.bib">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -663,44 +682,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/parts/glossary-defs.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+          <folding>
+            <element signature="e#0#23#2" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parts/conclusion.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parts/model.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="117" selection-start-line="5" selection-start-column="117" selection-end-line="5" selection-end-column="117" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/parts/analysis.tex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sema-samuel-blattner.tex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="11" lean-forward="true" selection-start-line="24" selection-start-column="11" selection-end-line="24" selection-end-column="11" />
+        <state relative-caret-position="687">
+          <caret line="71" column="24" selection-start-line="71" selection-start-column="24" selection-end-line="71" selection-end-column="24" />
           <folding>
             <element signature="e#97#117#2" expanded="true" />
-            <element signature="e#197#218#2" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parts/sections/model-data-training.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" column="60" selection-start-line="34" selection-start-column="60" selection-end-line="34" selection-end-column="60" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parts/sections/model-definition.tex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="600">
+          <caret line="40" column="94" lean-forward="true" selection-start-line="40" selection-start-column="94" selection-end-line="40" selection-end-column="94" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parts/sections/model-generation.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parts/sections/model-implementation.tex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="31" column="110" lean-forward="true" selection-start-line="31" selection-start-column="110" selection-end-line="31" selection-end-column="110" />
+        <state relative-caret-position="1125">
+          <caret line="75" column="75" selection-start-line="75" selection-start-column="75" selection-end-line="75" selection-end-column="75" />
           <folding>
-            <element signature="e#4560#4565#2" expanded="true" />
-            <element signature="e#5347#5352#2" expanded="true" />
-            <element signature="e#5718#5723#3" expanded="true" />
-            <element signature="e#5726#5731#3" expanded="true" />
-            <element signature="e#6129#6134#3" expanded="true" />
-            <element signature="e#6142#6147#3" expanded="true" />
-            <element signature="e#6156#6161#3" expanded="true" />
+            <element signature="e#6054#6059#2" expanded="true" />
+            <element signature="e#6841#6846#2" expanded="true" />
+            <element signature="e#7212#7217#3" expanded="true" />
+            <element signature="e#7220#7225#3" expanded="true" />
+            <element signature="e#7623#7628#3" expanded="true" />
+            <element signature="e#7636#7641#3" expanded="true" />
+            <element signature="e#7650#7655#3" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/parts/results.tex">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="271">
+          <caret line="37" column="55" lean-forward="true" selection-start-line="37" selection-start-column="55" selection-end-line="37" selection-end-column="55" />
         </state>
       </provider>
     </entry>

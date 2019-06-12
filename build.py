@@ -37,10 +37,10 @@ def build_model(use_gpu: bool = False, num_units: int = 64, num_layers: int = 1,
 
     model = Sequential()
     for layer in range(0, max(num_layers - 1, 0)):
-        model.add((SimpleRNNCell if use_gpu else LSTM)(num_units,  input_shape=(window_size, len(tokenizer.index_word) + 1), return_sequences=True))
+        model.add((CuDNNLSTM if use_gpu else LSTM)(num_units,  input_shape=(window_size, len(tokenizer.index_word) + 1 + 1,), return_sequences=True))
         model.add(Dropout(dropout_rate))
 
-    model.add((SimpleRNNCell if use_gpu else LSTM)(num_units,  input_shape=(window_size, len(tokenizer.index_word) + 1)))
+    model.add((CuDNNLSTM if use_gpu else LSTM)(num_units,  input_shape=(window_size, len(tokenizer.index_word) + 1 + 1)))
     model.add(Dense(len(tokenizer.index_word) + 1, activation='softmax'))
 
     model.compile(

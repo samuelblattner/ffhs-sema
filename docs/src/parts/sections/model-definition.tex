@@ -24,20 +24,21 @@ Zwei gut bekannte Probleme, die einfache RNN-Memory-Zellen aufweisen sind einers
 die propagierten Werte «explodieren» oder gegen null «verschwinden», andererseits das Problem, dass anfangs eingespeiste Informationen gegen Ende der Sequenz verloren gehen \autocite{geron}.
 Zur Lösung dieser Problem wurden sog. «Long-Short-Term Memory Cells» (LSTM)\autocite{lstm} und später sog. «Gated Recurrent Units» (GRU)\autocite{gru} entwickelt.
 Weil sich beide «Gedächtniszellen» als sehr erfolgreich bewiesen haben, werden einfache RNN-Zellen schon fast nicht mehr verwendet.
-
-Für das hier angewandte Modell sollen LSTMs verwendet werden.
-Eine Trainingssequenz (1) wird Buchstabe um Buchstabe in das Modell eingegeben.
-Weil Buchstaben an sich nicht für arithmetische Operationen innerhalb des RNNs verwendet werden können, werden sie V-dimensionale One-hot-Vektoren encodiert, wobei die Konstante $ V $ die Menge des Vokabulars darstellt (2).
-Das RNN besteht aus einer oder mehreren Schichten (3).
-Eine RNN-Zelle besteht wiederum aus einer bestimmten Anzahl an Neuronen oder «Units» (4).
-Nachdem die ganze Buchstabensequenz ins RNN eingegeben wurde, wird der letzte Ausgabe-Vektor der LSTM-Zelle ($ y_{1,t} $) durch einen Softmax-Layer auf den Wertebereich (0.0, …, 1.0) normalisiert (5).
-So stellt der Ausgabevektor eine Wahrscheinlichkeitsverteilung über das ganze Vokabular dar.
-Der Index derjenigen Vektor-Komponente mit der höchsten Wahrscheinlichkeit ist gleichzeitig der Index des vorhergesagten nächsten Buchstanbes in der Sequenz im Vokabular (siehe Abb. \ref{fig:rnn-model-definition}).
+Für das hier angewandte Modell sollen LSTMs verwendet werden (siehe Abb. \ref{fig:rnn-model-definition}).
 
 \begin{figure}
     \centering
     \includegraphics[width=0.9\linewidth]{images/diagrams/model.pdf}
-    \caption{RNN Modell}
+    \caption{RNN Modell: Eine Trainingssequenz (1) wird Buchstabe um Buchstabe in das Modell eingegeben.
+    Weil Buchstaben an sich nicht für arithmetische Operationen innerhalb des RNNs verwendet werden können, werden sie V-dimensionale One-hot-Vektoren encodiert, wobei die Konstante $ V $ die Menge des Vokabulars darstellt (2).
+    Anschliessend wird jedem Buchstaben (also für jeden Zeitschrit) die Jahreszahl angehängt (3).
+    Das RNN besteht aus einer oder mehreren Schichten (4).
+    Eine RNN-Zelle besteht wiederum aus einer bestimmten Anzahl an Neuronen oder «Units» (5).
+    Nachdem die ganze Buchstabensequenz ins RNN eingegeben wurde, wird der letzte Ausgabe-Vektor der LSTM-Zelle ($ y_{1,t} $) durch einen Softmax-Layer auf den Wertebereich (0.0, …, 1.0) normalisiert (6).
+    So stellt der Ausgabevektor eine Wahrscheinlichkeitsverteilung über das ganze Vokabular dar.
+    Der Index derjenigen Vektor-Komponente mit der höchsten Wahrscheinlichkeit ist gleichzeitig der Index des vorhergesagten nächsten Buchstanbes in der Sequenz im Vokabular.
+    Mithilfe der Wahrscheinlichkeitsverteilung wird der One-Hot-Vektor zu einem Buchstaben dekodiert (7).
+    Dieser Buchstabe wird dann der Sequenz angehängt (8) und der Kreislauf beginnt von vorne.}
     \label{fig:rnn-model-definition}
 \end{figure}
 

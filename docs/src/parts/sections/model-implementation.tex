@@ -65,12 +65,16 @@ Zuletzt werden diese Vokabularfolgen in One-Hot-Vektoren umgewandelt.
 \end{lstlisting}
 
 
-\paragraph{Builder}
+\paragraph{Builder} Die Builder-Komponente übernimmt die Aufgabe, das RNN-Modell nach bestimmten Vorgaben aufzubauen.
+Sie scant durch sämtliche Datensätze und nimmt alle vorkommenden Buchstaben (=Vokabular) in einem sog. «\glq{Tokenizer}» auf.
 
-\paragraph{Tainer}
+\paragraph{Tainer} Trainer ist die Hauptkomponente, die vom Loader und vom Builder gebrauch macht.
 
 \subsection{Evaluierung der schnellsten Batchsize}
 \label{sec:evaluating-fastest-batchsize}
+Während der ersten Versuche konnte eine unterschiedliche Ausführungsgeschwindigkeit in Abhängigkeit der Batch-Grösse beobachtet werden.
+Um das Training der verschiedenen Modellkonfigurationen möglichst effizient
+
 Grafikkarte 980XT.
 Um das Modell möglichst effizient zu trainieren, soll die effizienteste Batch-Grösse für diese Grafikkarte empirisch eruiert werden.
 Dazu werden 10 Epochen mit jeweils 1000 Trainingsschritten vollführt.
@@ -125,10 +129,8 @@ Dazu werden 10 Epochen mit jeweils 1000 Trainingsschritten vollführt.
     \end{table}
 \end{center}
 
-
-
 \subsection{Erweiterung des Trainingssets}
-\label{sec:enhancing-training-set}
+\label{subsec:enhancing-training-set}
 
 -- INSERT HISTORGRAM LINE LENGHTS ---
 
@@ -165,6 +167,27 @@ Sollen also beispielsweise 25\% des gesamten Datensatzes mit 50 Epochen trainier
 
 Batches an.
 
+\subsection{Hinzufügen der Zeitkomponente}
+\label{subsec:adding-time-component}
 
-\subsection{Dropout rate erhöhen für bessere Generalisierung}
-\label{subsec:enhance-dropout-rate}
+Jeder Trainingssatz bzw. jede Gerichtbezeichnung ist mit einem Datum versehen, an dem das Gericht zum ersten Mal
+registriert wurde sowie mit einem Datum, an dem das Gericht zum letzen Mal registriert wurde.
+Ein Histogram legt offen, dass die einzelnen Gerichte ungleichmässig auf die Zeit verteilt ist.
+Ausserdem weist der Grossteil der Gerichte eine «Lebensdauer» von wenigen Jahren auf (siehe Abb.\ref{fig:hist-dates-datespans}).
+Aufgrund letztgenannter Tatsache soll das Enddatum einfachheitshalber ignoriert werden.
+Stattdessen wir das Eintrittsdatum der Eingabesequenz für das Modell angehängt.
+Da nach erstem Ausprobieren das Anfügen der absoluten Jahreszahl kein gutes Training ermöglichte, wird das Jahr
+als relativer Wert in einer Jahresspanne von 300 Jahren (1800 - 2100) angehängt, wobei also 0.0 dem Jahr 1800 sowie
+der Wert 1.0 dem Jahr 2100 entsprechen.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.75\linewidth]{images/analysis/histogram-dates.pdf}
+    \caption{Zeitliche Verteilung}
+    \label{fig:hist-dates-datespans}
+\end{figure}
+
+Dem Modell werden zudem sog. Callbacks\footnote{https://keras.io/callbacks/} hinzugefügt, damit das Training nach
+längerem Plateau nicht unnötig weiter trainiert werden muss.
+Ausserdem wird das gesamte Modell und insbesondere seine Gewichte nach jeder Epoche quasi als «Spielstand» gespeichert,
+falls sich die Validierungsakuratheit insgesamt verbessert hat.
