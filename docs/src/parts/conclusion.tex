@@ -1,2 +1,26 @@
 \chapter{Fazit \& Ausblick}
 \label{ch:conclusions}
+
+Diese Arbeit zeigt auf, dass Machine Learning durchaus als Kreativitätswerkzeug verwendet werden kann.
+Die Qualität und der Umfang der Erzeugnisse stehen und fallen allerdings mit der Qualität des Trainingsdatensatzes.
+Hier könnte mit einem Daten-Preprocessing abgeholfen werden, indem beispielsweise die Namen der Gerichte nach
+Sprache segmentiert werden.
+So könnte auch eine weitere Klassifikation nach Sprache stattfinden und die Variabilität des Modells erhöhen, indem
+die Sprache als Steuerparameter verwendet wird.
+Es hat sich gezeigt, dass die Klassifikation nach Zeit (Jahr) nicht funktioniert, weil die Verteilung der Gerichte nach Jahr sehr unregelmässig ist und
+weil sich die Epoche nicht sonderlich in der Wahl von Wörtern niederschlägt.
+
+Das Modell könnte so weiterentwickelt werden, dass Feedback vom Benutzer integriert werden kann und so die Qualität des Modells nach und nach verbessert wird.
+Beispielsweise könnte der Datensatz manuell um weitere Labels erweitert werden.
+Zum einen wäre sicher die Sprache der Namen interessant, zum anderen auch mehr Informationen zum Gericht selbst.
+Ist ein Gericht vegetarisch oder gar vegan?
+Wieviele Kalorien enthält ein Gericht?
+Ist es eher deftig oder leicht?
+Nicht zuletzt ist ja die Normalisierung des Preises Gegenstand von tatsächlichen Weiterentwicklungen des Datensatzes\footnote{http://nypl.github.io/menus-api/, Stichwort «price normalization»}.
+Ist dieser Schritt vollendet, so wäre es möglich, günstige und teure Gerichte zu trainieren.
+All diese Daten eignen sich wahrscheinlich besser als die Zuordnung einer Epoche, da die Daten deutlicher zugeordnet werden könnten.
+So haben Gerichte ohne Fleisch die Tendenz, günstiger auszufallen während Angus Rind erfahrungsgemäss teuer ist.
+
+Eine weitere Arbeit könnte darin bestehen, die optimale Netzkonfiguration für den höchsten Anteil lesbarer Wörter sowie die
+höchste Originalität zu finden.
+Möglicherweise wäre auch die Veränderung der Sequenz-Fenstergrösse interessant, um das Modell leistungsfähiger zu machen.

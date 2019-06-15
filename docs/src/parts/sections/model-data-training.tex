@@ -1,11 +1,10 @@
-\section{Daten \& Training}
+\section{Daten}
 \label{sec:model-data-training}
 
-In diesem Abschnitt werden die Trainingsdaten für das Modell analysiert und beschrieben.
-Als Lerngrundlage für den Algorithmus dienen rund 400000 Namen von Gerichten.
-Diese sind im Kaggle-Datensatz «What's on the menu»\footnote{https://www.kaggle.com/nypl/whats-on-the-menu}\footnote{http://nypl.github.io/menus-api/} enthalten.
-Der Unterdatensatz «Dish.csv» enthält folgende Struktur:
-
+Als Lerngrundlage für den Algorithmus dienen rund 400'000 Bezeichnungen von Gerichten.
+Diese sind im Datensatz «What's on the menu»\footnote{http://nypl.github.io/menus-api/} enthalten, der von
+der New York Public Library unterhalten und laufend erweitert wird.
+Der Unterdatensatz «Dish.csv» besteht aus folgender Struktur:
 
 \begin{center}
     \resizebox{\textwidth}{!}{
@@ -31,18 +30,11 @@ Der Unterdatensatz «Dish.csv» enthält folgende Struktur:
     }
 \end{center}
 
-Für die Arbeit relevant ist vorerst lediglich die \textit{name}-Spalte.
-Sie enthält Bezeichungen von Gerichten in mehreren Sprachen.
-
-Für das Training eines ersten Modells wird folgende Spezifikation verwendet:
-
-Batches: 100
-Batchsize: 50
-Epochen: 50
-RNN-Units: 64
-RNN-Layers: 1
-Textlänge: 15
-
-Für die Validierung pro Epoche werden jeweils die weiteren Zeilen, die auf das Trainingsset folgen, verwendet.
-
-
+Für die Arbeit relevant sind vorerst lediglich die \textit{name}-Spalte sowie die \textit*{firs\_appeared}-Spalte.
+Die Namens-Spalte enthält Bezeichnungen in verschiedenen Sprachen, hauptsächlich jedoch in Englisch.
+First\_appeared datiert den Zeitpunkt, an dem ein bestimmtes Gericht zum ersten Mal registriert wurde.
+Leider sind die Preis-Spalten nicht normalisiert, d.h. Inflation und Lohnniveau sind nicht berücksichtigt.
+Somit können Preise unterschiedlicher Epochen nicht verglichen werden bzw. ein Gericht kann nicht per se als «teuer» oder
+«günstig» klassifiziert werden.
+Möglich wäre die Preise anhand einer eigenen einfachen Funktion in Abhängigkeit der Jahreszahl linear zu normalisieren, was
+den Rahmen der Arbeit jedoch sprengen würde.

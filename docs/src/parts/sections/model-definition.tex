@@ -1,17 +1,17 @@
 \section{Formale Definition}
 \label{sec:model-definition}
 
-Weil sie fähig sind, zeitliche Zustände zu speichern, eignen sich Rekurrente Neuronale Netze (in der restlichen Arbeit wird die Abkürzung «RNN» verwendet) besonders gut, um Sequenzen zu lernen.
+Weil sie fähig sind, zeitliche Zustände zu speichern, eignen sich sog. «Rekurrente Neuronale Netze» (in der restlichen Arbeit wird die Abkürzung «RNN» verwendet) besonders gut, um Sequenzen zu lernen.
 Die natürliche Sprache ist eine Sequenz von Wörtern, die in sich wiederum aus einer Sequenz von Buchstaben bestehen.
 Deshalb kommen RNNs bis heute in vielen Gebieten von natürlichsprachlicher Textverarbeitung zum Einsatz.
 
 Die Besonderheit eines RNN's liegt darin, dass – anders als bei einfachen neuronalen Netzen – die \glspl{neuron} nicht nur den Wert der vorangehenden Netzschicht als
 Eingangswert erhalten, sondern auch den Ausgangswert des vorangehenden Zeitschritts ihrer selbst.
 Jedes \gls{neuron} speichert den Zustand der bisherigen Zeitschritte als sog. «hidden state», der mit der Variable $ h $ gekennzeichnet wird (siehe Abb. \ref{fig:rnn-model-definition-memory-cell}).
-Da das Neuron einr Art Erinnerung fähig ist, wird es auch als «Memory Cell» oder einfach als Zelle bezeichnet.
+Da das Neuron einer Art Erinnerung fähig ist, wird es auch als «Memory Cell» oder einfach als Zelle bezeichnet.
 Der Wert der Zellenausgabe $ y $ sowie der Zustand $ h $ werden beide durch eine Funktion $ f(h_{(t-1)}, x_{(t)})$ anhand des Zustandes aus dem vorangehenden Zeitschritt sowie der Eingabe berechnet.
 Die beiden Funktionen können, müssen aber nicht den gleichen Wert ausgeben.
-Für nähere Details zur Architektur und Funktionsweise sei auf die exzellente Beschreibung in \autocite{geron} verwiesen.
+Für nähere Details zur Architektur, Berechnung sowie Funktionsweise sei auf die exzellente Beschreibung in \autocite{geron} verwiesen.
 
 \begin{figure}
     \centering
@@ -21,10 +21,22 @@ Für nähere Details zur Architektur und Funktionsweise sei auf die exzellente B
 \end{figure}
 
 Zwei gut bekannte Probleme, die einfache RNN-Memory-Zellen aufweisen sind einerseits das sog. «Exploding/Vanishing Gradient Problem», bei dem insbesondere in mehrschichtigen neuronalen Netzen
-die propagierten Werte «explodieren» oder gegen null «verschwinden», andererseits das Problem, dass anfangs eingespeiste Informationen gegen Ende der Sequenz verloren gehen \autocite{geron}.
-Zur Lösung dieser Problem wurden sog. «Long-Short-Term Memory Cells» (LSTM)\autocite{lstm} und später sog. «Gated Recurrent Units» (GRU)\autocite{gru} entwickelt.
+die propagierten Werte «explodieren» oder gegen null verschwinden, andererseits das Problem, dass anfangs eingespeiste Informationen gegen Ende der Sequenz verloren gehen \autocite{geron}.
+Zur Lösung dieses Problems wurden sog. «Long-Short-Term Memory Cells» (LSTM)\autocite{lstm} und später sog. «Gated Recurrent Units» (GRU)\autocite{gru} entwickelt.
 Weil sich beide «Gedächtniszellen» als sehr erfolgreich bewiesen haben, werden einfache RNN-Zellen schon fast nicht mehr verwendet.
-Für das hier angewandte Modell sollen LSTMs verwendet werden (siehe Abb. \ref{fig:rnn-model-definition}).
+Für das hier angewandte Modell sollen LSTMs verwendet werden.
+Damit der Ausgabevektor des Modells für die Vorhersage des nächsten Zeichens verwendet werden kann, wird er mit der Softmax-Funktion normalisiert.
+Die Softmax-Funktion ist definiert durch:
+
+\[ \sigma(x)_{j} = \frac{e^{x}}{\sum_{k=1}^{K} e^{x_{k}}} \]
+
+wobei $ x $ der Wert der $ j $-ten Vektorkomponente ist und $ K $ der Anzahl Vektorkomponenten entspricht.
+Die Exponentialfunktion wandelt sämtliche Werte $ x $ in positive Werte um, und die Division durch die Summe aller Exponentialwerte berechnet den prozentualen Anteil jeden Wertes.
+Alle Anteile bzw. Wahrscheinlichkeiten addiert ergeben wiederum $ 1 $.
+Der vom Modell errechnete Ausgabevektor \hat{y} wird mit dem Zielwert y anhand von Cross-Entropy\footnote{https://ml-cheatsheet.readthedocs.io/en/latest/loss_functions.html#cross-entropy} verglichen.
+Durch Backpropagation Through Time\footnote{https://machinelearningmastery.com/gentle-introduction-backpropagation-time/} wird das Modell nach jedem Trainingsschritt im Gradient-Descent-Verfahren
+so angepasst, dass die berechnete Abweichung von \hat{y} zum Zielwert y kleiner wird.
+Der Aufbau des Modells ist in Abb. \ref{fig:rnn-model-definition} beschrieben.
 
 \begin{figure}
     \centering

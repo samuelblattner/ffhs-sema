@@ -5,306 +5,176 @@ Dieser Abschnitt führt die durch das im vorherigen Abschnitt definierten Modell
 Weil die Bewertung des Modells nur manuell und qualitativ möglich ist (d.h. Messwerte wie Präzision oder Recall korrelieren nicht zwingend
 mit der wahrgenommenen Qualität der Ausgaben des Modells), ist es notwendig, dass die Ausgaben systematisch auf die verwendeten
 Modellparameter zurückgeführt werden können.
-Dafür wir das Modell systematisch mit unterschiedlichen Parametern trainiert, und die Resultate werden in einer
-Konfigurationsmatrix aufgelistet.
+Dafür wir das Modell systematisch mit unterschiedlichen Parametern trainiert, und die Resultate der Erzeugung von Namen
+werden in einer Konfigurationsmatrix aufgelistet.
 Für jede Konfiguration werden die Initialsequenzen «A», «E», «I», «O», «U», «Chicken», «Steak», «Burger» und «Tomato» verwendet.
-Für jede Konfiguration und jede Initialsequenz werden ausserdem jeweils drei Ausgaben erzeugt.
+Um repräsentative Werte zu erhalten, werden insgesamt 1000 Sequenzen erzeugt.
+Jede Initialsequenz wird also rund 111 mal verwendet (1000/9).
+Von allen erzeugten Sequenzen werden für jede Initialsequenz jeweils zwei Beispiele in Tabellen (siehe Anhang) abgebildet.
+
+Um die Resultate später beurteilen zu können, werden zusätzlich zu den Ausgaben einige Messwerte berechnet, die hier
+kurz erklärt werden:
+
+\paragraph{Wörter}: Gesamtanzahl ausgegebenener Wörter
+\paragraph{Lesbare Wörter}: Anteil der lesbaren bzw. verwendbaren Wörter.
+Als «lesbar» wird ein Wort akzeptiert, wenn es in einer der Wortliste in den Sprachen Deutsch, Englisch, Französisch, Italienisch, Spanisch oder Niederländisch enthalten ist\footnote{Daten: http://www.gwicks.net/dictionaries.htm}.
+Gross-/Kleinschreibung wird dabei ignoriert.
+\paragraph{ø-Worlänge}: Durchschnittliche Zeichenzahl der erzeugten Wörter
+\paragraph{Multi}: Anteil der Wörter, die in mehreren Wörterbüchern vorkommen.
+\paragraph{G, E, F, I, Es, Dt}: Anteile der Wörter, die ausschliesslich in den Wörterbüchern \textbf{G}erman, \textbf{E}nglish, \textbf{F}rench, \textbf{I}talian, \textbf{Es} (Spanish) oder \textbf{Dt} (Dutch) vorkommen.
+\paragraph{ø-Namenslänge}: Durchschnittliche Länge der erzeugten Namen von Gerichten.
+\paragraph{Originalität}: Anteil der erzeugten Namen, der nicht im Trainingsset vorkommt.
+\paragraph{Repetition}: Anteil mehrfach erzeugter Sequenzen
+\paragraph{Inline-Repetition}: Anteil wiederholter Wörter pro Name
+\paragraph{Max Val Acc}: «Maximum Validation Accuracy».
+Maximale während dem Training erreichte Akuratheit.
+\paragraph{Min Val Loss}: «Minimum Validation Loss».
+Minimal erreichte Abweichung zum Soll-Wert.
+
+\section{Generation 1: Fehlerhaftes Modell \& Verbesserung}
+\label{sec:erroneous-model}
+
+
+
+\section{Generation 2: Korrektes Modell \& Resultate}
+\label{sec:correct-model}
+
+Zur besseren Übersicht sind alle Tabellen im Anhang aufgelistet.
+
+\newcommand{\sn} {\vspace{1.2mm}\newline}
 
 \begin{center}
     \begin{table}
         \centering
         \tiny
-        \begin{tabular}{ |l|l|l| }
+        \begin{tabularx}{\textwidth}{|>{\hsize=.1\hsize}X|>{\hsize=.45\hsize}X|>{\hsize=.45\hsize}X|}
 
             \hline
-            \textbf{} & \textbf{64 Units, val acc 49\%} & \textbf{512 Units, val acc 76\%} \\
-            \hline
-            \textbf{1 Layer} &
-            \begin{tabular}[c]{@{}l@{}}
+            \textbf{} & \textbf{64 Units, val acc 49\%} & \textbf{512 Units, val acc 76\%} \\\hline
 
-               Avota, Coffee, Season, Lobler, Nice Combinatiandi \\
-               Ard Supremern Mambor Rolls (20 Omeley) (2 de \\
-               Aspirale, Partreyning, Cocktamel, Handia Portion, Heas Ice B \\
-               Eggs Holl: Coffee with Fresh Branches \\
-               ERts with or Veal Holland Bour,, Butter, Salad Bowl with \\
-               Extra Canfot Strawberringen Broiled Lamb Sandwich, Escelliny \\
-               Isporit of Chicken \\
-               Imported Sea Lemunish Limp Rib on Tarle \\
-               Ice Cream, Beug \\
-               Odes Potato  Rind Eocy-Fried Potatoes, Salad \\
-               Oriex Coldoysh, Broth Bowl pinach) \\
-               Orrerser Lobster and Butter, served with Chocolated Two Bord \\
-               Undola New Chicken & Cream \\
-               Utentelle Saude Craps or Peas, Coffee \\
-               UVanori, Noodly Bosed with Chicken, Broiled Coffee, Rolls an \\
-               Chicken and Breant \\
-               Chicken Rib of Cream, Coffee Mad or Fresh Cane Yonktaa Blanch, Fre \\
-               Chicken Peach Sinally Paddermi sauco \\
-               Steak 25 Wenberner Dails, Beef Boiled Made Hollander with Fresh \\
-               Steak cake and in with thriled smith, or Crablese, Cocktail (192 \\
-               Steak, Lemon Madeluse STEAK VEGIT RYAMEL with French Fried Potat \\
-               Burger with Salad and Spring Salad, sHELS SPRIMP AUL DABE \\
-               Burger \\
-               Burger (S.) Charent \\
-               Tomato Butterrian Pie \\
-               Tomato Coffee Sandwich, Pot Pork \\
-               Tomato Tomato Tamered Sen Brothry Coffee, Fresh Fruits, Turlen,, \\
+                \textbf{1 Layer}
 
-            \end{tabular} &
-            \begin{tabular}[c]{@{}l@{}}
+                &
 
-                Apricots, Layer Cake \\
-                Arisotter's Sword Cheese, Tea and Dessert \\
-                Aveck Made a OBARISION COCKTAIL (R.F.E. Regil) \\
-                EWNEY COCKTAIE S9oth (Resart) \\
-                Enchilada Cake \\
-                English Mutton Chops, Ham, Puree Grilled in served with vinc \\
-                Italian Decker \\
-                Ice Cream, Parsley-Potato \\
-                Italienne Lemon Horsicreme \\
-                Oyster, Au Jus, French Dressing, Bread and Butter, Toast or \\
-                Old English Cheese and Cream, Fresh Greens accia celery, win \\
-                ORANGE Cockane \\
-                Un Sirloin Steak, Dinner Stew \\
-                UCYlet Bourbon Whisky \\
-                Usher Cocktail \\
-                Chicken Noodles, Dinner Salad \\
-                Chicken Normoniscotod Beefsteak, Cookie Juice or Red Wine, Served \\
-                Chicken a la Therking \\
-                Steak, au Gratin Potatoes \\
-                Steak a la Newburg \\
-                Steak, French Fried Potatoes \\
-                Burger Topps, Brandy, Fresh Mushrooms or Skresser, Cheddar Peau a \\
-                Burger Scallops, Fried) \\
-                Burgerstone-Crabmeat \\
-                Tomato, Salad Bowl, Rolls, Coffee, Tea or Milk \\
-                Tomato, Toast or Rolls, Beverage \\
-                Tomato Surprise with Slices of Lettuce, Cole \\
+                Art. Lugon with Lemon Steak with Santwichs, Fresh Porta \sn
+                Aurabor Special \sn
+                Burger Matternode, Beens \sn
+                Burgerma Herring Hamburner, Jumbo Bitter \sn
+                Chicken Bordeia Butterkuhe Sainds, Barolian Juice, Tortare de Long French Friedens, While Cheese \sn
+                Chicken Potage sautess \sn
+                Ea Roaded Mulne \sn
+                Eggs of Kits Special Potato, Peas and Boiled Bollt, Dressiny \sn
+                Imporied Hom Soup Cnock a la gridleys, Cabined Salad \sn
+                Italian Sandwich or Onion, Mashed, Doicuols \sn
+                Oce Potatoes, Fruits, Syrup, (oriles au buigs, Endoll Beef and Half-Dessert, Bacon,, Salad \sn
+                OPELL CHOPPED PODS, GURLAIENURL JULIEN, ESOISTERY STEAK - PURTRROP \sn
+                Ule Chambernerse Bacon, Cream of Fresh Vegetables, Couffalian Compons \sn
+                U'2 Kern Inille Julien, Seddons, Coffee, Newburg, Green, grean on Whisparl \sn
+                Steak Caul M. Capon \sn
+                Steak with Breast, Green Pommatee with Coin cream, Mayonnaise, 1916 Jub Pers \sn
+                Tomato Green Nown Lobster, Potatoes, Littlender Rois Ptupe, reef, served with De Cortored Potatoes \sn
+                Tomato Slices Brandy \sn
+                \sn\sn
+                \textbf{Training} \sn
+                Wörter: 6885, Lesbare Wörter: 69.68\%, ø-Wortlänge: 5.66\newline
+                Multi: 45.7\% G: 0.52\%, E: 52\%, F: 0.46\%, I: 0.2\%, Es: 0.31\%, Dt: 0.7\% \newline
+                ø-Namenslänge: 44.7, Originalität: 97.39\% \newline
+                Repetition: 1.1\%, Inline-Repetition: 1.3\% \newline
+                Max Val Acc: 60\%, Min Val Loss: 1.3748 \newline
 
-            \end{tabular} \\
-            \hline
-            \textbf{5 Layers} & KZZkfvyyQexqTel & a bey \\
-            \hline
-        \end{tabular}
-        \caption{Caption}
-        \label{tab:first-sequences}
+                &
+
+                All Brandy and beverages \sn
+                Asparagus, Rum \sn
+                Burger Holland Kbrod \sn
+                Burgerbranting \sn
+                Chicken Fircies with Sweetbread, Cereal Dressing \sn
+                Chicken Livers Bents Harsmell \sn
+                Eggs with Crisp Bacon, Fried \sn
+                Eugeny Essence or Denays \sn
+                I8 dienne \sn
+                Imported Sardine, Bread and Butter, Pepper \sn
+                O.B. Victor's White \sn
+                Old Fashioned Corn \sn
+                Steak Saute Mullerin \sn
+                Steak Tomato Florida \sn
+                Tomato au Gratin Potatoes, French fried oribroll, mornay and cereal, in meat Dill Pickle (8 years) \sn
+                Tomatoes, Apple, French Fried Potatoes \sn
+                Ul Soup, Iceding Cream with Toast, Rolls, With * \sn
+                Ungarisnister, Tartar Sauce, Potatoes \sn
+                \sn\sn
+                \textbf{Training} \newline
+                Wörter: 6383, Lesbare Wörter: 85.8\%, ø-Wortlänge: 5.62\newline
+                Multi: 46\%, G: 0.31\%, E: 52\%, F: 0.46\%, I: 0.036\%, Es: 0.07\%, Dt: 027\% \newline
+                ø-Namenslänge: 41.1, Originalität: 92.8\% \newline
+                Repetition: 1.1\%, Inline-Repetition: 1.2\% \newline
+                Max Val Acc: 76\%, Min Val Loss: 1.3584 \newline
+
+            \\\hline
+
+                \textbf{3 Layers}\newline Dropout: 5\%
+
+                &
+
+                Assorted Fruit Sainagido (5) \sn
+                Avepilet Ory Per of Melinas \sn
+                Burger Blon 2 Steak, Baked Consonfor au crabmeat, Trout - Bowl, Fried Friets of Bruefle, Fruits, Swiss Korsiurast - Lettuce Dessert and Toast and French Fried Potatoes, Coffee \sn
+                Burger's in Home Clams \sn
+                Chicken Chef's Bocon or Bordeal one Wine Coffee, tea or Toast or Bowl Ost. Pirener, Coinn Bon, Mimagion, Cherrions (huwey) \sn
+                Chicken, Loraise Sliced Toast \sn
+                Eggs with Spiped Tartar \sn
+                Eio-Bread of Le roiled Coffee, Boked Corn \sn
+                IGRELOSTED FRESH CALNON VANHRUNT OF TONDTER MASPY SPECED MUBERLEAGS) MICHREE \sn
+                Imported and Vilrath Vegetables, Beans, Pigab Perrilles, Ling Marnicadi and with Spring Coffee, Toast, Strip, Casserole with Poples, Browned French Potatoes and Tondwed \sn
+                Obsro Noudonne Choice \sn
+                Oysters with Butter, Tea \sn
+                Steak Saddles, Chicken Saute Person \sn
+                Steak with Celery, Salad \sn
+                Tomato \sn
+                Tomato Steak with Fried Potatoes \sn
+                U-Broiled Coffee, Vrewse or Herring, Birdo-crumb with Pork Dany Tenderloin \sn
+                Urad) Ice Cereal rockfish Roast Meat salad, Bread, Pork Filet of Lincer  2) Curnet Club, Meat - Clinet Choomille \sn
+                \sn\sn
+                \textbf{Training} \newline
+                Wörter: 10094, Lesbare Wörter: 73.6\%, ø-Wortlänge: 5.67\newline
+                Multi: 44.5\%, G: 0.48\%, E: 53.95\%, F: 0.40\%, I: 0.05\%, Es: 0.13\%, Dt: 0.47\% \newline
+                ø-Namenslänge: 65.8, Originalität: 98.6\% \newline
+                Repetition: 0.19\%, Inline-Repetition: 2.4\% \newline
+                Max Val Acc: 59.7\%, Min Val Loss: 1.3584 \newline
+
+                &
+
+                Asparagus ( Carrots), Cup, Shrimps, Fresh String Beans, Hollandaise \sn
+                ASSORTED BREADS with Salad Bowl, Breast of Beef with Canadian Bacon, Toast or Rolls, Water Cress \sn
+                Burger Hawdinne Piespund Corn with Cream Orleans \sn
+                Burger Wine \sn
+                Chicken a la Mornay, Mixed Green Peas and Sgr. J Loaf Cabar or Corned Beef, Baked Idaho Potato \sn
+                Chicken consomme \sn
+                Elberts Sherry, Barsac, Nip \sn
+                English Mutton chops, smithfield, potatoes, Lettuce and Tomatoes (Gin, Waldorf Salad \sn
+                India Renale, Cordials \sn
+                Indle with Russian Dressing, Persimines \sn
+                Order Salad Hollandaise Sauce \sn
+                Our Raw Sausage, French Fried Potatoes \sn
+                Steak \sn
+                Steak Dinner, White Cabbage \sn
+                Tomato En Casserole, Fruits or Milk \sn
+                Tomato Liqueur, Bread \sn
+                UND NECT CRABMEAT on Toast, French fried potato, special d'Anchovy in Toast \sn
+                UR BACON, Fresh Green Peas, Baked Potato \sn
+                \sn\sn
+                \textbf{Training} \newline
+                Wörter: 6848, Lesbare Wörter: 88.84\%, ø-Wortlänge: 5.57\newline
+                Multi: 46.94\%, G: 0.13\%, E: 52.3\%, F: 0.34\%, I: 0.05\%, Es: 0.13\%, Dt: 0.1\% \newline
+                ø-Namenslänge: 43.8, Originalität: 92.8\% \newline
+                Repetition: 1\%, Inline-Repetition: 1.4\% \newline
+                Max Val Acc: 72.12\%, Min Val Loss: 0.9165 \newline
+
+            \\\hline
+        \end{tabularx}
+        \caption{Resultate verschiedener Modellkonfigurationen (Schichten vs. Units)}
+        \label{tab:results-of-various-configurations}
     \end{table}
-\end{center}
-
-
-\begin{center}
-    \begin{table}
-        \centering
-        \begin{tabular}{ |l|l|l| }
-
-            \hline
-            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz} \\
-            \hline
-            1 & GVoRUcZybxnbknW & in Aones \\
-            2 & KZZkfvyyQexqTel & a bey \\
-            3 & oXvGKETlJftZHnE & SPhKAQahbgOCmjA \& pg. \\
-            4 & TKWLvaUtsiBvjPm & Artonast wit Creme \\
-            5 & fewKeuFYJecyCAk & Autt, cu paAte Sauce \\
-            6 & ItekMqsKSONjbZj & gngn \\
-            7 & KXntyJsfzrZFAJT & eatong \\
-            8 & wudYekDhHOnsuPM & t \\
-            9 & rOVMbLyCBbyCCSv & uAf \\
-            10 & sGrYAEQfnkKxpOM & eiihg \\
-            11 & jTNkWHsSswfEqhE & ing woth Mustorer) \\
-            12 & bSTqiMSCZxVffMo & pshne Homatse \\
-            13 & ktJyYYRuSUIJrCk & ung, D AyAnena aute,ors \\
-            14 & kfoHrzlsoUGsAkY & Ah DricrTela oedt \\
-            15 & DLVzoGsxmAwZgNZ & PoRrer \\
-            16 & LCgtubworFrYewb & anco Hadorige \\
-            17 & XchjpBUGSMyTMDq & ung \\
-            19 & uNjcueOEZadlCMi & ihon w anilh Potatoast \\
-            20 & UqStcroEvEehEyo & ng aust (torofffeds \\
-            22 & ITiVXrEVDZXmROr & i, Are \& OoTatots \\
-            23 & qweSAvVKPXrITCg & eagO \\
-            26 & HfhoDhwJzEQaENT & \& Bance \\
-            27 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator \\
-            28 & CswghmMaYkvPCbR & ete wite withe Bacons onito \\
-            29 & tfRfupMQNvfAiaM & n Ar) \\
-            30 & DdeFQkxYiMRYZdS & eupe \\
-            31 & EcWjyUUvFZlzIVr & ieegs \\
-            32 & seJxLpTqfwVrXap & jUTKKjCUByrALrS \& , Pon oof CTEes \\
-            33 & jkAdzFdrlJDiQrI & ig anu Fueneons \\
-            34 & ZItmxxUhqrlSXOI & b \\
-            36 & ZhkCmYpZooVaFbs & e \\
-            37 & jKbYNXXLpnbCgOd & Ait \\
-            38 & wdaAgOuxYYhomCF & ith shune \\
-            \hline
-        \end{tabular}
-        \caption{Caption}
-        \label{tab:first-sequences}
-    \end{table}
-\end{center}
-
-\begin{center}
-    \begin{table}
-        \centering
-        \begin{tabular}{ |l|l|l| }
-
-            \hline
-            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz} \\
-            \hline
-            1 &  heyvAgaJnFEykXR & ROyooA SFac,a BaNooe \\
-            2 &  qApRVwGkLZaRTpY & YoClNE AN COuuvE SARS \\
-            3 &  hSSBSghZgvntYKW & WNOy \\
-            4 &  FDtdLiovThWAABB & BaAsSA SALL IET CONDE, BRER AMBRA SUER, SIUTALIRA SLUERE BEE \\
-            5 &  exvduWkBRXPNgNc & casOy BSTTESSaSTAS, Ay STENLLOWSFe \\
-            6 &  pjJugwZkcVtIaHT & TEE AAa OpBu'E LAUj \\
-            7 &  vYDTlKoBjHctHLM & Mer Em \\
-            8 &  EATxlnekKSyyhXi & if Spakess \\
-            9 &  VacBJsKUBwxBydg & gnodPHasdLirsh\& Salcok \\
-            10 & DzEnFccEnDbgdHI & IEs \\
-            11 & WVaBhFZTILSnQUj & jeTEEE \\
-            12 & tuTluUGOpjxkryK & KraANdd Nedd \\
-            13 & OKRABqePBWpocxI & Indeas \\
-            14 & VzXKNFSsVfYfzlg & ge ois Ned M'llet \\
-            15 & SuxVLdnvkkCacoq & qu \\
-            16 & leIMviMndJaIjSb & bo org, BL OUG \\
-            17 & LOFFoVRpWHMonHv & vA, TETLa \\
-            19 & UkjuVIJtjoUpLIB & BTONCEETS \\
-            20 & yWMmVISehLIBXoh & h \\
-            22 & QHzgFhRXrsfwHnD & DhoAs,ucheredaldesri \\
-            23 & sMhAWWJdrTjcjsN & Ned \\
-            26 & GNGyQTKJgvxfPtK & KasagB \\
-            27 & QPVDHuCtxfHrReF & F Su Sak OIp,, Ay oes Oes \\
-            28 & czXXfUdrbYuxQaw & was \\
-            29 & WigGaQAfkvSgyAV & Ve, LOIroua Aw CerE's \\
-            30 & TfgDYRHCSXRnjDv & vELLEILLINTITEK,IS, ROUDOUYA \\
-            31 & vwrTcebqyXvKChl & ls, crowmerrbous e \\
-            32 & WpjVUIxzQbHbRoJ & J TEUE \\
-            33 & bjXkBNwONnuriUT & TEF YEE \\
-            34 & SUwXNVDHGuyrPXZ & ZANE,II  O N Ay CREp \\
-
-            \hline
-        \end{tabular}
-        \caption{Caption}
-        \label{tab:first-sequences-after-fix}
-    \end{table}
-\end{center}
-
-
-\begin{center}
-    \begin{table}
-        \centering
-        \resizebox{\textwidth}{!}{
-        \begin{tabular}{ |l|l|l|l|l| }
-
-            \hline
-            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64} & \textbf{Generierte Sequenz 256} & \textbf{Generierte Sequenz 512} \\
-            \hline
-            1 & GVoRUcZybxnbknW & Whea & WUag Dalen & WhipTer ba ch pind Camb eits \\
-            2 & TKWLvaUtsiBvjPm & moshrin  Musr rumst wchet & me & mon tarte\\
-            3 & fewKeuFYJecyCAk & kfand & kglanY acol & knssaraw andderes \\
-            4 & KXntyJsfzrZFAJT & T & T muthe & Te \\
-            5 & jTNkWHsSswfEqhE & E, CoN Oy Lp My DfOTBRENOa  F TOINO & Eg S \& CE BLUUCR\& OTREAS, SAUL Yo Sauc & Et \& E sansere, Soulles \\
-            6 & uNjcueOEZadlCMi & i, Aal are & in, & ingere \\
-            7 & XESvYRSRqVSVNQy & yE, DAy NANG Lea DO CEg OAE & yUN Ef BUN SAMCE & yETT MAATEEAl \\
-            8 & EcWjyUUvFZlzIVr & rF FAy Busdee B YoNNed Friodd & r ongKice & riss wAth cre \\
-            9 & A & Apples & Apples & Apples \\
-            10 & B & Baked apples with cream & Baked apples with cream & Baked apples with cream \\
-            11 & C & Chicken broth & Chicken broth & Chicken broth \\
-            12 & Chicken & n broth & n broth & n broth \\
-            \hline
-        \end{tabular}
-        }
-        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
-        \label{tab:fixed-initial-sequences1}
-    \end{table}
-
-\end{center}
-
-\begin{center}
-    \begin{table}
-        \centering
-        \resizebox{\textwidth}{!}{
-        \begin{tabular}{ |l|l|l|l|l| }
-
-            \hline
-            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64, L1, D0.1} & \textbf{Generierte Sequenz 62, L3, D0.1} & \textbf{Generierte Sequenz 64, L5 D0.1} \\
-            \hline
-            1 & GVoRUcZybxnbknW & in Aones & WSrh' chhompagntsos tret & Whreast \\
-            2 & TKWLvaUtsiBvjPm & Artonast wit Creme & mERNT Dooo D GEN, M.lerr LNNe, Po.us PTENBe Nock FuNer rifd & mels \\
-            3 & fewKeuFYJecyCAk & Autt, cu paAte Sauce & kripl & ky Snonle \\
-            4 & KXntyJsfzrZFAJT & eatong & Toratt & Tinse \\
-            5 & jTNkWHsSswfEqhE & ing woth Mustorer) & Es & Erg \\
-            6 & uNjcueOEZadlCMi & ihon w anilh Potatoast & ih & inds \\
-            7 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator & y BRoNffrotd & yK \\
-            8 & EcWjyUUvFZlzIVr & ieegs & r \& OfxTEe s & rer \\
-            9 & A & kee & Apples & Apples \\
-            10 & B & amb & Boiled onions, cream sauce & Baked apples with cream \\
-            11 & C & \&. & \& Chicken broth & Chicken broth \\
-            12 & Chicken & & n broth & n broth \\
-            \hline
-        \end{tabular}
-        }
-        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
-        \label{tab:fixed-initial-sequences2}
-    \end{table}
-
-\end{center}
-
-\begin{center}
-    \begin{table}
-        \centering
-        \resizebox{\textwidth}{!}{
-        \begin{tabular}{ |l|l|l|l|l| }
-
-            \hline
-            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64, 5000} & \textbf{Generierte Sequenz 64, 50000} & \textbf{Generierte Sequenz 64, 500000} \\
-            \hline
-            1 & GVoRUcZybxnbknW & in Aones & anteG in Cream & Whished Sureere \\
-            2 & TKWLvaUtsiBvjPm & Artonast wit Creme & e with Milk with Bacon with Milk with Bacon with Milk with & mo\\
-            3 & fewKeuFYJecyCAk & Autt, cu paAte Sauce & es) & ke \\
-            4 & KXntyJsfzrZFAJT & eatong & ss & TZN CUSCACOUP PIT OY ALET Brackleass) 1/2 pot \\
-            5 & jTNkWHsSswfEqhE & ing woth Mustorer) & vil)-aux champagonago & E. \\
-            6 & uNjcueOEZadlCMi & ihon w anilh Potatoast & le Style & itte \\
-            7 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator & en Pee Sleate & yON \\
-            8 & EcWjyUUvFZlzIVr & ieegs & eatlaine & avery & r \\
-            9 & A & kee & \& & Assorted Cakes \\
-            10 & B & amb & oxe & Broiled Spring Chicken Saute au gratin \\
-            11 & C & \&. & rams & Cold Cocktails \\
-            12 & Chicken & & & n Croquettes, Cream sauce \\
-            \hline
-        \end{tabular}
-        }
-        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
-        \label{tab:fixed-initial-sequences}
-    \end{table}
-
-\end{center}
-
-\begin{center}
-    \begin{table}
-        \centering
-        \resizebox{\textwidth}{!}{
-        \begin{tabular}{ |l|l|l|l|l| }
-
-            \hline
-            \textbf{n} & \textbf{Initialsequenz} & \textbf{Generierte Sequenz 64, 5000} & \textbf{Generierte Sequenz 256, 50000} & \textbf{Generierte Sequenz 64, 500000} \\
-            \hline
-            1 & GVoRUcZybxnbknW & in Aones & Wey & Whished Sureere \\
-            2 & TKWLvaUtsiBvjPm & Artonast wit Creme & min & mo\\
-            3 & fewKeuFYJecyCAk & Autt, cu paAte Sauce & ken Black, or Cotz, Gin & ke \\
-            4 & KXntyJsfzrZFAJT & eatong & Tram Punch & TZN CUSCACOUP PIT OY ALET Brackleass) 1/2 pot \\
-            5 & jTNkWHsSswfEqhE & ing woth Mustorer) & Ex& E. \\
-            6 & uNjcueOEZadlCMi & ihon w anilh Potatoast & irontan, Pine Sauce & itte \\
-            7 & XESvYRSRqVSVNQy & iAe, D' Arerel \& Sauce Potator & y & yON \\
-            8 & EcWjyUUvFZlzIVr & ieegs & eatlaine & rI & r \\
-            9 & A & kee & Anchovies & Assorted Cakes \\
-            10 & B & amb & Bluefish & Broiled Spring Chicken Saute au gratin \\
-            11 & C & \&. & Calf's head, fried with tomato sauce & Cold Cocktails \\
-            12 & Chicken & & n croquette, with peas & n Croquettes, Cream sauce \\
-            \hline
-        \end{tabular}
-        }
-        \caption{Fixierte Initialsequenzen zur Untersuchung verschiedener Modellkonfigurationen}
-        \label{tab:fixed-initial-sequences}
-    \end{table}
-
 \end{center}
 
 
@@ -314,14 +184,3 @@ Für jede Konfiguration und jede Initialsequenz werden ausserdem jeweils drei Au
     \caption{Fehler in der Logik: Statt der gesamten Abfolge wird jeweils nur der letzte Buchstabe trainiert.}
     \label{fig:logic-error}
 \end{figure}
-
-512
-47s 9ms/step - loss: 0.0272 - accuracy: 0.9799 - val_loss: 4.9989 - val_accuracy: 0.3500
-
-50000
-Epoch 00001: val_accuracy improved from -inf to 0.45450, saving model to checkpoints/checkpoint_100_500_50_64_1_0_15.best_val_acc.hdf5
-
-
-Weiterentwicklung:
-
-System, wo Benutzer Vorschläge bewerten kann -> Einspeisung in netz

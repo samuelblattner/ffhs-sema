@@ -1,22 +1,30 @@
-\section{Erzeugung von Sequenzen}
+\section{Erzeugung von Sequenzen («Inferenz»)}
 \label{sec:model-generation}
 
-Um mit dem trainierten Modell Sequenzen zu erzeugen, werden zufällige Zeichen als Initialsequenz erzeugt, die
-wiederum ins Modell eingespeist werden.
+Das Erzeugen von neuen Sequenzen funktioniert ähnlich zum Training.
+Allerdings entfällt der Optimierungsschritt, der das Modell trainiert.
+Stattdessen wird anhand des ausgegebenen Wahrscheinlichkeitsvektors das vom Modell prognostizierte nächste Zeichen
+ausgewählt und der Sequenz angehängt.
+Die neue Sequenz wird erneut in das Modell eingegegben und der Prozess beginnt erneut.
+Dies wird so lange wiederholt, bis das Modell eine Stoppmarke («end») ausgibt (siehe Listing \ref{lst:generating-sequences}).
 
-Die ersten paar generierten Sequenzen sind in Tabelle \ref{tab:first-sequences} aufgeführt.
-Interessanterweise zeigen sich bereits einige Muster, die entfernt an Namen von Gerichten erinnern.
-So zum Beispiel «Artonast wit Creme» (4) oder «iAe, D' Arerel \& Sauce Potator».
-Um das Modell weiter auszubauen und die Auswirkungen der Veränderungen konsistent beobachten zu können,
-werden einige der zufälligen Initialsequenzen sowie ein paar manuell definierte Sequenzen als Ausgangslage
-festgelegt (siehe Tabelle \ref{tab:fixed-initial-sequences}).
+\begin{lstlisting}[language=Python, caption=Erzeugung von Sequenzen, label=lst:generating-sequences]
+...
 
-Rätselhaft ist vorerst, dass sich die erzeugten Sequenzen auch nach längeren Trainingszeiten (+4h) nicht merklich verbessern.
-Nach längerer Analyse des Codes für das Training und Vergleichen mit Beispielmodellen\footnote{z.B. https:\/\/pytorch.org\/tutorials\/intermediate\/char\_rnn\_generation\_tutorial.html}
-stellt sich heraus, dass ein Fehler in der Logik dafür sorgt, dass für jeden trainierten Namen immer nur der letzte Buchstabe trainiert wird (siehe Abb. \ref{fig:logic-error}).
+# Have model predict probabilities for next char
+p = model.predict(x=np.array(padded_sequence)...)
 
-Nachdem der Fehler behoben ist, stellen sich bereits nach dem Training eines verhältnismässig niederkomplexen Modells bedeutend bessere Resultate ein (siehe Tabelle \ref{tab:first-sequences-after-fix}).
-Die Resultate weisen besser lesbare Abfolgen von Konsonanten und Vokalen auf.
+# Randomly choose the next char with p as bias
+last_char = np.random.choice(chars, p=p.reshape((96,)))
 
-Ausgehend von den Anfangs präsentierten Initialsequenzen sollen nun systematisch verschiedene Modell-Konfigurationen trainiert und
-ausgewertet werden.
+# Append next char to sequence
+sequence += [last_char]
+
+...
+\end{lstlisting}
+
+Der Aufruf \textit{model.predict(...)} gibt einen Wahrscheinlichkeitsvektor zurück, in dem jede Komponente der Wahrscheinlichkeit eines Zeichens im Vokabular entspricht,
+nach der es aufgrund der bestehenden Sequenz folgen wird.
+So wie in \autocite{dabbura} soll der nächste Buchstabe zufällig ausgewählt werden.
+Dabei wählt die NumPy-Funktion \textit{random.choice()} das nächste Zeichen gemäss der Wahrscheinlichkeitsverteilung $ p $ aus.
+Diese Methode garantiert, dass eine ins Modell eingegebene Initialsequenz jedes Mal andere Folgesequenzen erzeugt.

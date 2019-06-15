@@ -14,6 +14,7 @@
 % Listings
 \usepackage{listings}
 \usepackage{color}
+\usepackage{tabularx}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -49,10 +50,10 @@ tabsize=2
 % Document
 \begin{document}
 
-    \dokumentTyp{Bachelor/Master-Thesis}
+    \dokumentTyp{Seminararbeit}
     \studiengang{INF/WI}
     \title{Recurrent Neuronal Networks als Kreativitätswerkzeug für Gastronomiebetriebe}
-    \titelbild[height=2cm,width=10cm]{ffhslogo}  % optional
+    \titelbild[height=5cm,width=10cm]{ffhslogo}  % optional
     \author{Samuel Blattner}
     \wohnort{Zürich}
 
@@ -62,11 +63,21 @@ tabsize=2
     \maketitle
 
     \begin{zusammenfassung}
-
+        In dieser Arbeit untersucht, ob Rekurrente Neuronale Netze (RNNs) dazu verwendet werden können,
+        epochenabhängige, neue Bezeichnungen von Gerichten als Kreativitätswerkzeug für die Gastronomie zu erzeugen.
+        Dazu wird ein RNN in verschiedenen Konfigurationen mit dem Datensatz «What's on the Menu» trainiert und
+        die Ausgaben systematisch analysiert und auf ihre Tauglichkeit überprüft.
+        Die Arbeit kommt zum Schluss, dass das Modell durchaus fähig ist, neue und lesbare Bezeichnungen zu erzeugen,
+        dass jedoch die Vielfallt zu begrenzt ist.
     \end{zusammenfassung}
 
     \begin{abstract}
-        ... English summary ...
+        This work investigates if Recurrent Neuronal Networks (RNNs) can be utilized to generate new names for
+        dishes based on epochs.
+        For this purpose, an RNN is trained on the «What's on the menu» dataset and is systematically analyzed and
+        tested for its usefulness.
+        This work concludes that a model can very well be used to generate new and readable names for dishes, but
+        that the variety is limited.
     \end{abstract}
 
     \setcounter{tocdepth}{1}
@@ -78,6 +89,8 @@ tabsize=2
     \include{parts/model}
     \include{parts/results}
     \include{parts/analysis}
+    \include{parts/conclusion}
+    \include{parts/appendix}
     \include{parts/glossary}
 
     \printbibliography[<options for printing>]

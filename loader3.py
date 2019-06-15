@@ -81,7 +81,7 @@ class Loader(object):
 
                         windowed_tokenized_sequences = []
 
-                        # Split menu text up into characters
+                        # Split menu text up into characters and attach stop marker
                         split_text = list(name)
                         split_text_with_end = split_text + ['<end>']
 
