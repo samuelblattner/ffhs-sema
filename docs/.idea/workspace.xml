@@ -1,38 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="faa572fd-a88a-4461-9295-5bbbf685ca2e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../data/dictionaries/deutsch.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data/dictionaries/english3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data/dictionaries/espanol.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data/dictionaries/francais.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data/dictionaries/italiano.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../data/dictionaries/nederlands3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/images/analysis/histogram-lengths.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/parts/appendix.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/deployment.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/../analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/analysis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/analysis.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/conclusion.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/glossary.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/glossary.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/introduction.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/model.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/results.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/sections/model-data-training.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-data-training.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/sections/model-definition.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-definition.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/sections/model-generation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-generation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/parts/sections/model-implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/parts/sections/model-implementation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sema-samuel-blattner.bib" beforeDir="false" afterPath="$PROJECT_DIR$/src/sema-samuel-blattner.bib" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sema-samuel-blattner.tex" beforeDir="false" afterPath="$PROJECT_DIR$/src/sema-samuel-blattner.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../loader3.py" beforeDir="false" afterPath="$PROJECT_DIR$/../loader3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../test.png" beforeDir="false" afterPath="$PROJECT_DIR$/../test.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../train.py" beforeDir="false" afterPath="$PROJECT_DIR$/../train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/../utils.py" afterDir="false" />
-    </list>
+    <list default="true" id="faa572fd-a88a-4461-9295-5bbbf685ca2e" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/auxil/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -142,8 +111,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/parts/appendix.tex">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="553" column="40" selection-start-line="553" selection-start-column="40" selection-end-line="553" selection-end-column="40" />
+            <state relative-caret-position="244">
+              <caret line="533" column="59" lean-forward="true" selection-start-line="533" selection-start-column="59" selection-end-line="533" selection-end-column="59" />
             </state>
           </provider>
         </entry>
@@ -261,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-28" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
@@ -296,7 +265,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560637615084" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1560637808584" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -372,7 +341,7 @@
         <compiler-path />
         <compiler-arguments />
         <main-file>$PROJECT_DIR$/src/parts/results.tex</main-file>
-        <aux-dir />
+        <aux-dir>$APPLICATION_HOME_DIR$/bin</aux-dir>
       </texify-bibtex>
       <method v="2" />
     </configuration>
@@ -456,10 +425,10 @@
       <item itemvalue="BibTeX.SEMA Bibtex" />
       <item itemvalue="BibTeX.disposition bibliography" />
       <item itemvalue="BibTeX.sema-samuel-blattner bibliography" />
+      <item itemvalue="BibTeX.results bibliography" />
       <item itemvalue="LaTeX.To PDF" />
       <item itemvalue="LaTeX.To PDF Arbeit" />
       <item itemvalue="LaTeX.To PDF Arbeit \w Glossary" />
-      <item itemvalue="BibTeX.results bibliography" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -495,18 +464,17 @@
       <workItem from="1560337602110" duration="13159000" />
       <workItem from="1560406456399" duration="28420000" />
       <workItem from="1560511890774" duration="4055000" />
-      <workItem from="1560583663142" duration="43095000" />
+      <workItem from="1560583663142" duration="43435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="200944000" />
+    <option name="totallyTimeSpent" value="201284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-28" y="23" width="2560" height="1417" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12708499" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12708499" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -515,7 +483,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981133" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.23396227" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.23396227" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -814,8 +782,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/parts/appendix.tex">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="553" column="40" selection-start-line="553" selection-start-column="40" selection-end-line="553" selection-end-column="40" />
+        <state relative-caret-position="244">
+          <caret line="533" column="59" lean-forward="true" selection-start-line="533" selection-start-column="59" selection-end-line="533" selection-end-column="59" />
         </state>
       </provider>
     </entry>
