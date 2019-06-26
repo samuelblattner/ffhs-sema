@@ -51,33 +51,36 @@ tabsize=2
 \begin{document}
 
     \dokumentTyp{Seminararbeit}
-    \studiengang{INF/WI}
-    \title{Recurrent Neuronal Networks als Kreativitätswerkzeug für Gastronomiebetriebe}
-    \titelbild[height=5cm,width=10cm]{ffhslogo}  % optional
+    \studiengang{INF}
+    \title{Rekurrente Neuronale Netze als Kreativitätswerkzeug für die Gastronomie}
+    %\titelbild[height=5cm,width=10cm]{ffhslogo}  % optional
     \author{Samuel Blattner}
     \wohnort{Zürich}
 
-    \referentin{Dr. Heinrich Zimmermann\\ BSc INF 2015, ZH5-Mo, FS19}
     \eingereichtBei{Dr. Heinrich Zimmermann\\ BSc INF 2015, ZH5-Mo, FS19}
 
     \maketitle
 
     \begin{zusammenfassung}
-        In dieser Arbeit untersucht, ob Rekurrente Neuronale Netze (RNNs) dazu verwendet werden können,
-        epochenabhängige, neue Bezeichnungen von Gerichten als Kreativitätswerkzeug für die Gastronomie zu erzeugen.
-        Dazu wird ein RNN in verschiedenen Konfigurationen mit dem Datensatz «What's on the Menu» trainiert und
-        die Ausgaben systematisch analysiert und auf ihre Tauglichkeit überprüft.
-        Die Arbeit kommt zum Schluss, dass das Modell durchaus fähig ist, neue und lesbare Bezeichnungen zu erzeugen,
-        dass jedoch die Vielfallt zu begrenzt ist.
+        Diese Arbeit untersucht, ob Rekurrente Neuronale Netze (RNNs) dazu verwendet werden können,
+        parameterabhängig neue, sinnvolle Bezeichnungen von Speisen zu erzeugen und als kreative Hilfestellung für die Gastronomie zu dienen.
+        Ein RNN wird in verschiedenen Konfigurationen mit rund 400'000 Bezeichnungen trainiert, und die Ausgaben werden objektiv und subjektiv beurteilt.
+        Die Arbeit kommt zum Schluss, dass das Modell neuartige und lesbare Bezeichnungen erzeugen kann.
+        Deren Verwendbarkeit hängt jedoch stark vom Umfang und der Vielfältigkeit des Trainingsdatensatzes sowie von der Speicherkapazität des Modelles ab.
+        Eine geschichtlichen Epoche als Steuerparameter zeigt keinen Effekt, weil der Sprachstil im Trainingsdatensatz konstant ist.
+        Mit Feature-Engineering wird jedoch gezeigt, dass die Ausgaben des Modells durch einen Steuerparameter beeinflusst werden können.
+
     \end{zusammenfassung}
 
     \begin{abstract}
-        This work investigates if Recurrent Neuronal Networks (RNNs) can be utilized to generate new names for
-        dishes based on epochs.
-        For this purpose, an RNN is trained on the «What's on the menu» dataset and is systematically analyzed and
-        tested for its usefulness.
-        This work concludes that a model can very well be used to generate new and readable names for dishes, but
-        that the variety is limited.
+        This work investigates whether Recurrent Neural Networks (RNNs) can be used to generate new and meaningful names for
+        dishes depending on parameters and thus act as a creativity tool for the catering industry.
+        An RNN is trained in various configurations with around 400,000 names and the outputs are assessed with objective and subjective means.
+        The work concludes that the model is able to generate novel and legible designations.
+        Their usefulness, however, strongly depends on the scope and diversity of the training data as well as on the capacity of the model.
+        Adding a historical epoch as control parameter shows no effect, because the language style in the training data is constant.
+        By using feature engineering, it can nevertheless be shown that the output of the model can be influenced by a control parameter.
+
     \end{abstract}
 
     \setcounter{tocdepth}{1}
@@ -93,9 +96,8 @@ tabsize=2
     \include{parts/appendix}
     \include{parts/glossary}
 
-    \printbibliography[<options for printing>]
-
     \listoffigures
 
+    \printbibliography
 
 \end{document}

@@ -1,9 +1,8 @@
 \section{Daten}
 \label{sec:model-data-training}
 
-Als Lerngrundlage für den Algorithmus dienen rund 400'000 Bezeichnungen von Gerichten.
-Diese sind im Datensatz «What's on the menu»\footnote{http://nypl.github.io/menus-api/} enthalten, der von
-der New York Public Library unterhalten und laufend erweitert wird.
+Als Lerngrundlage des Modells dienen rund 400'000 Bezeichnungen von Speisen.
+Diese sind im Datensatz «What's on the menu»\footnote{http://nypl.github.io/menus-api/} enthalten, der von der New York Public Library unterhalten und laufend erweitert wird.
 Der Unterdatensatz «Dish.csv» besteht aus folgender Struktur:
 
 \begin{center}
@@ -31,10 +30,9 @@ Der Unterdatensatz «Dish.csv» besteht aus folgender Struktur:
 \end{center}
 
 Für die Arbeit relevant sind vorerst lediglich die \textit{name}-Spalte sowie die \textit*{firs\_appeared}-Spalte.
-Die Namens-Spalte enthält Bezeichnungen in verschiedenen Sprachen, hauptsächlich jedoch in Englisch.
-First\_appeared datiert den Zeitpunkt, an dem ein bestimmtes Gericht zum ersten Mal registriert wurde.
-Leider sind die Preis-Spalten nicht normalisiert, d.h. Inflation und Lohnniveau sind nicht berücksichtigt.
-Somit können Preise unterschiedlicher Epochen nicht verglichen werden bzw. ein Gericht kann nicht per se als «teuer» oder
-«günstig» klassifiziert werden.
-Möglich wäre die Preise anhand einer eigenen einfachen Funktion in Abhängigkeit der Jahreszahl linear zu normalisieren, was
-den Rahmen der Arbeit jedoch sprengen würde.
+Die \textit{name}-Spalte enthält Bezeichnungen in verschiedenen Sprachen, hauptsächlich jedoch in Englisch.
+\textit{first\_appeared} datiert den Zeitpunkt, an dem ein bestimmtes Gericht zum ersten Mal registriert wurde.
+Leider sind die Preis-Spalten nicht normalisiert, Inflation und Lohnniveau sind also nicht berücksichtigt.
+Somit können Preise unterschiedlicher Epochen nicht verglichen werden bzw. ein Gericht kann nicht als «günstig» oder «teuer» klassifiziert werden.
+Möglich wäre die Preise anhand einer eigenen einfachen Funktion in Abhängigkeit der Jahreszahl linear zu normalisieren, was den Rahmen der Arbeit jedoch sprengen würde.
+Die Bezeichnungen werden zudem einfachheitshalber ohne weiteres \gls{Pre-processing} zum Training verwendet.

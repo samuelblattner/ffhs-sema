@@ -1,6 +1,8 @@
 \chapter{Resultate}
 \label{ch:results}
 
+\newcommand{\sn} {\vspace{1.2mm}\newline}
+
 Dieser Abschnitt führt die durch das im vorherigen Abschnitt definierten Modell erzeugten Resultate auf und beschreibt sie.
 Weil die Bewertung des Modells nur manuell und qualitativ möglich ist (d.h. Messwerte wie Präzision oder Recall korrelieren nicht zwingend
 mit der wahrgenommenen Qualität der Ausgaben des Modells), ist es notwendig, dass die Ausgaben systematisch auf die verwendeten
@@ -12,36 +14,79 @@ Um repräsentative Werte zu erhalten, werden insgesamt 1000 Sequenzen erzeugt.
 Jede Initialsequenz wird also rund 111 mal verwendet (1000/9).
 Von allen erzeugten Sequenzen werden für jede Initialsequenz jeweils zwei Beispiele in Tabellen (siehe Anhang) abgebildet.
 
-Um die Resultate später beurteilen zu können, werden zusätzlich zu den Ausgaben einige Messwerte berechnet, die hier
-kurz erklärt werden:
-
-\paragraph{Wörter}: Gesamtanzahl ausgegebenener Wörter
-\paragraph{Lesbare Wörter}: Anteil der lesbaren bzw. verwendbaren Wörter.
-Als «lesbar» wird ein Wort akzeptiert, wenn es in einer der Wortliste in den Sprachen Deutsch, Englisch, Französisch, Italienisch, Spanisch oder Niederländisch enthalten ist\footnote{Daten: http://www.gwicks.net/dictionaries.htm}.
-Gross-/Kleinschreibung wird dabei ignoriert.
-\paragraph{ø-Worlänge}: Durchschnittliche Zeichenzahl der erzeugten Wörter
-\paragraph{Multi}: Anteil der Wörter, die in mehreren Wörterbüchern vorkommen.
-\paragraph{G, E, F, I, Es, Dt}: Anteile der Wörter, die ausschliesslich in den Wörterbüchern \textbf{G}erman, \textbf{E}nglish, \textbf{F}rench, \textbf{I}talian, \textbf{Es} (Spanish) oder \textbf{Dt} (Dutch) vorkommen.
-\paragraph{ø-Namenslänge}: Durchschnittliche Länge der erzeugten Namen von Gerichten.
-\paragraph{Originalität}: Anteil der erzeugten Namen, der nicht im Trainingsset vorkommt.
-\paragraph{Repetition}: Anteil mehrfach erzeugter Sequenzen
-\paragraph{Inline-Repetition}: Anteil wiederholter Wörter pro Name
-\paragraph{Max Val Acc}: «Maximum Validation Accuracy».
-Maximale während dem Training erreichte Akuratheit.
-\paragraph{Min Val Loss}: «Minimum Validation Loss».
-Minimal erreichte Abweichung zum Soll-Wert.
-
-\section{Generation 1: Fehlerhaftes Modell \& Verbesserung}
+\section{Generation 1: Fehlerhafte Implementierung}
 \label{sec:erroneous-model}
 
+Wie in \ref{subsec:enhancing-training-set} beschrieben unterlag die erste Generation von Resultaten einem Implementierungsfehler,
+wobei für jede Trainingszeile jeweils nur das letzte Zeichen trainiert wurde.
+Ein Ausschnitt der Resultate dieser Implementierung seien hier zum Vergleich mit der neuen Generation aufgelistet (siehe Tabelle \ref{tab:results-erroneous-implementation})
 
+\begin{center}
+    \begin{table}
+        \centering
+        \tiny
+        \begin{tabularx}{\textwidth}{|>{\hsize=.1\hsize}X|>{\hsize=.9\hsize}X|}
+
+            \hline
+            \textbf{} & \textbf{512 Units} \\\hline
+
+            \textbf{3 Layers}
+
+            &
+
+            Atmbones an Brancho \sn
+            A Grputh Ale \sn
+            Burger, slawed with chicken ly Cless stuffet \sn
+            Burgerma Herring Hamburner, Jumbo Bitter \sn
+            Cin \& Freecain to Oried dres in with Tomatoes \sn
+            C or Riaket or milk \sn
+            Ea, Ham or Bubtins and cream \sn
+            Eu batt S ly to ax LrA17 CrengIES \sn
+            Iter with freen half dozenaise with cream of beef with Freen\sn
+            Idr, 1/cut ingsasche Ame tammey or an fried \sn
+            Ouigs. Vee Alaninanitse Brtthe \sn
+            Oe Margnes \& Coblettes, Half \sn
+            Uvelinallis Wate a la Mashgald Pie \sn
+            U Sorkee, Cream of beeffast Cheesee on toast Stawnish style \sn
+            Steak Igt[IveE Vin)vinais and Crial \sn
+            Steak, Kadn))ggutet, with Crean \sn
+            Tomaton sauce cuburnote \sn
+            Tomato B(Mla Batwe t'asce \sn
+            \\\hline
+        \end{tabularx}
+        \caption{Resultate verschiedener Modellkonfigurationen (Schichten vs. Units)}
+        \label{tab:results-erroneous-implementation}
+    \end{table}
+\end{center}
 
 \section{Generation 2: Korrektes Modell \& Resultate}
 \label{sec:correct-model}
 
-Zur besseren Übersicht sind alle Tabellen im Anhang aufgelistet.
+Das korrekt implementierte Modell trainiert jeweils die ganze Trainingszeile und integriert die Jahreszahl als Steuerparameter.
+Anschliessend ist eine Tabelle (\ref{tab:results-of-various-configurations}) aufgelistet, die beispielhaft zeigt, wie die Resultate abgebildet werden.
+Die Resultate werden in einer Matrix mit zwei verschiedenen Konfigurationsparametern gegenübergestellt (im Beispiel: Anzahl Modell-Units vs. Anzahl Modellschichten).
+Die aufgelisteten generierten Zeilen repräsentieren einen Ausschnitt aus jeweils 1000 erzeugten Namen.
+Die restlichen Vergleichstabellen sind zur besseren Übersicht im Anhang zu finden.
+Um die Resultate vergleichen zu können, werden zusätzlich zu den Ausgaben einige Messwerte berechnet, die im Folgenden kurz erklärt werden:
 
-\newcommand{\sn} {\vspace{1.2mm}\newline}
+\begin{description}
+\item[Wörter]: Gesamtanzahl ausgegebenener Wörter
+\item[Lesbare Wörter]: Anteil der lesbaren bzw. verwendbaren Wörter.
+Als «lesbar» wird ein Wort akzeptiert, wenn es in einer der Wortliste in den Sprachen Deutsch, Englisch, Französisch, Italienisch, Spanisch oder Niederländisch enthalten ist\footnote{Daten: http://www.gwicks.net/dictionaries.htm}.
+Gross-/Kleinschreibung wird dabei ignoriert.
+\item[ø-Worlänge]: Durchschnittliche Zeichenzahl der erzeugten Wörter
+\item[Multi]: Anteil der Wörter, die in mehreren Wörterbüchern vorkommen.
+\item[G, E, F, I, Es, Dt]: Anteile der Wörter, die ausschliesslich in den Wörterbüchern \textbf{G}erman, \textbf{E}nglish, \textbf{F}rench, \textbf{I}talian, \textbf{Es} (Spanish) oder \textbf{Dt} (Dutch) vorkommen.
+\item[ø-Namenslänge]: Durchschnittliche Länge der erzeugten Namen von Gerichten.
+\item[Originalität]: Anteil der erzeugten Namen, der nicht im Trainingsset vorkommt.
+\item[Repetition]: Anteil mehrfach erzeugter Sequenzen
+\item[Inline-Repetition]: Anteil wiederholter Wörter pro Name
+\item[Max Val Acc]: «Maximum Validation Accuracy».
+Maximale während dem Training erreichte Akuratheit.
+\item[Min Val Loss]: «Minimum Validation Loss».
+Minimal erreichte Abweichung zum Soll-Wert.
+\end{description}
+
 
 \begin{center}
     \begin{table}
@@ -50,7 +95,7 @@ Zur besseren Übersicht sind alle Tabellen im Anhang aufgelistet.
         \begin{tabularx}{\textwidth}{|>{\hsize=.1\hsize}X|>{\hsize=.45\hsize}X|>{\hsize=.45\hsize}X|}
 
             \hline
-            \textbf{} & \textbf{64 Units, val acc 49\%} & \textbf{512 Units, val acc 76\%} \\\hline
+            \textbf{} & \textbf{64 Units} & \textbf{512 Units} \\\hline
 
                 \textbf{1 Layer}
 

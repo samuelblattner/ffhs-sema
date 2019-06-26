@@ -3,6 +3,8 @@ import string
 from loader import Loader
 from matplotlib import pyplot as plt
 
+from loader3 import MEAT_LIST
+
 loader = Loader(5000, 0)
 
 d = 0
@@ -55,6 +57,7 @@ menus_appeared_hist = []
 times_appeared_hist = []
 word_lengths = []
 name_lengths = []
+veg_violations = 0
 
 for name, dictionary in DICTIONARIES.items():
     if 'path' in dictionary:
@@ -84,7 +87,7 @@ in_line_repetitions = []
 legible_words = 0
 unlegible_words = 0
 
-with open('data/output/2000-1.5_100_2194_75_512_3_0.05_15_y.txt', 'r', encoding='utf-8') as f:
+with open('data/output/2000-bNONVEG-VEG_1.5_100_2194_75_512_2_0.1_15_y.txt', 'r', encoding='utf-8') as f:
     for line in f.readlines():
         line = line.strip()
 
@@ -96,6 +99,11 @@ with open('data/output/2000-1.5_100_2194_75_512_3_0.05_15_y.txt', 'r', encoding=
             checked_words = []
             words = line.strip(string.punctuation).split(' ')
             for w, word in enumerate(words):
+                check_word = word.strip(string.punctuation).strip().lower()
+                for meat_word in MEAT_LIST:
+                    if meat_word in check_word:
+                        veg_violations += 1
+
                 in_dict = get_dicts(word.strip(string.punctuation).lower())
                 if in_dict is None:
                     unlegible_words += 1
@@ -114,6 +122,8 @@ with open('data/output/2000-1.5_100_2194_75_512_3_0.05_15_y.txt', 'r', encoding=
 
             check_names[line] = 0
 
+num_meat_lines = 0
+lines = 0
 for dataframe in loader:
 
     chars = set()
@@ -138,6 +148,12 @@ for dataframe in loader:
         else:
             less += 1
 
+        for word in name.split(' '):
+            if word.strip(string.punctuation).strip().lower() in MEAT_LIST:
+                num_meat_lines += 1
+
+        lines += 1
+
         # for check_name, _ in check_names.items():
         #     if check_name.lower() in name.lower():
         #         check_names[check_name] += 1
@@ -156,6 +172,7 @@ for dataframe in loader:
                 yl -= 1000
             years_last.append(yl)
 
+print('MEAT: ', num_meat_lines / lines)
 print('Total Words: ', legible_words + unlegible_words)
 print('Legible: ', legible_words / (legible_words + unlegible_words) * 100)
 print('Illegible: ', unlegible_words / (legible_words + unlegible_words) * 100)
@@ -164,6 +181,7 @@ print('Avg name length: ', sum(name_lengths) / len(name_lengths))
 print('New: ', (1 - len(list(filter(lambda o: o[1] > 0, check_names.items()))) / len(check_names.items())) * 100)
 print('Repetition: ', repetition/len(check_names.items()))
 print('Avg inline repetition: ', sum(in_line_repetitions)/len(in_line_repetitions))
+print('Vegetarian violations: ', veg_violations/legible_words)
 
 print('Dictionaries:\n')
 for name, dictionary in DICTIONARIES.items():

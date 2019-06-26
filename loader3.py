@@ -1,8 +1,74 @@
+import string
+
 from pandas import read_csv
 from tensorflow.python.keras.preprocessing.sequence import pad_sequences
 from tensorflow.python.keras.preprocessing.text import Tokenizer
 import numpy as np
 from tensorflow.python.keras.utils import to_categorical
+
+MEAT_LIST = (
+
+    # Chicken
+    'chicken',
+    'hühnchen',
+    'hähnchen',
+    'poulet',
+    'pollo',
+    'kip'
+    
+    # Duck
+    'duck',
+    'ente',
+    'canard',
+    'cane',
+    'anatra',
+    'eend',
+    'pata',
+    'pato'
+    
+    # Beef
+    'beef',
+    'rind',
+    'steak',
+    'boeuf',
+    'boeuf',
+    'manzo',
+    'carne de res',
+    'rundvlees'
+    
+    # Veal
+    'veal',
+    'kalb',
+    'veau',
+    'vitello',
+    'ternera',
+    'kalfsvlees'
+    
+    # Venison
+    'venison',
+    'wild',
+    'venaison'
+    'carne di cervo'
+    'venado'
+    'hertevlees'
+    
+    # Lamb
+    'lamb',
+    'lamm',
+    'agneau'
+    'agnello',
+    'cordero'
+    'cordera'
+    'lam'
+    
+    # Pork
+    'pork',
+    'porc',
+    'maiale',
+    'cerda',
+    'cerdo',
+    'varkensvlees',
+)
 
 
 class Loader(object):
@@ -75,9 +141,19 @@ class Loader(object):
 
                         name = row[1]
                         year = ((float(row[5]) - 1800) / 300)
+
+                        for word in name.strip(string.punctuation).strip().split(' '):
+                            if word.lower() in MEAT_LIST:
+                                vegetarian = False
+                                break
+                        else:
+                            vegetarian = True
+
                         if self.__offset > 0 and initial_offset_lines_skipped < self.__offset:
                             initial_offset_lines_skipped += 1
                             continue
+
+                        # vegetarian = True
 
                         windowed_tokenized_sequences = []
 
@@ -109,6 +185,11 @@ class Loader(object):
                         one_hot_phrases = np.append(
                             to_categorical(padded_phrases_X, num_classes=len(tokenizer.index_word) + 1),
                             np.array([[[year]] * char_window_size] * len(padded_phrases_X)),
+                            axis=2)
+
+                        one_hot_phrases = np.append(
+                            one_hot_phrases,
+                            np.array([[[1.0 if vegetarian else 0.0]] * char_window_size] * len(padded_phrases_X)),
                             axis=2)
 
                         # print(one_hot_phrases)

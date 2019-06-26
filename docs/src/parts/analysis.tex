@@ -57,21 +57,28 @@ Allerdings steigt die Wiederholungsrate leicht an.
 Diese Beobachtungen waren in mehreren Versuchen reproduzierbar.
 
 
-\section{Erhöhung der Trainingsdatensätze, unterschiedliche Dropout-Raten}
+\section{Unterschiedlicher Umfang der Trainingsdaten}
 \label{sec:increase-num-dataset}
 
 Wird das Modell nur mit einem Viertel des Datensatzes trainiert, so scheint das Vokabular begrenzt zu sein.
-Wird das Modell zweimal mit dem gesamten Datensatz trainiert, so ist das Vokabular umfangreich, und die Genaugikeit
-erhöht sich gar.
-Dies legt nahe, dass Wörter und Begriffe bei umfangreicherem Training gefestigt werden.
-Das Modell erreicht zudem eine maximale Validierungsgenaugikeit von 76\%.
+Wird das Modell zweimal mit dem gesamten Datensatz trainiert, so ist das Vokabular umfangreich.
+Dies äussert sich deutlich im Anteil lesbarer Wörter.
+So ist in beiden Modellkonfigurationen ein deutlicher Anstieg (z.B. von 59.92\% auf 85.03\% bei 512 Units und 3 Schichten) zu sehen.
+Hat das Modell also ein längeres Training bzw. einen grösseren und vielfältigeren Umfang des Trainingsdatensatzes zur Verfügung, so
+schreibt es häufiger Wörter korrekt.
+Interessant ist allerdings, dass die Originalität sowie Repetition mit zunehmender Trainingsgrösse abnimmt.
+Dies kann damit erklärt werden, dass das Modell bei zu häufigem Training mit denselben Daten in den Bereich des Overfittings gerät.
+Der Effekt ist besonders beim 512-Units Netz zu sehen, wo die Repetitionsrate auf 5\% steigt und die Originalität auf 84.89\% sinkt.
+Das Modell gibt also bedeutend häufiger Namen aus dem Trainingsset wieder.
 
 
-
-\section{Einbezug der Jahreszahlen}
+\section{Einbezug des Steuerparameters}
 \label{sec:including-years}
 
 Der Einsatz unterschiedlicher Jahreszahlen (Tabelle \ref{tab:results-of-various-years}) als Steuerparameter scheint keinen Unterschied auszumachen.
+Allenfalls könnte spekuliert werden, dass der Anteil fremdsprachiger Wörter (Französisch, Italienisch, Deutsch, …) um 2000 höher ausfallen müsste,
+weil der Einfluss internationaler Küche durch die Globalisierung stärker ist.
+Allerdings ist der Unterschied in den erzeugten Sequenzen verschwindend gering.
 Wird der Datensatz nach Jahr des ersten Erscheinens sortiert, so könnte der Eindruck entstehen,
 dass exotisch klingende Namen tendentiell auch zeitnahe wieder verschwinden, während zeitlos klingende
 Namen eher eine höhere «Lebensdauer» aufweisen (siehe Tabelle \ref{tab:data-1900}).
@@ -89,7 +96,18 @@ Zudem ist der Sprachstil wohl eher in längeren Sätzen kennzeichnend für eine 
 grammatikalisch niederkomplexen Begriffen wie das eben bei den Gerichten der Fall ist.
 Beste Beispiele dafür sind der Shakespeare-Generator\footnote{http://karpathy.github.io/2015/05/21/rnn-effectiveness/} sowie DeepDrumpf\footnote{https://twitter.com/deepdrumpf}.
 
-Der Einbezug von zeitlicher Information zur Erzeugung von neuen Namen ist also nicht möglich bzw. macht keinen Unterschied.
+Ein Unterschied könnte allenfalls in den Zutaten der Gerichte ausgemacht werden.
+Beispielsweise wäre eine Hypothese, dass der Anteil einfacher und günstiger Zutaten wie Kartoffeln um 1900 höher ist, weil
+die Kaufkraft und die gastronomische Affinität der Gesellschaft heute höher ist.
+Dies zu untersuchen erfordert allerdings sehr viel manuelle Arbeit, was ausserhalb des zeitlichen Rahmens dieser Arbeit liegt.
+
+Stattdessen wurde per Feature Engineering ein Steuerparameter erstellt, der vegetarische von nicht-vegetarischen Gerichten unterscheidet.
+Die Unterscheidung bzw. Klassifizierung wurde durch eine einfache und unvollständige, manuell erstellte Liste von Fleisch bezeichnenden Wörtern wie z.B. «Chicken» erreicht.
+Die Tabelle \ref{tab:results-of-various-vegetarian} zeigt, dass der Einfluss des Steuerparameters nun durchaus gegeben ist, insbesondere wenn beachtet wird,
+dass der Anteil nicht-vegetarischer Gerichte im Datensatz gerade mal 7.5\% beträgt.
+
+Interessant zu beobachten ist die Abnahme der «vegetarischen Verstösse» wenn das Modell mehr Schichten zur Verfügung hat.
+Dies könnte wiederum damit zusammenhängen, dass die Abstraktionsfähigkeit des Modells durch Schichten zunimmt.
 
 \begin{figure}
     \centering

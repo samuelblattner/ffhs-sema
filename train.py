@@ -23,10 +23,14 @@ INITIAL_SEQUENCES = (
     'I',
     'O',
     'U',
-    'Chicken',
-    'Steak',
-    'Burger',
-    'Tomato'
+    'C',
+    'S',
+    'B',
+    'T',
+    # 'Chicken',
+    # 'Steak',
+    # 'Burger',
+    # 'Tomato'
 )
 
 # INITIAL_SEQUENCES = (
@@ -129,7 +133,7 @@ if args.configuration:
 
 if args.configuration is None or args.force_train:
 
-    args.configuration = '{}_{}_{}_{}_{}_{}_{}_{}_{}'.format(
+    args.configuration = 'VEG_{}_{}_{}_{}_{}_{}_{}_{}_{}'.format(
         args.perc_lines,
         args.batch_size,
         args.num_batches,
@@ -219,6 +223,7 @@ num_samples = 0
 words = [''] + [i for w,i in tokenizer.index_word.items()]
 
 year = ((float(2000) - 1800) / 300) if args.use_year else None
+vegetarian = False
 
 print(year)
 out = []
@@ -248,12 +253,18 @@ for r in range(0, 112):
                     to_categorical(padded_sequence, num_classes=len(tokenizer.index_word) + 1),
                     np.array([[year]] * args.window_size),
                     axis=1)
+
+                padded_sequence = np.append(
+                    padded_sequence,
+                    np.array([[1.0 if vegetarian else 0.0 ]] * args.window_size),
+                    axis=1)
+
             else:
                 padded_sequence = to_categorical(padded_sequence, num_classes=len(tokenizer.index_word) + 1)
             i = i + 1
 
             p = model.predict(
-                x=np.array(padded_sequence).reshape((1, args.window_size, len(tokenizer.index_word) + 1 + (1 if year else 0)))
+                x=np.array(padded_sequence).reshape((1, args.window_size, len(tokenizer.index_word) + 1 + (1 if year else 0) + 1))
             )
             # probs = list(p[0])
             # print(p)
@@ -270,5 +281,5 @@ for r in range(0, 112):
         out.append('{}{}\n'.format(''.join(initial_sequence), ''.join(out_sequence[:-1])))
 
 
-with open('data/output/2000-{}.txt'.format(args.configuration), 'w+', encoding='utf-8') as f:
+with open('data/output/2000-bNONVEG-{}.txt'.format(args.configuration), 'w+', encoding='utf-8') as f:
     f.writelines(out)
