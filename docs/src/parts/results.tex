@@ -3,23 +3,40 @@
 
 \newcommand{\sn} {\vspace{1.2mm}\newline}
 
-Dieser Abschnitt führt die durch das im vorherigen Abschnitt definierten Modell erzeugten Resultate auf und beschreibt sie.
-Weil die Bewertung des Modells nur manuell und qualitativ möglich ist (d.h. Messwerte wie Präzision oder Recall korrelieren nicht zwingend
-mit der wahrgenommenen Qualität der Ausgaben des Modells), ist es notwendig, dass die Ausgaben systematisch auf die verwendeten
-Modellparameter zurückgeführt werden können.
-Dafür wir das Modell systematisch mit unterschiedlichen Parametern trainiert, und die Resultate der Erzeugung von Namen
-werden in einer Konfigurationsmatrix aufgelistet.
-Für jede Konfiguration werden die Initialsequenzen «A», «E», «I», «O», «U», «Chicken», «Steak», «Burger» und «Tomato» verwendet.
-Um repräsentative Werte zu erhalten, werden insgesamt 1000 Sequenzen erzeugt.
+Dieser Abschnitt führt die durch das Modell erzeugten Resultate auf und beschreibt sie.
+Die Bewertung des Modells bzw. dessen Erzeugnisse nach ihrer Verwendbarkeit ist nur manuell und qualitativ möglich.
+Gute Trainingskennzahlen wie z.B. die Validierungsrichtigkeit bedeuten nicht zwingend eine hohe Verwendbarkeit, da das Modell im ungünstigsten Fall das Trainingsset auswendig gelernt hat und dieses unverändert wiedergibt.
+Um dennoch eine gewisse Vergleichbarkeit für die unterschiedlichen Modellkonfigurationen zu schaffen, werden für jede Konfiguration immmer dieselben Initialsequenzen «A», «E», «I», «O», «U», «Chicken», «Steak», «Burger» und «Tomato» verwendet.
+Zudem werden zusätzlich zu den Ausgaben einige Messwerte berechnet (nur für 2. Generation), die im Folgenden kurz erklärt werden:
+
+\begin{description}
+    \item[Wörter]: Gesamtanzahl ausgegebenener Wörter
+    \item[Lesbare Wörter]: Anteil der lesbaren bzw. verwendbaren Wörter.
+    Als «lesbar» wird ein Wort akzeptiert, wenn es in einer der Wortliste in den Sprachen Deutsch, Englisch, Französisch, Italienisch, Spanisch oder Niederländisch enthalten ist\footnote{Daten: http://www.gwicks.net/dictionaries.htm}.
+    Gross-/Kleinschreibung wird dabei ignoriert.
+    \item[ø-Worlänge]: Durchschnittliche Zeichenzahl der erzeugten Wörter
+    \item[Multi]: Anteil der Wörter, die in mehreren Wörterbüchern vorkommen.
+    \item[G, E, F, I, Es, Dt]: Anteile der Wörter, die ausschliesslich in den Wörterbüchern \textbf{G}erman, \textbf{E}nglish, \textbf{F}rench, \textbf{I}talian, \textbf{Es} (Spanish) oder \textbf{Dt} (Dutch) vorkommen.
+    \item[ø-Namenslänge]: Durchschnittliche Länge der erzeugten Namen von Gerichten.
+    \item[Originalität]: Anteil der erzeugten Namen, der nicht im Trainingsset vorkommt.
+    \item[Repetition]: Anteil mehrfach erzeugter Sequenzen
+    \item[Inline-Repetition]: Anteil wiederholter Wörter pro Name
+    \item[Max Val Acc]: «Maximum Validation Accuracy».
+    Maximale während dem Training erreichte Validierungsrichtigkeit.
+    \item[Min Val Loss]: «Minimum Validation Loss».
+    Minimal erreichte Abweichung von $ \hat{y} $ zum Soll-Wert ($ y $).
+\end{description}
+
+Um repräsentative Werte zu erhalten, werden für jede Konfiguration 1000 Sequenzen erzeugt.
 Jede Initialsequenz wird also rund 111 mal verwendet (1000/9).
-Von allen erzeugten Sequenzen werden für jede Initialsequenz jeweils zwei Beispiele in Tabellen (siehe Anhang) abgebildet.
+Von allen erzeugten Sequenzen werden für jede Initialsequenz jeweils zwei Beispiele in Tabellen abgebildet.
 
 \section{Generation 1: Fehlerhafte Implementierung}
 \label{sec:erroneous-model}
 
 Wie in \ref{subsec:enhancing-training-set} beschrieben unterlag die erste Generation von Resultaten einem Implementierungsfehler,
 wobei für jede Trainingszeile jeweils nur das letzte Zeichen trainiert wurde.
-Ein Ausschnitt der Resultate dieser Implementierung seien hier zum Vergleich mit der neuen Generation aufgelistet (siehe Tabelle \ref{tab:results-erroneous-implementation})
+Ein Ausschnitt der Resultate dieser Implementierung sei hier zum Vergleich mit der neuen Generation aufgelistet (siehe Tabelle \ref{tab:results-erroneous-implementation})
 
 \begin{center}
     \begin{table}
@@ -54,7 +71,7 @@ Ein Ausschnitt der Resultate dieser Implementierung seien hier zum Vergleich mit
             Tomato B(Mla Batwe t'asce \sn
             \\\hline
         \end{tabularx}
-        \caption{Resultate verschiedener Modellkonfigurationen (Schichten vs. Units)}
+        \caption{Fehler in der Logik: Statt der gesamten Abfolge wird jeweils nur der letzte Buchstabe trainiert.}
         \label{tab:results-erroneous-implementation}
     \end{table}
 \end{center}
@@ -67,25 +84,7 @@ Anschliessend ist eine Tabelle (\ref{tab:results-of-various-configurations}) auf
 Die Resultate werden in einer Matrix mit zwei verschiedenen Konfigurationsparametern gegenübergestellt (im Beispiel: Anzahl Modell-Units vs. Anzahl Modellschichten).
 Die aufgelisteten generierten Zeilen repräsentieren einen Ausschnitt aus jeweils 1000 erzeugten Namen.
 Die restlichen Vergleichstabellen sind zur besseren Übersicht im Anhang zu finden.
-Um die Resultate vergleichen zu können, werden zusätzlich zu den Ausgaben einige Messwerte berechnet, die im Folgenden kurz erklärt werden:
 
-\begin{description}
-\item[Wörter]: Gesamtanzahl ausgegebenener Wörter
-\item[Lesbare Wörter]: Anteil der lesbaren bzw. verwendbaren Wörter.
-Als «lesbar» wird ein Wort akzeptiert, wenn es in einer der Wortliste in den Sprachen Deutsch, Englisch, Französisch, Italienisch, Spanisch oder Niederländisch enthalten ist\footnote{Daten: http://www.gwicks.net/dictionaries.htm}.
-Gross-/Kleinschreibung wird dabei ignoriert.
-\item[ø-Worlänge]: Durchschnittliche Zeichenzahl der erzeugten Wörter
-\item[Multi]: Anteil der Wörter, die in mehreren Wörterbüchern vorkommen.
-\item[G, E, F, I, Es, Dt]: Anteile der Wörter, die ausschliesslich in den Wörterbüchern \textbf{G}erman, \textbf{E}nglish, \textbf{F}rench, \textbf{I}talian, \textbf{Es} (Spanish) oder \textbf{Dt} (Dutch) vorkommen.
-\item[ø-Namenslänge]: Durchschnittliche Länge der erzeugten Namen von Gerichten.
-\item[Originalität]: Anteil der erzeugten Namen, der nicht im Trainingsset vorkommt.
-\item[Repetition]: Anteil mehrfach erzeugter Sequenzen
-\item[Inline-Repetition]: Anteil wiederholter Wörter pro Name
-\item[Max Val Acc]: «Maximum Validation Accuracy».
-Maximale während dem Training erreichte Akuratheit.
-\item[Min Val Loss]: «Minimum Validation Loss».
-Minimal erreichte Abweichung zum Soll-Wert.
-\end{description}
 
 
 \begin{center}
@@ -221,11 +220,3 @@ Minimal erreichte Abweichung zum Soll-Wert.
         \label{tab:results-of-various-configurations}
     \end{table}
 \end{center}
-
-
-\begin{figure}
-    \centering
-    \includegraphics[width=0.75\linewidth]{}
-    \caption{Fehler in der Logik: Statt der gesamten Abfolge wird jeweils nur der letzte Buchstabe trainiert.}
-    \label{fig:logic-error}
-\end{figure}

@@ -6,99 +6,127 @@
 {
 name=Mini-Batch,
 plural=Mini-Batches,
-description="Batches"
+description={Ein Ausschnitt des gesamten Trainingsdatensatzes, der zum Training eines Modells verwendet wird}
 }
 
-\newglossaryentry{epoche}
+\newglossaryentry{epoch}
 {
 name=Epoche,
 plural=Epochen,
-description="Epochen"
+description={In der Regel hat ein Modell nach einer Epoche den gesamten Trainingsdatensatz genau einmal verarbeitet. In dieser Arbeit wird der Begriff allerdings als beliebig grosser Ausschnitt aus dem Trainingsset verwendet. Dadurch wird das Modell in kürzeren Zeitabständen validiert und Resultate schneller absehbar.}
 }
 
 \newglossaryentry{layer}
 {
 name=Netzschicht,
 plural=Netzschichten,
-description="Epochen"
+description={Ein Verbund von mehreren Neuronen oder Zellen auf einer Ebene. Eine Ebene erhält Eingaben von einer darunterliegenden Ebene oder direkt vom Trainingsset. Sie gibt ihre Ausgaben an die nächste Schicht weiter oder liefert das Endresultat.}
 }
-
 
 \newglossaryentry{cell}
 {
 name=Zelle,
 plural=Zellen,
-description="Epochen"
+description={Eine Einheit in einem RNN, die fähig ist, Zustände zu speichern.}
+}
+
+\newglossaryentry{feature-engineering}
+{
+name=Feature-Engineering,
+plural=Feature-Engineering,
+description={Erweitern eines Datensatzes um neue, künstlich erzeugten Eigenschaften, meist kombinierend bzw. auf Basis bestehender Eigenschaften.}
 }
 
 \newglossaryentry{neuron}
 {
 name=Neuron,
 plural=Neuronen,
-description="Ein Neuron ist ein…"
+description={Einheit bzw. Knoten eines Neuronalen Netzes, die durch eine oder mehrere Eingaben und eine Aktivierungsfunktion ihren Ausgabewert berechnet}
+}
+
+\newglossaryentry{inference}
+{
+name=Inferenz,
+plural=Inferenzen,
+description={In Machine Learning der Prozessschritt, wo ein trainiertes Modell zum Erzeugen neuer Prognosen verwendet wird.}
 }
 
 \newglossaryentry{Tokenizer}
 {
 name=Tokenizer,
 plural=Tokenizers,
-description="Ein Tokenizer ist ein..."
+description={Wandelt Zeichen- oder Wortsequenzen in numerische Repräsentationen anhand eines endlichen Vokabulars um und umgekehrt.}
 }
 
 \newglossaryentry{Trainingsschritt}
 {
 name=Trainingsschritt,
 plural=Trainingsschritte,
-description="Ein Tokenizer ist ein..."
+description={Ein kompletter Trainingszyklus des Modells, wobei dem Modell ein Eingabewert überreicht, eine Prognose errechnet, die Prognose validiert sowie das Modell angepasst wird.}
 }
 
 \newglossaryentry{Pre-processing}
 {
 name=Pre-processing,
 plural=Pre-processing,
-description="Ein Tokenizer ist ein..."
+description={Vorverarbeitung des Datensatzes, um z.B. fehlerhafte und potentiell störende Daten zu beseitigen oder zu korrigieren.}
 }
 
 \newglossaryentry{rnn}
 {
 name=Rekurrentes Neuronales Netz,
 plural=Rekurrente Neuronale Netze,
-description="Ein Tokenizer ist ein..."
+description={Spezielle Implementation eines neuronalen Netzes, bei dem die Neuronen bzw. Zellen nicht nur die direkte Eingabe erhalten sondern zusätzlich die letzte Ausgabe ihrer selbst.}"
 }
 
 \newglossaryentry{cross-entropy}
 {
 name=Cross-Entropy,
-plural=Rekurrente Neuronale Netze,
-description="Ein Tokenizer ist ein..."
+plural=Cross Entropy,
+description={Logarithmische Abweichungsfunktion, die Abweichungen vom Soll-Wert mit schnell zunehmender «Härte» bestraft, je weiter ein prognostizierter Wert vom Soll-Wert entfernt liegt.}
 }
 
 \newglossaryentry{backpropagation-through-time}
 {
 name=Backpropagation Through Time,
 plural=Backpropagation Through Time,
-description="Ein Tokenizer ist ein..."
+description={ei der Backpropagation werden die Gewichte eines Modells so angepasst, dass die Abweichung zum Soll-Wert sinkt. Mit der Backpropagation Through Time geschieht dieser Prozess zusätzlich über mehrere Zeitschritte eines RNN.}
 }
 
 \newglossaryentry{gradient-descent}
 {
 name=Gradient-Descent-Verfahren,
 plural=Gradient-Descent-Verfahren,
-description="Ein Tokenizer ist ein..."
+description={Verfahren, bei dem die Gewichte eines Modells anhand eines Vektors (Gradient) so angepasst werden, dass die Abweichung zum Soll-Wert insgesamt am stärksten abnimmt.}
 }
 
 \newglossaryentry{lstm}
 {
 name=Long Short Term Memory Cell,
 plural=Long Short Term Memory Cells,
-description="Ein Tokenizer ist ein..."
+description={Von Sepp Hochreiter and Jürgen Schmidhuber entwickelte RNN-Zelle, bestehend aus einem Eingang, einem Ausgang so wie einem «Forget-Gate», mit dem die Persistenz von neuen Informationen reguliert wird.}
+}
+
+
+\newglossaryentry{dropout}
+{
+name=Dropout,
+plural=Dropout,
+description={Regulierender Mechanismus bei neuronalen Netzen, wobei bei jedem Trainingsschritt ein bestimmter Anteil («Dropout-Rate») der Neuronen deaktiviert wird, um so das Netz robuster zu machen.}
 }
 
 \newglossaryentry{gru}
 {
 name=Gated Recurrent Unit,
 plural=Gated Recurrent Units,
-description="Ein Tokenizer ist ein..."
+description=Von Kyunghyun Cho et al. entwickelte Vereinfachung eines LSTM.
+}
+
+\newglossaryentry{tensor}
+{
+name=Tensor,
+plural=Tensoren,
+description=Generalisierung von Vektoren und Matritzen. Allg. ein multi-dimensionales Datenkonstrukt. Implementiert als mehrdimensionales Array.
 }
 
 \newacronym[see={[Glossary:]{rnn}}]{acr-rnn}{RNN}{Rekurrentes Neuronales Netz}
@@ -107,6 +135,7 @@ description="Ein Tokenizer ist ein..."
 
 \newglossaryentry{accuracy}
 {
-name=accuracy
+name=Accuracy,
+description=Anteil korrekter Prognosen in Relation zu allen Prognosen eines Modells
 }
 

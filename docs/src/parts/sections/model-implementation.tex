@@ -5,15 +5,70 @@ Für den Aufbau und das Training werden TensorFlow 2.0\footnote{https://www.tens
 Der Code ist auf Github\footnote{https://github.com/samuelblattner/ffhs-sema} frei verfügbar.
 Die Implementierung kann grundsätzlich in drei Komponenten aufteilt werden:
 
-\paragraph{Builder (build.py)} Die Builder-Komponente übernimmt die Aufgabe, das RNN-Modell mit Keras nach bestimmten Vorgaben aufzubauen (z.B. Anzahl LSTM-Einheiten, Anzahl Schichten, …).
-Weil Neuronale Netze auf arithmetischen Operationen beruhen, müssen die Eingabezeichen in Zahlen umgewandelt werden.
-Diese Aufgabe übernimmt ein sog. «\glq{Tokenizer}».
-Die Komponente gibt als Rückgabewert einersets das kompilierte Modell sowie andererseits einen Tokenizer zurück, der numerische Repräsentationen für sämtliche im Datensatz enthaltenen Zeichen (=Vokabular) enthält.
+\paragraph{Builder (build.py)} Die Builder-Komponente übernimmt die Aufgabe, das \acrshort{acr-rnn}-Modell mit Keras nach bestimmten Vorgaben aufzubauen (z.B. Anzahl LSTM-Einheiten, Anzahl Schichten, …).
+Weil neuronale Netze auf arithmetischen Operationen beruhen, müssen die Eingabezeichen in numerische Repräsentationen umgewandelt werden.
+Diese Aufgabe übernimmt ein sog. «\gls{Tokenizer}».
+Dem Tokenizer werden alle im Datensatz vorkommenden Zeichen übergeben.
+Zudem werden die Extrazeichen «pre» (für unbekannte Zeichen in neuen Datensätzen; kommt nicht zur Anwendung), «<end>» (Stoppmarke; Ende der Sequenz) sowie «pad» (Füllzeichen für Sequenzlängen $ < t $) hinzugefügt (Listing \ref{lst:tokenizer}).
+Die Zeilen 14 bis 37 zeigen den Aufbau des Modells.
+Werden mehr als eine \gls{layer} verwendet, fügen Zeilen 16 bis 26 die unteren Schichten sowie dazwischenliegende \gls{dropout}-Regulatoren hinzu, während Zeilen 28 bis 37 die oberste Schicht sowie die Softmax-Normalisierung erstellen.
+Per \textit{input\_shape}-Argument wird den Schichten die Form des Eingabe-\gls{tensor}s übergeben (Zeilen 19 und 31).
+Der Tensor besteht jeweils aus \textit{window\_size} Elementen (entspricht der Sequenzlänge $ t $), wovon jedes wiederum aus $ |V| + 1 + n_{Steuerparameter} $ Unterelementen besteht («$ + 1$» erweitert den Zeichenvektor um ein vom Tokenizer reserviertes Zeichen, \textit{$n_{Steuerparameter}$ bestimmt die Anzahl an zusätzlichen Steuerparameter, die mit den Sequenzen mittrainiert werden sollen}).
 
-\paragraph{Loader} Der Loader übernimmt die Aufgabe, die Trainings- wie auch Validierungsdaten bereitszustellen.
-Das Training des Modells wird im sog. Mini-Batch-Verfahren vollführt.
-Der Loader lädt damit mit einem Python-Generator für jede Trainingsepoche nacheinander mehrere Ausschnitte des Gesamtdatensatzes (siehe Listing \ref{lst:mini-batch-loader}, Zeile 3).
-Dies ermöglicht, beliebig grosse Datensätze zu bearbeiten, da immer nur der Speicherbedarf eines Mini-Batches benötigt wird.
+Der Builder gibt als Rückgabewert das kompilierte Modell sowie einen Tokenizer zurück, der numerische Repräsentationen für sämtliche im Datensatz enthaltenen Zeichen (=Vokabular) enthält.
+
+\begin{lstlisting}[basicstyle=\footnotesize, language=Python, caption=Der Builder erzeugt den Tokenizer sowie das Modell, label=lst:tokenizer]
+    ...
+    for dataframe in loader:
+
+        chars = set()
+
+        for name in dataframe['name']:
+            chars.update(set(str(name)))
+
+        tokenizer.fit_on_texts(list(chars))
+
+    tokenizer.fit_on_texts(['pre', '<end>', 'pad'])
+
+    # Build Keras Model
+    model = Sequential()
+    for r in range(0, max(num_layers - 1, 0)):
+        model.add(
+            layer=(CuDNNLSTM if use_gpu else LSTM)(
+                num_units,
+                input_shape=(
+                    window_size,
+                    len(tokenizer.index_word) + 1 + num_params
+                ),
+                return_sequences=True
+            )
+        )
+        model.add(Dropout(dropout_rate))
+
+    model.add(
+        layer=(CuDNNLSTM if use_gpu else LSTM)(
+            num_units,
+            input_shape=(
+                window_size,
+                len(tokenizer.index_word) + 1 + num_params
+            )
+        )
+    )
+    model.add(Dense(len(tokenizer.index_word) + 1, activation='softmax'))
+
+    model.compile(
+        optimizer='adam',
+        loss='categorical_crossentropy',
+        metrics=['accuracy']
+    )
+
+\end{lstlisting}
+
+
+\paragraph{Loader} Der Loader lädt Trainings- wie auch Validierungsdaten und stellt sie zum Training zur Verfügung.
+Das Training des Modells wird im sog. \gls{mini-batch}-Verfahren ausgeführt.
+Der Loader lädt dazu mit einem Python-Generator für jede Trainingsepoche nacheinander mehrere Ausschnitte des Gesamtdatensatzes (siehe Listing \ref{lst:mini-batch-loader}, Zeile 3).
+Damit ist es möglich, beliebig grosse Datensätze zu bearbeiten, da immer nur der Speicherbedarf eines \gls{mini-batch}es benötigt wird.
 Der Loader implementiert zudem ein Offset (Zeile 13), mit dem der Datensatz «vorgespult» werden kann.
 Damit ist es möglich, vom gleichen Datensatz sowohl das Trainingsset wie auch das Validierungsset zu entnehmen.
 Statt vom Anfang des Datensatzes, startet das Validierungsset jedoch viel weiter hinten im Datensatz, im Idealfall – und bei genügend grossem Datensatz – ausserhalb des Bereichs, den das Trainingsset jemals erreichen wird.
@@ -41,14 +96,13 @@ Der Loader übernimmt zudem die Aufgabe, die Textsequenzen in einzelne Trainings
 Eine Trainingseinheit besteht immer aus einer konstanten Anzahl Zeichen (Fenstergrösse) und einem Zielzeichen.
 Zudem wird am Schluss eine Stoppmarke («<end>») angefügt, die dem Modell das Ende der Sequenz signalisiert.
 Ist eine Trainingssequenz kürzer als die Fenstergrösse, wird sie mit Platzhalter Zeichen aufgefüllt («padding»).
-Ist eine Trainingssequenz länger als die Fenstergrösse, so wird sie abgeschnitten.
-und Zeichen um Zeichen in mehreren Trainingsschritten durch das Fenster geschoben (siehe Tabelle \ref{tab:splitting-into-training-units}).
+Ist eine Trainingssequenz länger als die Fenstergrösse, so wird sie in Ausschnitten Zeichen um Zeichen in mehreren Trainingsschritten durch das Fenster geschoben (siehe Tabelle \ref{tab:splitting-into-training-units}).
 Der letzte Buchstabe wird jeweils als Zielwert abgeschnitten und in einem separaten Array zurückgeliefert (y-Wert).
 Gleichzeitig werden die Buchstabensequenzen mit dem zuvor erwähnten Tokenizer in Vokabular-Indizes umgewandelt.
 Da die Ausgabe des Modells eine Wahrscheinlichkeitsverteilung für alle Buchstaben in Form eines Vektors sein wird (Wertebereich 0.0 - 1.0), ist es
 für ein optimales Training erforderlich, auch die Eingabe ins Modell entsprechend umzuformen.
 Die Vokabular-Indizes werden umgewandelt in sog. «One-Hot-Vektoren».
-Ein One-Hot-Vektor besteht aus sovielen Komponenten, wie das Vokabular Zeichen enthält.
+Ein One-Hot-Vektor besteht aus $ |V| $ Komponenten (Anzahl Zeichen im Vokabular).
 Die Komponenten mit dem Index des entsprechenden Zeichens wird auf $ 1.0 $ gesetzt, alle anderen Komponenten bleiben $ 0.0 $.
 Der Eingabevektor ist somit gewissermassen ebenfalls eine Wahrscheinlichkeitsverteilung, allerdings hat genau ein Zeichen die Wahrscheinlichkeit $ 100\% $ (das nächste Zeichen in der Sequenz), während
 alle anderen Zeichen die Wahrscheinlichkeit $0.0\%$ haben.
@@ -111,7 +165,7 @@ Der Trainer führt das eigentliche Training des Modells durch.
 Dem Modell werden zudem sog. Callbacks\footnote{https://keras.io/callbacks/} hinzugefügt, damit das Modell nach
 längeren Abschnitten ohne Verbesserung nicht unnötig weiter trainiert werden muss und somit Rechenzeit gespart werden kann.
 Ausserdem wird das gesamte Modell und insbesondere seine Gewichte nach jeder Epoche quasi als «Spielstand» gespeichert,
-falls sich die Validierungsrichtigkeit («Accuarcy») insgesamt verbessert hat.
+falls sich die Validierungsrichtigkeit («\gls{accuracy}») insgesamt verbessert hat.
 So wird vermieden, dass ein Modell nach abgebrochenem Training von vorne trainiert werden muss.
 
 \subsection{Hardware \& Evaluierung der günstigsten Mini-Batch-Grösse}
@@ -120,14 +174,14 @@ Für das Training des Modells steht eine nVidia GeForce GTX 980 Grafikkarte zur 
 Aufgrund der für Matritzenoperationen optimierten Hardware eignen sich Grafikkarten besonders gut für Machine Learning.
 Unter verwendung des CUDA-Tookits\footnote{https://developer.nvidia.com/cuda-downloads} sowie des Keras-Frameworks kann
 die Grafikkarte annähernd transparent ins Training des Modells einbezogen werden.
-Während der ersten Versuche konnte eine variiernde Ausführungsgeschwindigkeit in Abhängigkeit der Mini-Batch-Grösse beobachtet werden.
-Mini-Batches werden immer als Ganzes der Grafikkarte übergeben.
+Während der ersten Versuche konnte eine variiernde Ausführungsgeschwindigkeit in Abhängigkeit der \gls{mini-batch}-Grösse beobachtet werden.
+\glspl{mini-batch} werden immer als Ganzes der Grafikkarte übergeben.
 
-Um das Modell möglichst effizient zu trainieren, soll die effizienteste Mini-Batch-Grösse für diese Grafikkarte empirisch eruiert werden.
-Dazu werden 10 Epochen mit jeweils 1000 Trainingsschritten vollführt.
-Die erfassten Laufzeiten in Tabelle \ref{tab:best-batch-size} zeigen auf, dass das Modell bei einer Mini-Batch-Grösse von 100 Trainingseinheiten
+Um das Modell möglichst effizient zu trainieren, soll die effizienteste \gls{mini-batch}-Grösse für diese Grafikkarte empirisch eruiert werden.
+Dazu werden 10 Epochen mit jeweils 1000 Trainingsschritten durchgeführt.
+Die erfassten Laufzeiten in Tabelle \ref{tab:best-batch-size} zeigen auf, dass das Modell bei einer \gls{mini-batch}-Grösse von 100 Trainingseinheiten
 am effizientesten zu arbeiten scheint.
-Für sämtliche Modellkonfigurationen soll deshalb die \gls{mini-batch}-Grösse} von 100 Trainingseinheiten verwendet werden.
+Für sämtliche Modellkonfigurationen soll deshalb die \gls{mini-batch}-Grösse von 100 Trainingseinheiten verwendet werden.
 
 \begin{center}
     \begin{table}
@@ -167,53 +221,54 @@ Ein Fehler in der Implementierung hat zu Beginn dazu geführt, dass für jeden N
 Interessanterweise hat selbst dieses Modell nach hinreichend langem Training zu einigen brauchbaren Ausgaben (aber hauptsächlich unlesbaren Zeichenfolgen) geführt.
 Zum Vergleich mit den Ausgaben der korrekten Implementierung sind die Ausgaben des fehlerhaften Codes im Abschnitt «Resultate» (\ref{ch:results}) aufgelistet.
 
-Bisher war das Modell so implementiert, dass jede Epoche jeweils die gleichen Trainingseinheiten erhielt.
+Bisher war das Modell so implementiert, dass jede \gls{epoch} jeweils die gleichen Trainingseinheiten erhielt.
 Der Grund für dieses Vorgehen basierte auf der Annahme, dass jede Trainingseinheit mehrmals dem Modell vorgelegt werden müsse, damit der Lernprozess effektiv ist.
 Diese Annahme entstand jedoch auf der fehlerhaften Implementierung, weshalb sie verworfen werden kann.
 
-Der Nachteil war, dass das Modell eine relativ begrenztes Trainingsset zu sehen bekam.
-Dieser Nachteil verstärkt sich, da durch das behobene und nun korrekt funktionierende Training noch weniger Trainingseinheiten verwendet werden.
-Bei einer Median-Zeilenlänge von 26 Zeichen (siehe Abb. \ref{fig:sequence-lengths}) sowie 500 Mini-Batches à 100 Trainingsschritten werden dem Modell also:
+Der Nachteil war, dass das Modell ein relativ begrenztes Trainingsset zu sehen bekam, weil der Einsatz des gesamten Sets für nur eine \gls{epoch} zu viel Zeit in Anspruch genommen hätte.
+Dieser Nachteil verstärkt sich, da durch das behobene und nun korrekt funktionierende Training noch weniger Zeilen des Datensatzes verwendet werden, weil jede Zeile mehrere Trainingsschritte beinhaltet (statt nur einen wie in der fehlerhaften Implementierung).
+Bei einer Median-Zeilenlänge von 26 Zeichen (siehe Abb. \ref{fig:sequence-lengths}) sowie 500 \glspl{mini-batch} à 100 Trainingsschritten werden dem Modell also:
 
 \[ 500 \cdot \frac{100}{26} = 1'923.1 \]
 
 gerade mal rund 1900 Zeilen der insgesamt 400'000 Zeilen gezeigt.
-Damit erlernt das Modell ein sehr begrenztes Vokabular.
+Damit erlernt das Modell einen sehr begrenzten Wortschatz.
 Die Trainingslogik soll nun so verbessert werden, dass jede Epoche einen beliebigen Ausschnitt aus allen Zeilen zum Training erhält.
 Der Loader wird als Endlosgenerator implementiert.
 Erreicht eine Epoche das Ende des Datensatzes, wird wieder von vorne begonnen.
-Gleichwohl mit dem Datensatz, der zur Validierung herangezogen wird.
+Ebenso wird mit dem Validierungsdatensatz verfahren.
 Der Generator wird also quasi als Ringspeicher implementiert wobei Trainings- und Validierungsdatensatz um die Hälfte der Länge des Gesamtdatensatzes
-verschoben («Offset») ausgeliefert werden.
-Damit der ganze Datensatz mindestens einmal durchlaufen wird müssten also insgesamt rund \[ 26 \cdot 422039 = 10'973'014 \] Trainingsschritte vollführt werden.
-Wird von einer idealen Mini-Batch-Grösse von 100 Trainingsschritten ausgegangen, fallen insgesamt \[ \frac{109'730'14}{100} = 109'730 \] Mini-Batches an.
-Damit kann die Anzahl der notwendigen Mini-Batches für einen bestimmten Prozentsatz des Gesamtdatensatzes als Funktion $ b(p, e) $ ausgedrückt werden:
+verschoben ausgeliefert werden («Offset»).
+Damit der ganze Datensatz mindestens einmal durchlaufen wird müssten also insgesamt rund \[ 26 \cdot 422'039 = 10'973'014 \] Trainingsschritte vollführt werden.
+Wird von einer idealen \gls{mini-batch}-Grösse von 100 Trainingsschritten ausgegangen, fallen insgesamt \[ \frac{109'730'14}{100} = 109'730 \] \glspl{mini-batch} an.
+Damit kann die Anzahl der notwendigen \glspl{mini-batches} für einen bestimmten Prozentsatz des Gesamtdatensatzes als Funktion $ b(p, e) $ ausgedrückt werden:
 
 \[ b(p, e) = \frac{p \cdot R \cdot S}{B \cdot e} \]
 
 wobei $ p $ dem gewünschten Abdeckungsanteil des Datensatzes entspricht, $ e $ die Anzahl Epochen darstellt und die Konstanten $ R $, $ S $ sowie $ B $ die Anzahl Trainingssätze (Zeilen), die Median-Zeichenzahl pro Zeile sowie
 die ideale Mini-Batch-Grösse repräsentieren.
 
-Sollen also beispielsweise 25\% des gesamten Datensatzes mit 50 Epochen trainiert werden, so fallen:
+Sollen also beispielsweise 25\% des gesamten Datensatzes mit 50 \glspl{epoch} trainiert werden, so fallen:
 
 \[ b(0.25, 50) = \frac{0.25 \cdot 422039 \cdot 26}{125 \cdot 50} = 438.92 \]
 
-Mini-Batches pro an.
+\glspl{mini-batch} pro \gls{epoch} an.
 Diese Funktion dient dem Loader dazu, das Modell entsprechend lange zu trainieren.
 
 \subsection{Hinzufügen eines Steuerparameters (Jahreszahl)}
 \label{subsec:adding-time-component}
 
-Jeder Trainingssatz bzw. jede Gerichtbezeichnung ist mit einem Datum versehen, an dem das Gericht zum ersten Mal
+Jeder Trainingssatz bzw. jede Speisenbezeichnung ist mit einem Datum versehen, an dem das Gericht zum ersten Mal
 registriert wurde sowie mit einem Datum, an dem das Gericht zum letzen Mal registriert wurde.
 Ein Histogram legt offen, dass die einzelnen Gerichte ungleichmässig auf die Zeit verteilt ist.
-Ausserdem weist der Grossteil der Gerichte eine «Lebensdauer» von wenigen Jahren auf (siehe Abb.\ref{fig:hist-dates-datespans}).
+Ausserdem weist der Grossteil der Gerichte eine «Lebensdauer» von wenigen Jahren auf (siehe Abb. \ref{fig:hist-dates-datespans}).
 Aufgrund letztgenannter Tatsache soll das Enddatum einfachheitshalber ignoriert werden.
 Stattdessen wir das Eintrittsdatum der Eingabesequenz für das Modell angehängt.
-Da nach erstem Ausprobieren das Anfügen der absoluten Jahreszahl kein gutes Training ermöglichte, wird das Jahr
-als relativer Wert in einer Jahresspanne von 300 Jahren (1800 - 2100) angehängt, wobei also 0.0 dem Jahr 1800 sowie
-der Wert 1.0 dem Jahr 2100 entsprechen.
-Wurde zuvor das Zeichen «B» in Form eines One-Hot-Vektors $ (0.0, 0.0, 1.0, 0.0, 0.0)^{T} $ an das Modell übergeben,
+Da nach erstem Ausprobieren das Anfügen der Jahreszahl als absoluten Wert die Performanz des Modells massiv einschränkte (niedrige Validierungsrichtigkeit), wird das Jahr
+als relativer Wert in einer Jahresspanne von 300 Jahren (1800 - 2100) angehängt, wobei also 0.0 dem Jahr 1800 sowie der Wert 1.0 dem Jahr 2100 entsprechen.
+Damit liegt der Wertebereich des Steuerparameters in einem ähnlichen Umfeld wie die Zeichenwahrscheinlichkeiten.
+Die Performanz des Modells liegt dadurch wieder in ähnlichen Bereichen wie wenn kein Steuerparameter verwendet wird.
+Wurde zuvor beispielsweise das Zeichen «B» in Form eines One-Hot-Vektors $ (0.0, 0.0, 1.0, 0.0, 0.0)^{T} $ an das Modell übergeben,
 so wird nun der Vektor um die Jahreszahl (z.B. 1975 = 0.583) erweitert zu $ (0.0, 0.0, 1.0, 0.0, 0.0, 0.583)^{T} $
 
 \begin{figure}

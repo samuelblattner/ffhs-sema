@@ -3,25 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="acaa3f25-e3a6-40cd-aa47-0692f865a2c0" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/analysis.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.py" beforeDir="false" afterPath="$PROJECT_DIR$/build.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/data/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/analysis.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/analysis.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/appendix.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/appendix.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/conclusion.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/conclusion.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/glossary-defs.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/glossary-defs.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/glossary.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/glossary.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/introduction.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/introduction.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/model.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/model.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/results.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/results.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-data-training.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-data-training.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-definition.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-definition.tex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-generation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-generation.tex" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/src/parts/sections/model-implementation.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/parts/sections/model-implementation.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.tex" beforeDir="false" afterPath="$PROJECT_DIR$/docs/src/sema-samuel-blattner.tex" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loader3.py" beforeDir="false" afterPath="$PROJECT_DIR$/loader3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/train.py" beforeDir="false" afterPath="$PROJECT_DIR$/train.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,31 +21,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_sorted.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="45">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/loader_qg.py">
+        <entry file="file://$PROJECT_DIR$/build.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-655">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-              <folding>
-                <element signature="e#0#13#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+            <state relative-caret-position="795">
+              <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
               <folding>
                 <element signature="e#0#64#0" expanded="true" />
               </folding>
@@ -65,10 +33,34 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loader.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#27#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/loader3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1110">
+              <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
+              <folding>
+                <element signature="e#0#13#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/train.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="753">
+              <caret line="269" column="99" selection-start-line="269" selection-end-line="270" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
               </folding>
@@ -76,14 +68,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/train2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-685">
-              <caret line="196" column="36" lean-forward="true" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-              </folding>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="1044">
+              <caret line="292" column="4" selection-start-line="292" selection-start-column="4" selection-end-line="292" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_sorted.csv">
+          <provider selected="true" editor-type-id="LargeFileEditor">
+            <state relative-caret-position="-100522">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -92,8 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Gooood b</find>
-      <find>Hääää....? Aha 🏖</find>
       <find>Können wir Frauen mitbringen?</find>
       <find>Also wo läuft er denn?</find>
       <find>jetzt wods seisch! Last week with my army knife!</find>
@@ -122,6 +118,8 @@
       <find>drink</find>
       <find>gesehen</find>
       <find>stevan gese</find>
+      <find>num_batches</find>
+      <find>window</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,9 +147,7 @@
         <option value="$PROJECT_DIR$/loader.py" />
         <option value="$PROJECT_DIR$/loader3.py" />
         <option value="$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_only_year_1900.csv" />
-        <option value="$PROJECT_DIR$/train.py" />
         <option value="$PROJECT_DIR$/analysis.py" />
-        <option value="$PROJECT_DIR$/build.py" />
         <option value="$PROJECT_DIR$/loader_qg.py" />
         <option value="$PROJECT_DIR$/build2.py" />
         <option value="$PROJECT_DIR$/data/output/qg.txt" />
@@ -162,6 +158,8 @@
         <option value="$PROJECT_DIR$/data/full/_chat.txt" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/data/.gitignore" />
+        <option value="$PROJECT_DIR$/build.py" />
+        <option value="$PROJECT_DIR$/train.py" />
       </list>
     </option>
   </component>
@@ -192,7 +190,14 @@
               <item name="Seminararbeit" type="b2602c69:ProjectViewProjectNode" />
               <item name="Seminararbeit" type="462c0819:PsiDirectoryNode" />
               <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="output" type="462c0819:PsiDirectoryNode" />
+              <item name="full" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Seminararbeit" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Seminararbeit" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="full" type="462c0819:PsiDirectoryNode" />
+              <item name="whats-on-the-menu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Seminararbeit" type="b2602c69:ProjectViewProjectNode" />
@@ -1399,7 +1404,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="251217000" />
+    <option name="totallyTimeSpent" value="254050000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="2560" height="1417" extended-state="6" />
@@ -1410,7 +1415,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32981133" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.45132077" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.16" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -1483,7 +1488,7 @@
     <SUITE FILE_PATH="coverage/Seminararbeit$3__GEN__GPU__P__0_25__E__50__U__512__W__15__L__3__D__0_05__Y__1.coverage" NAME="3. GEN: GPU, P: 0.25, E: 50, U: 512, W: 15, L: 3, D: 0.05, Y: 1 Coverage Results" MODIFIED="1560761509154" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__5__N__1__E__50__U__64__W__10__L__1__D__0.coverage" NAME="GPU, B: 5, N: 1, E: 50, U: 64, W: 10, L: 1, D: 0 Coverage Results" MODIFIED="1559314972258" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$3__GEN__GPU__P__1_5__E__75__U__64__W__15__L__3__D__0_15__Y__1.coverage" NAME="3. GEN: GPU, P: 1.5, E: 75, U: 64, W: 15, L: 3, D: 0.15, Y: 1 Coverage Results" MODIFIED="1560774786977" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Seminararbeit$QG.coverage" NAME="QG Coverage Results" MODIFIED="1561568981222" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Seminararbeit$QG.coverage" NAME="QG Coverage Results" MODIFIED="1561569251471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$3__GEN__GPU__P__2_0__E__100__U__512__W__15__L__3__D__0_05__Y__1.coverage" NAME="3. GEN: GPU, P: 2.0, E: 100, U: 512, W: 15, L: 3, D: 0.05, Y: 1 Coverage Results" MODIFIED="1560761977250" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$GPU__B__1__N__1__E__1__U__64__W__10__L__1__D__0.coverage" NAME="GPU, B: 1, N: 1, E: 1, U: 64, W: 10, L: 1, D: 0 Coverage Results" MODIFIED="1559659261725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Seminararbeit$2__GEN__GPU__P__0_5__E__50__U__64__W__15__L__1__D__0.coverage" NAME="2. GEN: GPU, P: 0.5, E: 50, U: 64, W: 15, L: 1, D: 0 Coverage Results" MODIFIED="1559754843522" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -1702,23 +1707,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="45" lean-forward="true" selection-start-line="45" selection-end-line="45" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/extractor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/extractor.py" />
     <entry file="file://$PROJECT_DIR$/data/output/chat_barry.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2350275">
@@ -1729,22 +1718,9 @@
     <entry file="file://$PROJECT_DIR$/data/full/_chat_barry.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/loader_nonqg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2025">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/loader_nonqg.py" />
     <entry file="file://$PROJECT_DIR$/data/full/names/food.txt">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="4380">
-          <caret line="292" column="4" selection-start-line="292" selection-start-column="4" selection-end-line="292" selection-end-column="14" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_only_year_2000.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
@@ -1760,16 +1736,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="139" selection-start-line="12" selection-start-column="139" selection-end-line="12" selection-end-column="139" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1225">
-          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1808,9 +1774,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/loader_qg.py" />
+    <entry file="file://$PROJECT_DIR$/build2.py" />
+    <entry file="file://$PROJECT_DIR$/train2.py" />
+    <entry file="file://$PROJECT_DIR$/loader.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="53" column="22" selection-start-line="53" selection-start-column="22" selection-end-line="53" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/loader3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
+        <state relative-caret-position="1110">
           <caret line="74" column="25" selection-start-line="74" selection-start-column="25" selection-end-line="74" selection-end-column="25" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
@@ -1818,47 +1807,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="1044">
+          <caret line="292" column="4" selection-start-line="292" selection-start-column="4" selection-end-line="292" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/full/whats-on-the-menu/Dish_sorted.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="45">
+        <state relative-caret-position="-100522">
           <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/loader_qg.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-655">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
-          <folding>
-            <element signature="e#0#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/train.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/train2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-685">
-          <caret line="196" column="36" lean-forward="true" selection-start-line="196" selection-start-column="36" selection-end-line="196" selection-end-column="36" />
+        <state relative-caret-position="753">
+          <caret line="269" column="99" selection-start-line="269" selection-end-line="270" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
           </folding>

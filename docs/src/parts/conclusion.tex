@@ -2,26 +2,25 @@
 \label{ch:conclusions}
 
 Diese Arbeit zeigt auf, dass Machine Learning durchaus als Kreativitätswerkzeug verwendet werden kann und ein
-neuronales Netz fähig ist
-Die Qualität und der Umfang der Erzeugnisse stehen und fallen allerdings mit der Qualität des Trainingsdatensatzes.
-Hier könnte mit einem Daten-Preprocessing abgeholfen werden, indem beispielsweise die Namen der Gerichte nach
-Sprache segmentiert werden.
-So könnte auch eine weitere Klassifikation nach Sprache stattfinden und die Variabilität des Modells erhöhen, indem
-die Sprache als Steuerparameter verwendet wird.
-Es hat sich gezeigt, dass die Klassifikation nach Zeit (Jahr) nicht funktioniert, weil die Verteilung der Gerichte nach Jahr sehr unregelmässig ist und
-weil sich die Epoche nicht sonderlich in der Wahl von Wörtern niederschlägt.
+neuronales Netz fähig ist, verwendbare und lesbare Bezeichnungen von Speisen zu erzeugen.
+Die Qualität der Erzeugnisse steht und fällt allerdings mit der Qualität, dem Umfang sowie mit der Vielfältigkeit des Trainingsdatensatzes.
+Hier könnte mit einem Daten-Preprocessing abgeholfen werden, indem beispielsweise die Bezeichnungen bereinigt und fehlerhaft eingelesene Namen beseitigt oder korrigiert werden.
+Zudem könnten die Namen der Gerichte nach Sprache segmentiert werden, damit der Lernprozess für englische Begriffe nicht durch Begriffe anderer Sprachen gestört wird.
 
-Das Modell könnte so weiterentwickelt werden, dass Feedback vom Benutzer integriert werden kann und so die Qualität des Modells nach und nach verbessert wird.
-Beispielsweise könnte der Datensatz manuell um weitere Labels erweitert werden.
-Zum einen wäre sicher die Sprache der Namen interessant, zum anderen auch mehr Informationen zum Gericht selbst.
+Es hat sich gezeigt, dass die Klassifikation nach Zeit (Jahr) nicht funktioniert, weil die zeitliche Verteilung der Gerichte sehr unregelmässig ist und weil sich die Epoche nicht sonderlich in der Wahl von Wörtern niederschlägt.
+Durch \gls{feature-engineering} konnte jedoch gezeigt werden, wie Steuerparameter (in diesem Fall vegetarisch/nicht-vegetarisch) die Erzeugnisse beeinflussen können.
+Dies eröffnet eine Vielfalt an Erweiterungsmöglichkeiten, wenn der Datensatz manuell um weitere Labels erweitert wird.
+Zum einen wäre wie schon erwähnt die Sprache der Bezeichnungen interessant, zum anderen aber auch zusätzliche Informationen zum Gericht selbst.
 Ist ein Gericht vegetarisch oder gar vegan?
 Wieviele Kalorien enthält ein Gericht?
 Ist es eher deftig oder leicht?
 Nicht zuletzt ist ja die Normalisierung des Preises Gegenstand von tatsächlichen Weiterentwicklungen des Datensatzes\footnote{http://nypl.github.io/menus-api/, Stichwort «price normalization»}.
 Ist dieser Schritt vollendet, so wäre es möglich, günstige und teure Gerichte zu trainieren.
-All diese Daten eignen sich wahrscheinlich besser als die Zuordnung einer Epoche, da die Daten deutlicher zugeordnet werden könnten.
-So haben Gerichte ohne Fleisch die Tendenz, günstiger auszufallen während Angus Rind erfahrungsgemäss teuer ist.
+In diesem Umfeld wäre ein vertieftes Experimentieren mit der Abstraktionsfähigkeit von mehrschichtigen Netzen interessant.
+Ist ein tiefes Netz besser im Stande als ein einschichtiges Netz, mit mehreren Steuerparametern zu trainieren?
 
-Eine weitere Arbeit könnte darin bestehen, die optimale Netzkonfiguration für den höchsten Anteil lesbarer Wörter sowie die
-höchste Originalität zu finden.
+Eine weitere Arbeit könnte darin bestehen, die optimale Netzkonfiguration für den höchsten Anteil lesbarer Wörter sowie die höchste Originalität zu finden.
 Möglicherweise wäre auch die Veränderung der Sequenz-Fenstergrösse interessant, um das Modell leistungsfähiger zu machen.
+
+Nicht zuletzt müsste die Interaktione mit dem Benutzer konzipiert werden.
+In diesem Zusammenhang wäre auch eine Weiterentwicklung des Modells interessant, wodurch das Feedback über die Tauglichkeit von Begriffen vom Benutzer integriert werden kann und so die Qualität des Modells nach und nach verbessert wird.

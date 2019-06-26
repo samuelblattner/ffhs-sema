@@ -15,7 +15,7 @@ from tensorflow.python.keras.saving import load_model
 from tensorflow.python.keras.utils import to_categorical
 
 from build import build_model
-from loader3 import Loader
+from loader import Loader
 
 INITIAL_SEQUENCES = (
     'A',
@@ -225,7 +225,6 @@ words = [''] + [i for w,i in tokenizer.index_word.items()]
 year = ((float(2000) - 1800) / 300) if args.use_year else None
 vegetarian = False
 
-print(year)
 out = []
 for r in range(0, 112):
     for sequence in INITIAL_SEQUENCES:
@@ -268,7 +267,7 @@ for r in range(0, 112):
             )
             # probs = list(p[0])
             # print(p)
-            last_char = np.random.choice(words, p=p.reshape((96,)))
+            last_char = np.random.choice(words, p=p.reshape((len(tokenizer.index_word) + 1 + (1 if year else 0) + 1,)))
             # last_char = words[probs.index(max(probs))]
 
             sequence += [last_char]

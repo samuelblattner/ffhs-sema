@@ -1,8 +1,10 @@
 \chapter{Auswertung}
 \label{ch:analysis}
 
-In diesem Abschnitt wird die Ausgabe des im vorherigen Abschnitt erzeugten Modelles analysiert und
-systematisch erweitert und verbessert.
+In diesem Abschnitt werden die Resultate des Modells analysiert.
+Dazu wird der Einfluss jedes Modellparameters einzeln beleuchtet.
+Dies soll das Verständnis über die Funktionsweise des Modells erweitern und als Grundlage dienen, das Modell in zukünftigen Arbeiten systematisch zu verbessern.
+
 
 \section{Einfluss der Anzahl LSTM-Einheiten}
 \label{sec:increase-lstm}
@@ -41,7 +43,7 @@ vor allem in der Anzahl erzeugter Wörter nieder zu schlagen.
 Am deutlichsten ist das bei den 64-Zellen-Netzen zu beobachten (6'885 Wörter zu 10'094 Wörter).
 Womöglich lernt das Modell durch die zusätzlichen Schichten längere Sequenzen.
 Die durchschnittliche Namenslänge scheint mit der erhöhten Anzahl erzeugter Wörter zu korrelieren.
-Interessant für die Qualität der erzeugten Sequenzen dürfte der gleichzeitige leichte Anstieg im Anteil lesbarer Wörter sowie der Originalität sein.
+Interessant für die Qualität der erzeugten Sequenzen dürfte der zeitgleiche leichte Anstieg im Anteil lesbarer Wörter sowie der Originalität sein.
 Das Modell ist mit mehreren Schichten anscheinend fähig, Wörter häufiger korrekt wiederzugeben und zudem einzigartigere Sequenzen zu erzeugen.
 
 Je umfangreicher und komplexer ein Modell aufgebaut ist, desto höher ist allerdings die Gefahr, dass sich das Modell zu stark an die Trainingsdaten anpasst («Overfitting»).
@@ -49,19 +51,23 @@ Ist dies der Fall, so sinkt die Fähigkeit des Modells, von den Trainingsdaten z
 Eine einfache und überraschend effektive Möglichkeit, ein tiefes Netz zu «regulieren» und von den Trainingsdaten zu lösen, bietet die «Dropout»-Methode.
 Dabei wird bei jedem Trainingsschritt zufällig ein Anteil («Dropout-Rate») der Zellen ausgeschaltet.
 Das Netz muss quasi lernen, mit Ausfällen umzugehen.
-Es wird dadurch robuster (siehe \autocite{JMLR:v15:srivastava14a}).
-Die Auswirkungen der Dropout-Ragen 15\% sowie 60\% sind Tabelle \ref{tab:results-of-various-configurations-dropout} zu entnehmen.
+Es wird dadurch robuster\autocite{JMLR:v15:srivastava14a}.
+Die Auswirkungen der Dropout-Raten 15\% sowie 60\% sind Tabelle \ref{tab:results-of-various-configurations-dropout} zu entnehmen.
 Der Effekt scheint beim 512-Zellen-Netz sehr gering zu sein.
 Der Anteil lesbarer Wörter steigt leicht an, bei fast gleichbleibender Originalität.
 Allerdings steigt die Wiederholungsrate leicht an.
+Möglicherweise ist dieser Effekt damit erklärbar, dass das Modell zwar effektiv etwas robuster wird und einen höheren Anteil lesbarer Wörter erzeugt.
+Allerdings wird das Modell auch zurückhaltender und wiederholt etwas mehr Erzeugnisse, weil Zellen beim erhöhten Ausfall von Nachbarzellen einspringen müssen und somit einen Teil der Aufgabe der ausgefallenen Zellen übernehmen.
+Gravierend ist eine erhöhte Dropout-Rate allerdings für das 64-Zellen-Modell.
+Hier dürfte nun der Ausfall dermassen hoch sein, dass das Modell in seiner Lernfähigkeit zu sehr eingeschränkt wird und kein nachhaltiges Sprachmodell aufbauen kann.
 Diese Beobachtungen waren in mehreren Versuchen reproduzierbar.
 
 
 \section{Unterschiedlicher Umfang der Trainingsdaten}
 \label{sec:increase-num-dataset}
 
-Wird das Modell nur mit einem Viertel des Datensatzes trainiert, so scheint das Vokabular begrenzt zu sein.
-Wird das Modell zweimal mit dem gesamten Datensatz trainiert, so ist das Vokabular umfangreich.
+Wird das Modell nur mit einem Viertel des Datensatzes trainiert, so scheint der Wortschatz begrenzt zu sein.
+Wird das Modell zweimal mit dem gesamten Datensatz trainiert, so ist der Wortschatz umfangreich.
 Dies äussert sich deutlich im Anteil lesbarer Wörter.
 So ist in beiden Modellkonfigurationen ein deutlicher Anstieg (z.B. von 59.92\% auf 85.03\% bei 512 Units und 3 Schichten) zu sehen.
 Hat das Modell also ein längeres Training bzw. einen grösseren und vielfältigeren Umfang des Trainingsdatensatzes zur Verfügung, so
@@ -94,15 +100,15 @@ Anders als beispielsweise bei \autocite{robertson}, bei dem die Personennamen kl
 den einzelnen Sprachen zugeschrieben werden können (Russische Namen enden z.B. häufig auf «..ov»).
 Zudem ist der Sprachstil wohl eher in längeren Sätzen kennzeichnend für eine bestimmte Epoche, weniger aber in kurzen und
 grammatikalisch niederkomplexen Begriffen wie das eben bei den Gerichten der Fall ist.
-Beste Beispiele dafür sind der Shakespeare-Generator\footnote{http://karpathy.github.io/2015/05/21/rnn-effectiveness/} sowie DeepDrumpf\footnote{https://twitter.com/deepdrumpf}.
+Beste Beispiele für deutliche Sprachstile sind der Shakespeare-Generator\footnote{http://karpathy.github.io/2015/05/21/rnn-effectiveness/} sowie DeepDrumpf\footnote{https://twitter.com/deepdrumpf}.
 
-Ein Unterschied könnte allenfalls in den Zutaten der Gerichte ausgemacht werden.
+Ein Unterschied könnte allenfalls in den Zutaten der Speisen ausgemacht werden.
 Beispielsweise wäre eine Hypothese, dass der Anteil einfacher und günstiger Zutaten wie Kartoffeln um 1900 höher ist, weil
-die Kaufkraft und die gastronomische Affinität der Gesellschaft heute höher ist.
-Dies zu untersuchen erfordert allerdings sehr viel manuelle Arbeit, was ausserhalb des zeitlichen Rahmens dieser Arbeit liegt.
+die Kaufkraft und die gastronomische Affinität der Gesellschaft damals niedriger waren.
+Dies zu untersuchen erfordert allerdings sehr viel manuellen Aufwand, was ausserhalb des zeitlichen Rahmens dieser Arbeit liegt.
 
-Stattdessen wurde per Feature Engineering ein Steuerparameter erstellt, der vegetarische von nicht-vegetarischen Gerichten unterscheidet.
-Die Unterscheidung bzw. Klassifizierung wurde durch eine einfache und unvollständige, manuell erstellte Liste von Fleisch bezeichnenden Wörtern wie z.B. «Chicken» erreicht.
+Stattdessen wurde per \gls{feature-engineering} ein Steuerparameter erstellt, der vegetarische von nicht-vegetarischen Gerichten unterscheidet.
+Die Klassifizierung wurde durch eine einfache (und unvollständige), manuell erstellte Liste von Fleisch bezeichnenden Wörtern wie z.B. «Chicken» erreicht.
 Die Tabelle \ref{tab:results-of-various-vegetarian} zeigt, dass der Einfluss des Steuerparameters nun durchaus gegeben ist, insbesondere wenn beachtet wird,
 dass der Anteil nicht-vegetarischer Gerichte im Datensatz gerade mal 7.5\% beträgt.
 
